@@ -1,16 +1,51 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap');
+
+  
+.dark {
+    --color-bg-primary: #161618;
+    --color-bg-secondary: #283141;
+    --color-text-primary: #f7fafc;
+    --color-text-secondary: #e2e8f0;
+    --color-text-accent: #81e6d9;
+}
+  
+.light {
+    --color-bg-primary: #ECF0F3;
+    --color-bg-secondary: #edf2f7;
+    --color-text-primary: #2d3748;
+    --color-text-secondary: #4a5568;
+    --color-text-accent: #2b6cb0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@layer base  { 
 
-* {
-  box-sizing: border-box;
+    body {
+        @apply tracking-tight
+    }
+
+    h1,h2,h3,h4,h5,h6{
+        @apply font-bold
+    }
+
+    h1 {
+        @apply text-4xl sm:text-5xl md:text-6xl
+    }
+    
+    h2 {
+        @apply text-3xl sm:text-4xl
+    }
+
+    li {
+        @apply cursor-pointer
+    }
+
+    button{
+        @apply rounded-md
+    }
 }
