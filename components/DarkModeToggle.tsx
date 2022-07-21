@@ -1,8 +1,13 @@
 import { useEffect, useState } from 'react';
 import {DarkModeSwitch} from 'react-toggle-dark-mode'
 import {useTheme} from 'next-themes'
+import { margin } from 'styled-system';
 
-const DarkModeToggle = () => {
+type DarkModeToggleProps = {
+    size:string;
+}
+
+const DarkModeToggle = (props:DarkModeToggleProps) => {
   
     const {systemTheme , theme, setTheme} = useTheme();
 
@@ -29,7 +34,8 @@ const DarkModeToggle = () => {
     <DarkModeSwitch 
         checked={checked}
         onChange={onClick}
-        size={20}
+        size={props.size}
+        style={{marginTop:'5'}}
     />
   )
 }
