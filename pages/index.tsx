@@ -8,13 +8,14 @@ const Home: NextPageWithLayout  = () => {
 
   return (
     <motion.div
+      className="mt-36"
       initial={{ opacity: 0, scale: 1 }}
       animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.2 }}
+      transition={{ duration: 0.25 }}
     >
-      <div className="dark:text-primary flex flex-col mt-36">
-        <h1 className='dark:text-primary font-bold '>Bogdan Maftei</h1>
-        <h3 className='font-lights mt-8 text-xl'>Junior Software Developer</h3>
+      <div className="dark:text-primary flex flex-col text-center">
+        <h1 className='dark:text-primary font-bold'>Hey, I'm Bogdan Maftei</h1>
+        <h3 className='font-light mt-8 text-2xl'>Junior Software Developer</h3>
       </div>      
     </motion.div>
   )

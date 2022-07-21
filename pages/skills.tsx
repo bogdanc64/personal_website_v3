@@ -10,7 +10,7 @@ const Skills: NextPageWithLayout  = () => {
     <motion.div
     initial={{ opacity: 0, scale: 1 }}
     animate={{ opacity: 1, scale: 1 }}
-    transition={{ duration: 0.2 }}
+    transition={{ duration: 0.25 }}
     >
       <p>Skills</p>    
     </motion.div>

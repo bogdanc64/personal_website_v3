@@ -20,6 +20,7 @@ export default function Layout({children}:Props) {
   
     return (
     <motion.div
+        className="h-screen flex flex-col pt-12"
         initial={{ opacity: 0, scale: 1 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.4 }}
