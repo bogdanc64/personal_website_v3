@@ -1,6 +1,7 @@
 import Navbar from './Navbar'
 import Footer from './Footer'
 import { useEffect, useState } from 'react';
+import { motion } from "framer-motion"
 
 type Props = {
     children?: React.ReactNode;
@@ -18,10 +19,16 @@ export default function Layout({children}:Props) {
     if(!mounted) return null;
   
     return (
-    <div>
+    <motion.div
+        initial={{ opacity: 0, scale: 1 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.4 }}
+    >  
       <Navbar />
-         <main>{children}</main>
+         <main>
+             {children}
+         </main>
       <Footer />
-    </div>
+    </motion.div>
   )
 }

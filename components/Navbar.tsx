@@ -57,7 +57,7 @@ const Navbar = () => {
 
             {/* Mobile menu*/}
 
-            <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center bg-primary transition '}>
+            <ul className={!nav ? 'hidden' : 'md:hidden absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center bg-primary transition '}>
 
                 <Link href={"/"}>
                     <li className="py-5 hover:border-b text-3xl text-primary">Home</li>
