@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import {DarkModeSwitch} from 'react-toggle-dark-mode'
 import {useTheme} from 'next-themes'
-import { margin } from 'styled-system';
 
 type DarkModeToggleProps = {
     size:string;

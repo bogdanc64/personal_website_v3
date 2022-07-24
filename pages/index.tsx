@@ -15,13 +15,13 @@ const Home: NextPageWithLayout  = () => {
     >
       <div className="dark:text-primary flex flex-col place-items-center text-center">
         <Avatar />
-        <h1 className='font-bold mt-6 md:mt-10'>Hey, I'm Bogdan Maftei!</h1>
-        <h3 className='font-light mt-8 text-xl'>Junior Software Developer, experimental music producer and cats & dogs lover.</h3>
+        <h1 className='font-bold mt-6 md:mt-10'>Hey, I&apos;m Bogdan Maftei!</h1>
+        <h3 className='font-light mt-8 text-xl'>Junior Software Developer, experimental music producer and cats &amp; dogs lover.</h3>
         <ul className="flex flex-row p-6">
-          <li className="mx-2"><a href="https://www.facebook.com/maftei.bogdancosmin/" target="_blank"><FaFacebook size={25}/></a></li>
-          <li className="mx-2"><a href="https://github.com/bogdanc64" target="_blank"><FaGithub size={25}/></a></li>
-          <li className="mx-2"><a href="https://www.linkedin.com/in/bogdan-cosmin-maftei-412018215/" target="_blank"><FaLinkedin size={25}/></a></li>
-          <li className="mx-2"><a href="https://soundcloud.com/altadata" target="_blank">< FaSoundcloud size={25}/></a></li>
+          <li className="mx-2"><a href="https://www.facebook.com/maftei.bogdancosmin/" target="_blank" rel="noreferrer"><FaFacebook size={25}/></a></li>
+          <li className="mx-2"><a href="https://github.com/bogdanc64" target="_blank" rel="noreferrer"><FaGithub size={25}/></a></li>
+          <li className="mx-2"><a href="https://www.linkedin.com/in/bogdan-cosmin-maftei-412018215/" target="_blank" rel="noreferrer"><FaLinkedin size={25}/></a></li>
+          <li className="mx-2"><a href="https://soundcloud.com/altadata" target="_blank" rel="noreferrer">< FaSoundcloud size={25}/></a></li>
         </ul>
       </div>
     </motion.div>
