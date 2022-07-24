@@ -62,8 +62,8 @@ const Navbar = () => {
                 <Link href={"/"}>
                     <li className="py-5 hover:border-b text-3xl text-primary">Home</li>
                 </Link>
-                <Link href={"/skills"}>
-                    <li className="py-5 hover:border-b text-3xl text-primary">Skills</li>
+                <Link href={"/about"}>
+                    <li className="py-5 hover:border-b text-3xl text-primary">About me</li>
                 </Link>
                 <Link href={"/projects"}>
                     <li className="py-5 hover:border-b text-3xl text-primary">Projects</li>

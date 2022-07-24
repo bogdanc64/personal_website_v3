@@ -4,6 +4,7 @@ import {SiTypescript, SiArduino, SiNextdotjs, SiHtml5, SiCss3, SiReact, SiCplusp
 import Layout from '../components/Layout'
 import {motion} from 'framer-motion'
 import Link from 'next/link'
+import Title from '../components/Title'
 
 const About: NextPageWithLayout  = () => {
 
@@ -14,13 +15,9 @@ const About: NextPageWithLayout  = () => {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.25 }}
     >
-      <div className="px-40"> {/* xl:grid grid-cols-2 */}
+      <div className="xl:px-40"> {/* xl:grid grid-cols-2 */}
         <div className=""> {/* sm:mt-10 lg:mt-0 xl:pr-10 */}
-          <div className="flex items-center justify-center">
-            <div className="w-32 bg-opacity-40 h-px bg-gray-500"></div> 
-            <h2 className="flex-shrink px-4">About me</h2>
-            <div className="w-32 bg-opacity-40 h-px bg-gray-500"></div>
-          </div>
+          <Title value="About me" />
           <div className="py-10">
             <p className='text-xl text-center'>
               My name is Maftei Bogdan-Cosmin, I am a full-time Junior Software Developer and I love making customers satisfied and pleased with my work. 
@@ -36,12 +33,8 @@ const About: NextPageWithLayout  = () => {
             </Link>
           </div>
         </div>
-        <div className="sm:mt-10">{/* sm:mt-10 lg:mt-0 xl:pl-10 */}
-          <div className="flex items-center justify-center">
-            <div className="w-32 bg-opacity-40 h-px bg-gray-500"></div> 
-            <h2 className="flex-shrink px-4">Skills</h2>
-            <div className="w-32 bg-opacity-40 h-px bg-gray-500"></div>
-          </div>
+        <div className="mt-10">{/* sm:mt-10 lg:mt-0 xl:pl-10 */}
+          <Title value="Skills" />
           <div className="grid grid-cols-4 gap-y-10 justify-items-center py-10">
             <div className="flex flex-col items-center">
               <SiTypescript className='hover:text-[#3178C6] transition duration-200' size={50}/>

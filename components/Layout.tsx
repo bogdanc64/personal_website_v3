@@ -26,7 +26,7 @@ export default function Layout({children}:Props) {
         transition={{ duration: 0.4 }}
     >  
       <Navbar />
-         <main className="xl:mt-14">
+         <main className="mt-6 md:mt-14">
              {children}
          </main>
       <Footer />
