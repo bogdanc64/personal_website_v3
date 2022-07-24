@@ -42,8 +42,8 @@ const Navbar = () => {
                 <Link href={"/"}>
                     <li className="mx-5 hover:border-b text-l dark:text-primary">Home</li>
                 </Link>
-                <Link href={"/skills"}>
-                    <li className="mx-5 hover:border-b text-l dark:text-primary">Skills</li>
+                <Link href={"/about"}>
+                    <li className="mx-5 hover:border-b text-l dark:text-primary">About me</li>
                 </Link>
                 <Link href={"/projects"}>
                     <li className="mx-5 hover:border-b text-l dark:text-primary">Projects</li>

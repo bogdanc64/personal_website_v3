@@ -19,21 +19,21 @@
 }
   
 .light {
-    --color-bg-primary: #ECF0F3;
+    --color-bg-primary: #f0f0f0;
     --color-bg-secondary: #edf2f7;
     --color-border-avatar:#43348de8;
     --color-border-avatar-2:#43348da2;
     --color-border-avatar-3:#43348d70;
     --color-text-primary: #2d3748;
     --color-text-secondary: #4a5568;
-    --color-text-accent: #2b6cb0;
+    --color-text-accent: #43348d;
 }
 
 @layer base  { 
 
 
     body {
-        @apply m-0 pt-0 bg-primary transition duration-200 px-6 2xl:px-96 tracking-tight 
+        @apply m-0 pt-0 bg-primary transition duration-200 px-6 xl:px-40 bigger-desktops:px-96 tracking-tight 
     }
 
     h1,h2,h3,h4,h5,h6{

@@ -7,9 +7,13 @@ module.exports = {
   darkMode:'class',
   theme: {
     extend: {
+      screens:{
+        'bigger-desktops': '1650px',
+      },
       backgroundColor: {
         primary: 'var(--color-bg-primary)',
         secondary: 'var(--color-bg-secondary)',
+        accent: 'var(--color-border-avatar)',
       },
       fontFamily:{
         sans:['Manrope', 'sans-serif']
