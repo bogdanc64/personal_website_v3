@@ -7,6 +7,9 @@ module.exports = {
   darkMode:'class',
   theme: {
     extend: {
+      margin:{
+        'fix-scrollbar' : 'calc(100vw-100%)'
+      },
       screens:{
         'bigger-desktops': '1650px',
       },

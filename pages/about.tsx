@@ -1,12 +1,29 @@
 import type { NextPageWithLayout } from './_app'
-import { ReactElement } from 'react'
+import { ReactElement, useRef } from 'react'
 import {SiTypescript, SiArduino, SiNextdotjs, SiHtml5, SiCss3, SiReact, SiCplusplus, SiDotnet, SiCsharp, SiNodedotjs} from 'react-icons/si'
 import Layout from '../components/Layout'
 import {motion} from 'framer-motion'
 import Link from 'next/link'
 import Title from '../components/Title'
+import { useIsomorphicLayoutEffect } from '../utils/useIsomorphicLayoutEffect'
+import { stagger } from '../utils/animations'
 
 const About: NextPageWithLayout  = () => {
+
+  //refs
+
+  const firstTitle = useRef(null);
+  const description = useRef(null);
+  const secondTitle = useRef(null);
+  const skillsList = useRef(null);
+
+  useIsomorphicLayoutEffect(() => {
+    stagger(
+      [firstTitle.current, description.current, secondTitle.current, skillsList.current],
+      { y: 20 },
+      { y: 0 }
+    );
+  }, []);
 
   return (
     <motion.div
@@ -17,25 +34,31 @@ const About: NextPageWithLayout  = () => {
     >
       <div className="xl:px-40"> {/* xl:grid grid-cols-2 */}
         <div className=""> {/* sm:mt-10 lg:mt-0 xl:pr-10 */}
-          <Title value="About me" />
-          <div className="py-10">
-            <p className='text-xl text-center'>
-              My name is Maftei Bogdan-Cosmin, I am a full-time Junior Software Developer and I love making customers satisfied and pleased with my work. 
-              I always bring a touch of originality to every project I do and I love to communicate while carrying out the project, 
-              precisely to satisfy the needs and desires of each client.
-            </p>
+          <div ref={firstTitle}>
+            <Title value="About me" />
           </div>
-          <div className='flex justify-center'>
-            <Link target='_blank' href='/Resume.pdf'>
-              <button data-mdb-ripple="true" data-mdb-ripple-color="light" className="bg-primary text-color font-semibold py-2 px-4 border hover:text-color transition-all duration-300 rounded shadow">
-                Get my CV
-              </button>
-            </Link>
+          <div ref={description}>
+            <div className="py-10">
+              <p className='text-xl md:text-justify text-left'>
+                My name is Maftei Bogdan-Cosmin, I am a full-time Junior Software Developer and I love making customers satisfied and pleased with my work. 
+                I always bring a touch of originality to every project I do and I love to communicate while carrying out the project, 
+                precisely to satisfy the needs and desires of each client.
+              </p>
+            </div>
+            <div className='flex justify-center'>
+              <Link target='_blank' href='/Resume.pdf'>
+                <button data-mdb-ripple="true" data-mdb-ripple-color="light" className="bg-primary text-color font-semibold py-2 px-4 border hover:text-color transition-all duration-300 rounded shadow">
+                  Get my CV
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
         <div className="mt-10">{/* sm:mt-10 lg:mt-0 xl:pl-10 */}
-          <Title value="Skills" />
-          <div className="grid grid-cols-4 gap-y-10 justify-items-center py-10">
+          <div ref={secondTitle}>
+            <Title value="Skills" />
+          </div>
+          <div ref={skillsList} className="grid grid-cols-4 gap-y-10 justify-items-center py-10">
             <div className="flex flex-col items-center">
               <SiTypescript className='hover:text-[#3178C6] transition duration-200' size={50}/>
               <p className="pt-2">Typescript</p>
