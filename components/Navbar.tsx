@@ -1,5 +1,4 @@
 import Link from "next/link"
-import { Router } from "next/router";
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
@@ -16,6 +15,7 @@ const Navbar = () => {
     }
 
     useEffect(()=>{
+      
         if (overflow)
             document.body.classList.add('fix-navbar-overflow')
         else
