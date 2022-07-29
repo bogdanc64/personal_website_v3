@@ -4,12 +4,22 @@ import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 import DarkModeToggle from "./DarkModeToggle"
 
+const delay = (ms:number) => new Promise(
+    resolve => setTimeout(resolve, ms)
+  );
+
 const Navbar = () => {
     
     const [nav, setNav] = useState(false);
     const [overflow, setOverflow] = useState(false);
 
     const handleClick = () => {
+        setNav(!nav);
+        setOverflow(!overflow)
+    }
+    
+    const handleClickMobileNav = async () => {
+        await delay(250); //added to prevent flicker bug when navigating on mobile navbar
         setNav(!nav);
         setOverflow(!overflow)
     }
@@ -64,16 +74,16 @@ const Navbar = () => {
                 }
             >
                 <Link href={"/"}>
-                    <li onClick={handleClick} className="py-5 hover:border-b text-3xl text-primary">Home</li>
+                    <li onClick={handleClickMobileNav} className="py-5 hover:border-b text-3xl text-primary">Home</li>
                 </Link>
                 <Link href={"/about"}>
-                    <li onClick={handleClick} className="py-5 hover:border-b text-3xl text-primary">About me</li>
+                    <li onClick={handleClickMobileNav} className="py-5 hover:border-b text-3xl text-primary">About me</li>
                 </Link>
                 <Link href={"/projects"}>
-                    <li onClick={handleClick} className="py-5 hover:border-b text-3xl text-primary">Projects</li>
+                    <li onClick={handleClickMobileNav} className="py-5 hover:border-b text-3xl text-primary">Projects</li>
                 </Link>
                 <Link href={"/contact"}>
-                    <li onClick={handleClick} className="py-5 hover:border-b text-3xl text-primary">Contact</li>
+                    <li onClick={handleClickMobileNav} className="py-5 hover:border-b text-3xl text-primary">Contact</li>
                 </Link>
                 <div className="py-5 ">
                     <DarkModeToggle size="30"/>

@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 import {ThemeProvider} from 'next-themes'
 import type { AppProps } from 'next/app'
-import { ReactElement, ReactNode, useState } from 'react'
+import { ReactElement, ReactNode, useEffect, useState } from 'react'
 import { NextPage } from 'next/types'
 import Router from 'next/router'
 import nProgress from "nprogress";
@@ -17,7 +17,7 @@ export type AppPropsWithLayout = AppProps & {
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 
   const getLayout = Component.getLayout ?? ((page)=>page)
-  
+
   Router.events.on('routeChangeStart', nProgress.start)
   Router.events.on('routeChangeComplete',nProgress.done)
   Router.events.on('routeChangeError', nProgress.done)
