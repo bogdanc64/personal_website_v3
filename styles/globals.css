@@ -33,6 +33,23 @@
     overflow:hidden;
 }
 
+.hover-animation:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 1;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: var(--color-text-primary);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+.hover-animation:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+
 @layer base  {
     
     html {
@@ -40,7 +57,7 @@
     }
 
     body {
-        @apply w-[100vw] overflow-x-hidden m-0 pt-0 bg-primary transition duration-200 px-6 md:px-20 lg:px-40 bigger-desktops:px-96 tracking-tight 
+        @apply w-[100vw] overflow-x-hidden m-0 pt-0 bg-primary transition duration-200 px-6 md:px-20 lg:px-40 xl:px-64 bigger-desktops:px-96 tracking-tight 
     }
 
     h1,h2,h3,h4,h5,h6{

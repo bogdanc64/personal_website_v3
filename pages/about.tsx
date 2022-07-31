@@ -22,7 +22,8 @@ const About: NextPageWithLayout  = () => {
     stagger(
       [firstTitle.current, description.current, secondTitle.current, skillsList.current],
       { y: 20 },
-      { y: 0 }
+      { y: 0 },
+      0.2
     );
   }, []);
 
@@ -47,9 +48,9 @@ const About: NextPageWithLayout  = () => {
               </p>
             </div>
             <div className='flex justify-center'>
-              <Link target='_blank' href='/Resume.pdf'>
-                <Button name={'Get my CV'} />
-              </Link>
+              <a target='_blank' href='/Resume.pdf'>
+                <Button name={'Resumé'} />
+              </a>
             </div>
           </div>
         </div>

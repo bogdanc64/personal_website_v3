@@ -50,16 +50,16 @@ const Navbar = () => {
 
             <ul className="hidden xl:flex">
                 <Link href={"/"}>
-                    <li className="mx-5 hover:border-b text-l dark:text-primary">Home</li>
+                    <li className="mx-5 relative inline-block hover-animation text-l dark:text-primary">Home</li>
                 </Link>
                 <Link href={"/about"}>
-                    <li className="mx-5 hover:border-b text-l dark:text-primary">About me</li>
+                    <li className="mx-5 relative inline-block hover-animation text-l dark:text-primary">About me</li>
                 </Link>
                 <Link href={"/projects"}>
-                    <li className="mx-5 hover:border-b text-l dark:text-primary">Projects</li>
+                    <li className="mx-5 relative inline-block hover-animation text-l dark:text-primary">Projects</li>
                 </Link>
                 <Link href={"/contact"}>
-                    <li className="ml-5 mr-10 hover:border-b text-l dark:text-primary">Contact</li>
+                    <li className="ml-5 relative inline-block hover-animation mr-10 text-l dark:text-primary">Contact</li>
                 </Link>
                 
                 <DarkModeToggle size="15" />

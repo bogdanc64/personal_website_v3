@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import Button from "./Button";
 import SkillIcon from './SkillIcon'
 
@@ -21,22 +20,24 @@ function Project(props:Props) {
     if(isOdd)
     {
         return (
-            <div className="md:grid gap-x-40 grid-cols-2 my-20">
-                <Image className="z-[-10]" objectFit="cover" src={props.image} quality={75} width={640} height={360}></Image>
+            <div className="grid gap-x-20 xl:gap-x-28 lg:grid-cols-2 my-20">
+                <div className="flex justify-center items-center">
+                    <Image className="z-[-10]" objectFit="cover" src={props.image} quality={75} width={640} height={360}></Image>
+                </div>
                 <div className="flex flex-col justify-center">
-                    <h2>{props.title}</h2>
+                    <h2 className="pt-10 lg:pt-0">{props.title}</h2>
                     <p className="my-5 md:text-justify text-left">{props.description}</p>
                     <div className="flex flex-row">
                     {
-                        iconArray.map((element) => (
-                            <div className="mr-10">
+                        iconArray.map((element,index) => (
+                            <div key={index} className="mr-10">
                                 <SkillIcon title={false} type={element} size={25} />
                             </div>
                         ))
                     }
                     </div>
                     <div className="flex flex-row pt-5">
-                        <a target='_blank' href={props.linkCode}>
+                        <a target='_blank' rel="noreferrer" href={props.linkCode}>
                             <Button name={'View Code'} />
                         </a>
                     </div>
@@ -47,26 +48,28 @@ function Project(props:Props) {
     else
     {
         return (
-            <div className="md:grid gap-x-40 grid-cols-2 my-20">
-                <div className="flex flex-col justify-center">
-                    <h2>{props.title}</h2>
+            <div className="grid gap-x-20 xl:gap-x-28 lg:grid-cols-2 my-20">
+                <div className="flex flex-col justify-center order-last lg:order-[0]">
+                    <h2 className="pt-10 lg:pt-0">{props.title}</h2>
                     <p className="my-5 md:text-justify text-left">{props.description}</p>
                     <div className="flex flex-row">
                     {
-                        iconArray.map((element) => (
-                            <div className="mr-10">
+                        iconArray.map((element, index) => (
+                            <div key={index} className="mr-10">
                                 <SkillIcon title={false} type={element} size={25} />
                             </div>
                         ))
                     }
                     </div>
                     <div className="flex flex-row pt-5">
-                        <a target='_blank' href={props.linkCode}>
+                        <a target='_blank' rel="noreferrer" href={props.linkCode}>
                             <Button name={'View Code'} />
                         </a>
                     </div>
                 </div>
-                <Image className="z-[-10]" objectFit="cover" src={props.image} quality={75} width={640} height={360}></Image>
+                <div className="flex justify-center items-center">
+                    <Image className="z-[-10]" objectFit="cover" src={props.image} quality={75} width={640} height={360}></Image>
+                </div>
             </div>
         )
     }

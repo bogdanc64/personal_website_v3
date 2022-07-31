@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
  
 const Projects: NextPageWithLayout  = () => {
 
-  const firstTitle = useRef(null);
+  const title = useRef(null);
 
   const revealRefs = useRef<any[]>([]);
   revealRefs.current = [];
@@ -30,7 +30,7 @@ const Projects: NextPageWithLayout  = () => {
       title: 'Project 1',
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque aliquid voluptatem debitis hic possimus delectus ducimus pariatur neque? Esse quos ipsam id sunt tenetur amet saepe expedita ipsa pariatur eos.',
       linkCode: 'http://google.ro/',
-      image: 'https://dummyimage.com/640x360/fff/aaa'
+      image: 'https://placekitten.com/640/360'
     },
     {
       index: 2,
@@ -38,7 +38,7 @@ const Projects: NextPageWithLayout  = () => {
       title: 'Project 2',
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque aliquid voluptatem debitis hic possimus delectus ducimus pariatur neque? Esse quos ipsam id sunt tenetur amet saepe expedita ipsa pariatur eos.',
       linkCode: 'http://google.ro/',
-      image: 'https://dummyimage.com/640x360/fff/aaa'
+      image: 'https://placekitten.com/640/360'
     },
     {
       index: 3,
@@ -46,7 +46,7 @@ const Projects: NextPageWithLayout  = () => {
       title: 'Project 3',
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque aliquid voluptatem debitis hic possimus delectus ducimus pariatur neque? Esse quos ipsam id sunt tenetur amet saepe expedita ipsa pariatur eos.',
       linkCode: 'http://google.ro/',
-      image: 'https://dummyimage.com/640x360/fff/aaa'
+      image: 'https://placekitten.com/640/360'
     },
     {
       index: 4,
@@ -54,23 +54,26 @@ const Projects: NextPageWithLayout  = () => {
       title: 'Project 4',
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque aliquid voluptatem debitis hic possimus delectus ducimus pariatur neque? Esse quos ipsam id sunt tenetur amet saepe expedita ipsa pariatur eos.',
       linkCode: 'http://google.ro/',
-      image: 'https://dummyimage.com/640x360/fff/aaa'
+      image: 'https://placekitten.com/640/360'
     },
   ];
 
   useIsomorphicLayoutEffect(() => {
     stagger(
-      [firstTitle.current],
+      [title.current],
       { y: 20 },
-      { y: 0 }
+      { y: 0 },
+      0.5
     );
     revealRefs.current.forEach((el, index) => {
       // if(index>1)
       {
         gsap.fromTo(el, {
+          y:20,
           autoAlpha: 0
         }, {
             duration: 0.5,
+            y:0,
             autoAlpha: 1,
             ease: 'none',
             scrollTrigger: {
@@ -91,7 +94,7 @@ const Projects: NextPageWithLayout  = () => {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.25 }}
     >
-        <div ref={firstTitle}>
+        <div ref={title}>
           <Title value='Projects' />
         </div>
       {

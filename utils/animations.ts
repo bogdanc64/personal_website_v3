@@ -1,9 +1,9 @@
 import gsap, { Power3 } from "gsap";
 
-export const stagger = (target:any, fromvVars:any, toVars:any) => {
+export const stagger = (target:any, fromvVars:any, toVars:any, duration:number) => {
   return gsap.fromTo(
     target,
     { opacity: 0, ...fromvVars },
-    { opacity: 1, ...toVars, stagger: 0.2, ease: Power3.easeOut }
+    { opacity: 1, ...toVars, stagger: duration, ease: Power3.easeOut }
   );
 };
