@@ -1,4 +1,4 @@
-import { SiArduino, SiCplusplus, SiCsharp, SiCss3, SiDatabricks, SiDotnet, SiHtml5, SiNextdotjs, SiNodedotjs, SiReact, SiTypescript } from "react-icons/si"
+import { SiArduino, SiCplusplus, SiCsharp, SiCss3, SiDatabricks, SiDotnet, SiHtml5, SiNextdotjs, SiNodedotjs, SiReact, SiTailwindcss, SiTypescript } from "react-icons/si"
 
 interface Props{
     type:String,
@@ -12,7 +12,7 @@ function SkillIcon(props:Props) {
     {
         case 'React':
             return(
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center text-primary">
                     <SiReact className='hover:text-[#61DAFB] transition duration-200' size={props.size}/>
                     {
                         props.title === true 
@@ -23,7 +23,7 @@ function SkillIcon(props:Props) {
             )
         case 'Typescript':
             return(
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center text-primary">
                     <SiTypescript className='hover:text-[#3178C6] transition duration-200' size={props.size}/>
                     {
                         props.title === true 
@@ -34,7 +34,7 @@ function SkillIcon(props:Props) {
             )
         case 'HTML':
             return(
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center text-primary">
                     <SiHtml5 className='hover:text-[#E34F26] transition duration-200' size={props.size}/>
                     {
                         props.title === true 
@@ -45,7 +45,7 @@ function SkillIcon(props:Props) {
             )
         case 'CSS':
             return(
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center text-primary">
                     <SiCss3 className='hover:text-[#1572B6] transition duration-200' size={props.size}/>
                     {
                         props.title === true 
@@ -56,7 +56,7 @@ function SkillIcon(props:Props) {
             )
         case 'Node.JS':
             return(
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center text-primary">
                     <SiNodedotjs className='hover:text-[#339933] transition duration-200' size={props.size}/>
                     {
                         props.title === true 
@@ -67,7 +67,7 @@ function SkillIcon(props:Props) {
             )
         case 'Next.JS':
             return(
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center text-primary">
                     <SiNextdotjs size={props.size}/>
                     {
                         props.title === true 
@@ -78,7 +78,7 @@ function SkillIcon(props:Props) {
             )
         case 'C#':
             return(
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center text-primary">
                     <SiCsharp className='hover:text-[#239120] transition duration-200' size={props.size}/>
                     {
                         props.title === true 
@@ -89,7 +89,7 @@ function SkillIcon(props:Props) {
             )
         case '.NET':
             return(
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center text-primary">
                     <SiDotnet className='hover:text-[#512BD4] transition duration-200' size={props.size}/>
                     {
                         props.title === true 
@@ -100,7 +100,7 @@ function SkillIcon(props:Props) {
             )
         case 'Arduino':
             return(
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center text-primary">
                     <SiArduino className='hover:text-[#00979D] transition duration-200' size={props.size}/>
                     {
                         props.title === true 
@@ -111,7 +111,7 @@ function SkillIcon(props:Props) {
             )
         case 'C++':
             return(
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center text-primary">
                     <SiCplusplus className='hover:text-[#00599C] transition duration-200' size={props.size}/>
                     {
                         props.title === true 
@@ -120,9 +120,20 @@ function SkillIcon(props:Props) {
                     } 
                 </div>
             )
+        case 'Tailwind':
+            return(
+                <div className="flex flex-col items-center text-primary">
+                    <SiTailwindcss className='hover:text-[#06B6D4] transition duration-200' size={props.size}/>
+                    {
+                        props.title === true 
+                            ? <p className="pt-2">Tailwind CSS</p> 
+                            : null
+                    } 
+                </div>
+            )
         default:
             return(
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center text-primary">
                     <SiDatabricks className='transition duration-200' size={props.size}/>
                     {
                         props.title === true 

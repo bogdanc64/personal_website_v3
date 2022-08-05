@@ -61,6 +61,7 @@ const About: NextPageWithLayout  = () => {
           <div ref={skillsList} className="grid grid-cols-4 gap-y-10 justify-items-center py-10">
             <SkillIcon title={true} size={50} type={'React'} />
             <SkillIcon title={true} size={50} type={'Typescript'} />
+            <SkillIcon title={true} size={50} type={'Tailwind'} />
             <SkillIcon title={true} size={50} type={'HTML'} />
             <SkillIcon title={true} size={50} type={'CSS'} />
             <SkillIcon title={true} size={50} type={'Node.JS'} />

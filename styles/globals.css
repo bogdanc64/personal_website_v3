@@ -21,9 +21,9 @@
 .light {
     --color-bg-primary: #f0f0f0;
     --color-bg-secondary: #edf2f7;
-    --color-border-avatar:#43348de8;
-    --color-border-avatar-2:#43348da2;
-    --color-border-avatar-3:#43348d70;
+    --color-border-avatar:#2d3748;
+    --color-border-avatar-2:#2d37487e;
+    --color-border-avatar-3:#2d374849;
     --color-text-primary: #2d3748;
     --color-text-secondary: #4a5568;
     --color-text-accent: #43348d;
@@ -61,7 +61,11 @@
     }
 
     h1,h2,h3,h4,h5,h6{
-        @apply font-bold
+        @apply font-bold text-primary
+    }
+
+    p{
+        @apply text-primary
     }
 
     h1 {

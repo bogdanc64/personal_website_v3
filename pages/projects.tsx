@@ -8,6 +8,9 @@ import { useIsomorphicLayoutEffect } from '../utils/useIsomorphicLayoutEffect'
 import { stagger } from '../utils/animations'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+
+import personal_website from '../assets/images/personal_website.png'
+
 gsap.registerPlugin(ScrollTrigger);
  
 const Projects: NextPageWithLayout  = () => {
@@ -26,11 +29,11 @@ const Projects: NextPageWithLayout  = () => {
   const projects = [
     {
       index: 1,
-      tags: 'React Next.JS Typescript', 
-      title: 'Project 1',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque aliquid voluptatem debitis hic possimus delectus ducimus pariatur neque? Esse quos ipsam id sunt tenetur amet saepe expedita ipsa pariatur eos.',
-      linkCode: 'http://google.ro/',
-      image: 'https://placekitten.com/640/360'
+      tags: 'React Tailwind Next.JS Typescript', 
+      title: 'Portfolio Website',
+      description: "I've designed my personal website and coded it in React, using Tailwind CSS and Next.JS Framework.",
+      linkCode: 'https://github.com/bogdanc64/personal_website_v3',
+      image: personal_website,
     },
     {
       index: 2,
