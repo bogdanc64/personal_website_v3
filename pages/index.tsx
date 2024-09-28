@@ -38,15 +38,15 @@ const Home: NextPageWithLayout  = () => {
         <div ref={avatar}>
           <Avatar />
         </div>
-        <h1 ref={firstHeader} className='font-bold my-6'>Hey, I&apos;m Bogdan Maftei!</h1>
-        <h3 ref={secondHeader} className='font-light my-3 text-xl'>Junior Software Developer, experimental music producer and cats &amp; dogs lover.</h3>
+        <h1 ref={firstHeader} className='mt-6 mb-3'>Hey, I&apos;m Bogdan Maftei! <span className="wave">👋🏻</span></h1>
+        <h3 ref={secondHeader} className='font-light my-3 text-xl'>Full-Stack Developer</h3>
         <h3 ref={thirdHeader} className='font-light my-3 text-xl'>
           <Link href={"/about"}>
               <span className="font-bold inline-block hover-animation relative cursor-pointer">Get to know me better</span>
           </Link>
           , check out&nbsp;
-          <Link href={"/projects"}>
-            <span className="font-bold inline-block hover-animation relative cursor-pointer">my projects</span>
+          <Link href={"/experience"}>
+            <span className="font-bold inline-block hover-animation relative cursor-pointer">my experience</span>
           </Link>
           , and&nbsp;
           <Link href={"/contact"}>
@@ -54,7 +54,7 @@ const Home: NextPageWithLayout  = () => {
           </Link>
           .
         </h3>
-        <div ref={socialButtons}>
+        <div ref={socialButtons} className="mt-3">
           <SocialButtons />
         </div>
       </div>

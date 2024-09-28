@@ -26,7 +26,7 @@ function Project(props:Props) {
                 </div>
                 <div className="flex flex-col justify-center">
                     <h2 className="pt-10 lg:pt-0">{props.title}</h2>
-                    <p className="my-5 md:text-justify text-left">{props.description}</p>
+                    <p className="my-5 text-justify">{props.description}</p>
                     <div className="flex flex-row">
                     {
                         iconArray.map((element,index) => (
@@ -51,7 +51,7 @@ function Project(props:Props) {
             <div className="grid gap-x-20 xl:gap-x-28 lg:grid-cols-2 my-20">
                 <div className="flex flex-col justify-center order-last lg:order-[0]">
                     <h2 className="pt-10 lg:pt-0">{props.title}</h2>
-                    <p className="my-5 md:text-justify text-left">{props.description}</p>
+                    <p className="my-5 text-justify">{props.description}</p>
                     <div className="flex flex-row">
                     {
                         iconArray.map((element, index) => (

@@ -1,7 +1,6 @@
 import { Request, Response } from "express";
 
-export default function (req:Request, res:Response) {
-    
+export default function sendEmail (req:Request, res:Response) {
     require('dotenv').config()
     let nodemailer = require('nodemailer')
 
@@ -16,7 +15,7 @@ export default function (req:Request, res:Response) {
       })
     const mailData = {
         from: process.env.send_email,
-        to: 'bogdancm02@gmail.com',
+        to: 'maftei.bogdan@outlook.com',
         subject: `Message From ${req.body.name}`,
         text: `Subject: ${req.body.subject}` + " | Message:" +  req.body.message + " | Sent from: " + req.body.email,
         html: 
@@ -33,15 +32,13 @@ export default function (req:Request, res:Response) {
             </p>
         `
       }
-    transporter.sendMail(mailData, function (err:any, info:any) {
-        if(err)
+    transporter.sendMail(mailData, (err:any, info:any) => {
+        if (err)
         {
-            console.log(err)
-            res.send(err)
+            res.status(500).send(err)
         }        
         else
         {
-            console.log(info)
             res.send(info)
         }
     })

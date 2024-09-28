@@ -1,27 +1,38 @@
-import { SiArduino, SiCplusplus, SiCsharp, SiCss3, SiDatabricks, SiDotnet, SiHtml5, SiNextdotjs, SiNodedotjs, SiReact, SiTailwindcss, SiTypescript } from "react-icons/si"
+import { SiTypescript, SiAngular, SiDotnet, SiDatabricks, SiVuedotjs, SiGo, SiJest, SiNestjs } from "react-icons/si"
 
 interface Props{
-    type:String,
-    size:number,
-    title:boolean,
+    type: string,
+    size: number,
+    title: boolean,
 }
 
 function SkillIcon(props:Props) {
 
     switch(props.type)
     {
-        case 'React':
+        case 'angular':
             return(
                 <div className="flex flex-col items-center text-primary">
-                    <SiReact className='hover:text-[#61DAFB] transition duration-200' size={props.size}/>
+                    <SiAngular className='hover:text-[#b52e31] transition duration-200' size={props.size}/>
                     {
                         props.title === true 
-                            ? <p className="pt-2">React</p> 
+                            ? <p className="pt-2">Angular</p> 
                             : null
                     } 
                 </div>
             )
-        case 'Typescript':
+        case 'nestjs':
+            return(
+                <div className="flex flex-col items-center text-primary">
+                    <SiNestjs className='hover:text-[#EA2856] transition duration-200' size={props.size}/>
+                    {
+                        props.title === true 
+                            ? <p className="pt-2">NestJS</p> 
+                            : null
+                    } 
+                </div>
+            )
+        case 'typescript':
             return(
                 <div className="flex flex-col items-center text-primary">
                     <SiTypescript className='hover:text-[#3178C6] transition duration-200' size={props.size}/>
@@ -32,65 +43,10 @@ function SkillIcon(props:Props) {
                     } 
                 </div>
             )
-        case 'HTML':
+        case 'dotnet':
             return(
                 <div className="flex flex-col items-center text-primary">
-                    <SiHtml5 className='hover:text-[#E34F26] transition duration-200' size={props.size}/>
-                    {
-                        props.title === true 
-                            ? <p className="pt-2">HTML</p> 
-                            : null
-                    } 
-                </div>
-            )
-        case 'CSS':
-            return(
-                <div className="flex flex-col items-center text-primary">
-                    <SiCss3 className='hover:text-[#1572B6] transition duration-200' size={props.size}/>
-                    {
-                        props.title === true 
-                            ? <p className="pt-2">CSS</p> 
-                            : null
-                    } 
-                </div>
-            )
-        case 'Node.JS':
-            return(
-                <div className="flex flex-col items-center text-primary">
-                    <SiNodedotjs className='hover:text-[#339933] transition duration-200' size={props.size}/>
-                    {
-                        props.title === true 
-                            ? <p className="pt-2">Node.JS</p> 
-                            : null
-                    } 
-                </div>
-            )
-        case 'Next.JS':
-            return(
-                <div className="flex flex-col items-center text-primary">
-                    <SiNextdotjs size={props.size}/>
-                    {
-                        props.title === true 
-                            ? <p className="pt-2">Next.JS</p> 
-                            : null
-                    } 
-                </div>
-            )
-        case 'C#':
-            return(
-                <div className="flex flex-col items-center text-primary">
-                    <SiCsharp className='hover:text-[#239120] transition duration-200' size={props.size}/>
-                    {
-                        props.title === true 
-                            ? <p className="pt-2">C#</p> 
-                            : null
-                    } 
-                </div>
-            )
-        case '.NET':
-            return(
-                <div className="flex flex-col items-center text-primary">
-                    <SiDotnet className='hover:text-[#512BD4] transition duration-200' size={props.size}/>
+                    <SiDotnet className='hover:text-[#783bd2] transition duration-200' size={props.size}/>
                     {
                         props.title === true 
                             ? <p className="pt-2">.NET</p> 
@@ -98,35 +54,35 @@ function SkillIcon(props:Props) {
                     } 
                 </div>
             )
-        case 'Arduino':
+        case 'vue':
             return(
                 <div className="flex flex-col items-center text-primary">
-                    <SiArduino className='hover:text-[#00979D] transition duration-200' size={props.size}/>
+                    <SiVuedotjs className='hover:text-[#42b883] transition duration-200' size={props.size}/>
                     {
                         props.title === true 
-                            ? <p className="pt-2">Arduino</p> 
+                            ? <p className="pt-2">Vue</p> 
                             : null
                     } 
                 </div>
             )
-        case 'C++':
+        case 'go':
             return(
                 <div className="flex flex-col items-center text-primary">
-                    <SiCplusplus className='hover:text-[#00599C] transition duration-200' size={props.size}/>
+                    <SiGo className='hover:text-[#027D9C] transition duration-200' size={props.size}/>
                     {
                         props.title === true 
-                            ? <p className="pt-2">C++</p> 
+                            ? <p className="pt-2">Golang</p> 
                             : null
                     } 
                 </div>
             )
-        case 'Tailwind':
+        case 'jest':
             return(
                 <div className="flex flex-col items-center text-primary">
-                    <SiTailwindcss className='hover:text-[#06B6D4] transition duration-200' size={props.size}/>
+                    <SiJest className='hover:text-[#16C213] transition duration-200' size={props.size}/>
                     {
                         props.title === true 
-                            ? <p className="pt-2">Tailwind CSS</p> 
+                            ? <p className="pt-2">Jest</p> 
                             : null
                     } 
                 </div>

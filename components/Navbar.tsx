@@ -6,7 +6,7 @@ import DarkModeToggle from "./DarkModeToggle"
 
 const delay = (ms:number) => new Promise(
     resolve => setTimeout(resolve, ms)
-  );
+);
 
 const Navbar = () => {
     
@@ -19,13 +19,12 @@ const Navbar = () => {
     }
     
     const handleClickMobileNav = async () => {
-        await delay(250); //added to prevent flicker bug when navigating on mobile navbar
+        await delay(250); // added to prevent flicker bug when navigating on mobile navbar
         setNav(!nav);
         setOverflow(!overflow)
     }
 
     useEffect(()=>{
-      
         if (overflow)
             document.body.classList.add('fix-navbar-overflow')
         else
@@ -38,7 +37,7 @@ const Navbar = () => {
         <div className="flex pt-4 items-center justify-between w-full h-full">
             
             <Link href={"/"}>
-                <p className="text-2xl dark:text-primary">Bogdan Maftei</p>
+                <p className="text-2xl dark:text-primary cursor-pointer">Bogdan Maftei</p>
             </Link>
             
             {/* Hamburger button*/}
@@ -54,6 +53,9 @@ const Navbar = () => {
                 </Link>
                 <Link href={"/about"}>
                     <li className="mx-5 relative inline-block hover-animation text-l dark:text-primary">About me</li>
+                </Link>
+                <Link href={"/experience"}>
+                    <li className="mx-5 relative inline-block hover-animation text-l dark:text-primary">Experience</li>
                 </Link>
                 <Link href={"/projects"}>
                     <li className="mx-5 relative inline-block hover-animation text-l dark:text-primary">Projects</li>
@@ -74,16 +76,16 @@ const Navbar = () => {
                 }
             >
                 <Link href={"/"}>
-                    <li onClick={handleClickMobileNav} className="py-5 hover:border-b text-3xl text-primary">Home</li>
+                    <li onClick={handleClickMobileNav} className="py-5 text-3xl text-primary">Home</li>
                 </Link>
                 <Link href={"/about"}>
-                    <li onClick={handleClickMobileNav} className="py-5 hover:border-b text-3xl text-primary">About me</li>
+                    <li onClick={handleClickMobileNav} className="py-5 text-3xl text-primary">About me</li>
                 </Link>
                 <Link href={"/projects"}>
-                    <li onClick={handleClickMobileNav} className="py-5 hover:border-b text-3xl text-primary">Projects</li>
+                    <li onClick={handleClickMobileNav} className="py-5 text-3xl text-primary">Projects</li>
                 </Link>
                 <Link href={"/contact"}>
-                    <li onClick={handleClickMobileNav} className="py-5 hover:border-b text-3xl text-primary">Contact</li>
+                    <li onClick={handleClickMobileNav} className="py-5 text-3xl text-primary">Contact</li>
                 </Link>
                 <div className="py-5 ">
                     <DarkModeToggle size="30"/>

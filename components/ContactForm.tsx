@@ -8,18 +8,17 @@ function ContactForm() {
     const [subject, setSubject] = useState('')
     const [message, setMessage] = useState('')
     const [submitted, setSubmitted] = useState<boolean>(false)
-    const [response, setResponse] = useState<String | null>(null)
+    const [response, setResponse] = useState<string | null>(null)
 
-    let inputs = document.querySelectorAll("input");
-    let textarea = document.querySelector("textarea");
+    const inputs = document.querySelectorAll("input");
+    const textarea = document.querySelector("textarea");
 
     const handleSubmit = (e:any) => { 
       e.preventDefault()
       
       setSubmitted(true)
-      console.log('Sending')
       
-      let data = {
+      const data = {
         name,
         email,
         subject,
@@ -33,35 +32,22 @@ function ContactForm() {
             },
             body: JSON.stringify(data)
           }).then((res) => {
-            console.log(res.status)
-            console.log('Response received')
-            if (res.status === 200) 
-            {
-              console.log('Response succeeded!')
-              setResponse("Success")
-              
-              setName('')
-              setEmail('')
-              setSubject('')
-              setMessage('')
-              
-              inputs.forEach((input) => (input.value = ""));
-              textarea != null ? textarea.value = "" : null;
-            }
-            else
-            {
-              console.log('Error!')
-              
-              setResponse("Error")
-              setName('')
-              setEmail('')
-              setSubject('')
-              setMessage('')
-
-              inputs.forEach((input) => (input.value = ""));
-              textarea != null ? textarea.value = "" : null;
-            }
+            setResponse(res.status === 200 ? "Success" : "Error");
+            resetForm();
           })
+    }
+
+    const resetForm = () => {
+      setName('');
+      setEmail('');
+      setSubject('');
+      setMessage('');
+
+      inputs.forEach((input) => (input.value = ""));
+
+      if (textarea) {
+        textarea.value  = "";
+      }
     }
 
     return (
