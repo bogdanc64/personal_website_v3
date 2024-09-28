@@ -81,6 +81,9 @@ const Navbar = () => {
                 <Link href={"/about"}>
                     <li onClick={handleClickMobileNav} className="py-5 text-3xl text-primary">About me</li>
                 </Link>
+                <Link href={"/experience"}>
+                    <li onClick={handleClickMobileNav} className="py-5 text-3xl text-primary">Experience</li>
+                </Link>
                 <Link href={"/projects"}>
                     <li onClick={handleClickMobileNav} className="py-5 text-3xl text-primary">Projects</li>
                 </Link>
