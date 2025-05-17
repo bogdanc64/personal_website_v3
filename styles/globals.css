@@ -101,7 +101,7 @@
     }
 
     body {
-        @apply w-[100vw] overflow-x-hidden m-0 pt-0 bg-primary transition duration-200 px-6 md:px-20 lg:px-20 xl:px-64 bigger-desktops:px-96 tracking-tight 
+        @apply w-[100vw] overflow-x-hidden m-0 pt-0 bg-primary transition duration-200 px-6 md:px-10 lg:px-10 xl:px-64 bigger-desktops:px-96 tracking-tight 
     }
 
     h1,h2,h3,h4,h5,h6{

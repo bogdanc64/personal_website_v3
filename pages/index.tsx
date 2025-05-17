@@ -38,7 +38,7 @@ const Home: NextPageWithLayout  = () => {
         <div ref={avatar}>
           <Avatar />
         </div>
-        <h1 ref={firstHeader} className='mt-6 mb-3'>Hey, I&apos;m Bogdan Maftei! <span className="wave">👋🏻</span></h1>
+        <h1 ref={firstHeader} className='text-2xl sm:text-3xl mt-6 mb-3'>Hey, I&apos;m Bogdan Maftei! <span className="wave">👋🏻</span></h1>
         <h3 ref={secondHeader} className='font-light my-3 text-xl'>Full-Stack Developer</h3>
         <h3 ref={thirdHeader} className='font-light my-3 text-xl'>
           <Link href={"/about"}>

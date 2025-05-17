@@ -8,7 +8,7 @@ import { stagger } from '../utils/animations'
 import Button from '../components/Button'
 import SkillIcon from '../components/SkillIcon'
 
-const About: NextPageWithLayout  = () => {
+const About: NextPageWithLayout = () => {
   const firstTitle = useRef(null);
   const description = useRef(null);
   const secondTitle = useRef(null);
@@ -19,11 +19,11 @@ const About: NextPageWithLayout  = () => {
   useIsomorphicLayoutEffect(() => {
     stagger(
       [
-        firstTitle.current, 
+        firstTitle.current,
         description.current,
-        secondTitle.current, 
-        skillsList.current, 
-        thirdTitle.current, 
+        secondTitle.current,
+        skillsList.current,
+        thirdTitle.current,
         secondSkillsList.current
       ],
       { y: 20 },
@@ -39,7 +39,7 @@ const About: NextPageWithLayout  = () => {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.25 }}
     >
-      <div className="xl:px-20"> {/* xl:grid grid-cols-2 */}
+      <div> {/* xl:grid grid-cols-2 */}
         <div className=""> {/* sm:mt-10 lg:mt-0 xl:pr-10 */}
           <div ref={firstTitle}>
             <Title value="About me" />
@@ -47,8 +47,8 @@ const About: NextPageWithLayout  = () => {
           <div ref={description}>
             <div className="py-10">
               <p className='text-xl text-justify'>
-                My name is Maftei Bogdan-Cosmin, I am a software developer and I love making customers satisfied and pleased with my work. 
-                I always bring a touch of originality to every project I do and I love to communicate while carrying out the project, 
+                My name is Maftei Bogdan-Cosmin, I am a software developer and I love making customers satisfied and pleased with my work.
+                I always bring a touch of originality to every project I do and I love to communicate while carrying out the project,
                 precisely to satisfy the needs and desires of each client.
               </p>
             </div>
@@ -85,7 +85,7 @@ const About: NextPageWithLayout  = () => {
   )
 }
 
-About.getLayout = function getLayout(page:ReactElement){
+About.getLayout = function getLayout(page: ReactElement) {
   return <Layout>{page}</Layout>
 }
 

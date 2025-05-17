@@ -55,28 +55,28 @@ function ContactForm() {
             <input
             type="text" 
             onChange={(e)=>{setName(e.target.value)}} 
-            className="form-control shadow w-80 px-3 py-1.5 text-base font-normal text-primary bg-primary border border-solid border-gray-300 rounded transition ease-in-out my-3   "
+            className="form-control shadow w-2/5 px-3 py-1.5 text-base font-normal text-primary bg-primary border border-solid border-gray-300 rounded transition ease-in-out my-3   "
             placeholder="Name"
             required
             />
             <input
             type="email"
             onChange={(e)=>{setEmail(e.target.value)}} 
-            className="form-control shadow w-80 px-3 py-1.5 text-base font-normal text-primary bg-primary border border-solid border-gray-300 rounded transition ease-in-out my-3 "
+            className="form-control shadow w-2/5 px-3 py-1.5 text-base font-normal text-primary bg-primary border border-solid border-gray-300 rounded transition ease-in-out my-3 "
             placeholder="Email"
             required
             />
             <input
             type="text"
             onChange={(e)=>{setSubject(e.target.value)}} 
-            className="form-control shadow w-80 px-3 py-1.5 text-base font-normal text-primary bg-primary border border-solid border-gray-300 rounded transition ease-in-out my-3   "
+            className="form-control shadow w-2/5 px-3 py-1.5 text-base font-normal text-primary bg-primary border border-solid border-gray-300 rounded transition ease-in-out my-3   "
             placeholder="Subject"
             required
             />
             <textarea
             rows={6}
             onChange={(e)=>{setMessage(e.target.value)}} 
-            className="form-control shadow w-80 px-3 py-1.5 text-base font-normal text-primary bg-primary border border-solid border-gray-300 rounded transition ease-in-out my-3 "
+            className="form-control shadow w-2/5 px-3 py-1.5 text-base font-normal text-primary bg-primary border border-solid border-gray-300 rounded transition ease-in-out my-3 "
             placeholder="Your message"
             required
             />

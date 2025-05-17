@@ -6,9 +6,10 @@ import Title from '../components/Title'
 import { useIsomorphicLayoutEffect } from '../utils/useIsomorphicLayoutEffect'
 import { stagger } from '../utils/animations'
 import sbpLogo from '../assets/logos/sbp.png'
-import Image from "next/image"
+import softwireLogo from '../assets/logos/softwire.png'
+import ExperienceCard from '../components/ExperienceCard'
 
-const Experience: NextPageWithLayout  = () => {
+const Experience: NextPageWithLayout = () => {
   const experienceTitle = useRef(null);
   const experienceSection = useRef(null);
 
@@ -31,25 +32,42 @@ const Experience: NextPageWithLayout  = () => {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.25 }}
     >
-      <div className="xl:px-20"> {/* xl:grid grid-cols-2 */}
+      <div> {/* xl:grid grid-cols-2 */}
         <div className="mt-10"> {/* sm:mt-10 lg:mt-0 xl:pr-10 */}
           <div ref={experienceTitle}>
             <Title value="Experience" />
           </div>
           <div ref={experienceSection}>
-            <div className="py-10 grid grid-cols-4 gap-x-5 items-start">
-              <div>
-                <Image src={ sbpLogo } objectFit='contain' objectPosition='top' quality={90}></Image>
-              </div>
-              <div className="col-span-3 flex justify-center">
-                <div>
-                  <h3 className="font-light text-xl">
-                    <span className="text-2xl font-bold">Full-stack developer</span> 
-                    &nbsp;at&nbsp; 
-                    <span className="text-2xl className-bold">Software Business Partners</span></h3>
-                  <h3 className="font-light text-xl pt-2">August 2022 - Present</h3>
-                </div>
-              </div>
+            <div className="py-10 items-start">
+              <ExperienceCard
+                companyImage={softwireLogo}
+                companyName={"Softwire"}
+                position="Software Developer II"
+                startingDate={new Date(2025, 3, 22)}
+                keypoints={[
+                  "Advised clients on technical decisions and helped shape the application roadmap.",
+                  "Led the development of a high-priority project from scratch, meeting strict requirements and deadlines.",
+                  "Contributed to improving and maintaining existing codebases across multiple projects.",
+                  "Collaborated effectively with cross-functional teams to ensure smooth development workflows."
+                ]}
+                skills={['react', 'azure', 'python', 'fastapi', 'snowflake']}
+              />
+            </div>
+            <div className="py-10 items-start">
+              <ExperienceCard
+                companyImage={sbpLogo}
+                companyName={"Software Business Partners"}
+                position="Full-stack Developer"
+                startingDate={new Date(2022, 7, 22)}
+                endingDate={new Date(2025, 3, 15)}
+                keypoints={[
+                  "Designed and implemented complex management systems with full-stack proficiency, showcasing deep technical knowledge and attention to detail.",
+                  "Led the end-to-end development of software solutions, including architecture design, MVP creation, and team management, ensuring efficient project execution and delivery.",
+                  "Optimized application infrastructure on cloud platforms by implementing advanced CI/CD pipelines, streamlining deployment processes, and enhancing operational efficiency.",
+                  "Improved code quality and maintainability by refactoring legacy code, adhering to clean coding principles, and systematically increasing test coverage with robust unit testing practices."
+                ]}
+                skills={['vue', 'dotnet', 'express', 'aws', 'azure']}
+              />
             </div>
           </div>
         </div>
@@ -58,7 +76,7 @@ const Experience: NextPageWithLayout  = () => {
   )
 }
 
-Experience.getLayout = function getLayout(page:ReactElement){
+Experience.getLayout = function getLayout(page: ReactElement) {
   return <Layout>{page}</Layout>
 }
 
