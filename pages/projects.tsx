@@ -30,15 +30,6 @@ const Projects: NextPageWithLayout = () => {
   const projects = [
     {
       index: 1,
-      technologies: ['react', 'tailwind', 'nextjs'],
-      title: 'Personal portfolio',
-      description: "A fast and responsive personal website built with React, Tailwind CSS, and Next.js, designed to present my work and background clearly.",
-      linkCode: 'https://github.com/bogdanc64/personal_website_v3',
-      image: personal_website,
-      privateRepository: false,
-    },
-    {
-      index: 2,
       technologies: ['vue', 'nestjs', 'aws'],
       title: 'Runnie',
       description: 'An app that helps you run end-to-end (E2E) tests for websites by automating user actions and checking that everything works as expected from start to finish. It makes sure your site behaves correctly in real-world scenarios.',
@@ -46,6 +37,15 @@ const Projects: NextPageWithLayout = () => {
       image: runnie,
       privateRepository: true,
     },
+    {
+      index: 2,
+      technologies: ['react', 'tailwind', 'nextjs'],
+      title: 'Personal portfolio',
+      description: "A fast and responsive personal website built with React, Tailwind CSS, and Next.js, designed to present my work and background clearly.",
+      linkCode: 'https://github.com/bogdanc64/personal_website_v3',
+      image: personal_website,
+      privateRepository: false,
+    }
   ];
 
   useIsomorphicLayoutEffect(() => {
