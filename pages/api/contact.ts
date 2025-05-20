@@ -6,7 +6,7 @@ export default function sendEmail(req: Request, res: Response) {
 
     const transporter = nodemailer.createTransport({
         host: process.env.smtp_host,
-        secure: true,
+        secure: false,
         port: process.env.smtp_port,
         auth: {
             user: process.env.smtp_user,
@@ -15,7 +15,7 @@ export default function sendEmail(req: Request, res: Response) {
     })
     const mailData = {
         from: process.env.smtp_user,
-        to: 'maftei.bogdan@outlook.com',
+        to: process.env.smtp_destination,
         subject: `Message From ${req.body.name}`,
         text: `Subject: ${req.body.subject}` + " | Message:" + req.body.message + " | Sent from: " + req.body.email,
         html:
