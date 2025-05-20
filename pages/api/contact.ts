@@ -1,25 +1,25 @@
 import { Request, Response } from "express";
 
-export default function sendEmail (req:Request, res:Response) {
+export default function sendEmail(req: Request, res: Response) {
     require('dotenv').config()
     let nodemailer = require('nodemailer')
 
     const transporter = nodemailer.createTransport({
-        host: "smtp.zoho.eu",
+        host: process.env.smtp_host,
         secure: true,
-        port: 465,
+        port: process.env.smtp_port,
         auth: {
-          user: process.env.user,
-          pass: process.env.password,
+            user: process.env.smtp_user,
+            pass: process.env.smtp_password,
         },
-      })
+    })
     const mailData = {
-        from: process.env.send_email,
+        from: process.env.smtp_user,
         to: 'maftei.bogdan@outlook.com',
         subject: `Message From ${req.body.name}`,
-        text: `Subject: ${req.body.subject}` + " | Message:" +  req.body.message + " | Sent from: " + req.body.email,
-        html: 
-        `
+        text: `Subject: ${req.body.subject}` + " | Message:" + req.body.message + " | Sent from: " + req.body.email,
+        html:
+            `
             <div>
                 Subject: ${req.body.subject}
             </div>
@@ -31,16 +31,14 @@ export default function sendEmail (req:Request, res:Response) {
                 Sent from: ${req.body.email}
             </p>
         `
-      }
-    transporter.sendMail(mailData, (err:any, info:any) => {
-        if (err)
-        {
+    }
+    transporter.sendMail(mailData, (err: any, info: any) => {
+        if (err) {
             res.status(500).send(err)
-        }        
-        else
-        {
+        }
+        else {
             res.send(info)
         }
     })
-    
-  }
+
+}
