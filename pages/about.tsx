@@ -53,7 +53,7 @@ const About: NextPageWithLayout = () => {
               </p>
             </div>
             <div className='flex justify-center'>
-              <a target='_blank' href='/Resume.pdf'>
+              <a target='_blank' href='/Bogdan_Maftei_Resume.pdf'>
                 <Button name={'Resumé'} />
               </a>
             </div>
