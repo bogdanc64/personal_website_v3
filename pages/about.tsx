@@ -63,7 +63,7 @@ const About: NextPageWithLayout = () => {
           <div ref={secondTitle}>
             <Title value="Proficient at" />
           </div>
-          <div ref={skillsList} className="grid grid-cols-3 gap-y-10 justify-items-center py-10">
+          <div ref={skillsList} className="grid grid-cols-4 gap-y-10 justify-items-center py-10">
             <SkillIcon title={true} size={50} type={'typescript'} />
             <SkillIcon title={true} size={50} type={'angular'} />
             <SkillIcon title={true} size={50} type={'vue'} />
