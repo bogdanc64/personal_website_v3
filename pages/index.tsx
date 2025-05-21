@@ -9,7 +9,7 @@ import SocialButtons from '../components/SocialButtons'
 import Link from 'next/link'
 
 
-const Home: NextPageWithLayout  = () => {
+const Home: NextPageWithLayout = () => {
 
   //refs
 
@@ -39,10 +39,10 @@ const Home: NextPageWithLayout  = () => {
           <Avatar />
         </div>
         <h1 ref={firstHeader} className='text-2xl sm:text-3xl mt-6 mb-3'>Hey, I&apos;m Bogdan Maftei! <span className="wave">👋🏻</span></h1>
-        <h3 ref={secondHeader} className='font-light my-3 text-xl'>Full-Stack Developer</h3>
+        <h3 ref={secondHeader} className='font-light my-3 text-xl'>Software Developer</h3>
         <h3 ref={thirdHeader} className='font-light my-3 text-xl'>
           <Link href={"/about"}>
-              <span className="font-bold inline-block hover-animation relative cursor-pointer">Get to know me better</span>
+            <span className="font-bold inline-block hover-animation relative cursor-pointer">Get to know me better</span>
           </Link>
           , check out&nbsp;
           <Link href={"/experience"}>
@@ -62,7 +62,7 @@ const Home: NextPageWithLayout  = () => {
   )
 }
 
-Home.getLayout = function getLayout(page:ReactElement){
+Home.getLayout = function getLayout(page: ReactElement) {
   return <Layout>{page}</Layout>
 }
 
