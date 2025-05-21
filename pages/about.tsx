@@ -66,7 +66,8 @@ const About: NextPageWithLayout = () => {
           <div ref={skillsList} className="grid grid-cols-3 gap-y-10 justify-items-center py-10">
             <SkillIcon title={true} size={50} type={'typescript'} />
             <SkillIcon title={true} size={50} type={'angular'} />
-            <SkillIcon title={true} size={50} type={'dotnet'} />
+            <SkillIcon title={true} size={50} type={'vue'} />
+            <SkillIcon title={true} size={50} type={'nestjs'} />
           </div>
         </div>
         <div className="">{/* sm:mt-10 lg:mt-0 xl:pl-10 */}
@@ -76,8 +77,10 @@ const About: NextPageWithLayout = () => {
           <div ref={secondSkillsList} className="grid grid-cols-4 gap-y-10 justify-items-center py-10">
             <SkillIcon title={true} size={50} type={'go'} />
             <SkillIcon title={true} size={50} type={'jest'} />
-            <SkillIcon title={true} size={50} type={'vue'} />
-            <SkillIcon title={true} size={50} type={'nestjs'} />
+            <SkillIcon title={true} size={50} type={'aws'} />
+            <SkillIcon title={true} size={50} type={'azure'} />
+            <SkillIcon title={true} size={50} type={'tailwind'} />
+            <SkillIcon title={true} size={50} type={'dotnet'} />
           </div>
         </div>
       </div>
