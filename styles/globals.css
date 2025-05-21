@@ -8,7 +8,7 @@
 
   
 .dark {
-    --color-bg-primary: #151222; /* 0c0a18 0e0c17 */
+    --color-bg-primary: rgb(10, 8, 23); /* 0c0a18 0e0c17 */
     --color-bg-secondary: #283141;
     --color-border-avatar:#43348de8;
     --color-border-avatar-2:#43348da2;
