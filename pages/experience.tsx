@@ -50,7 +50,7 @@ const Experience: NextPageWithLayout = () => {
                   "Contributed to improving and maintaining existing codebases across multiple projects.",
                   "Collaborated effectively with cross-functional teams to ensure smooth development workflows."
                 ]}
-                skills={['react', 'azure', 'python', 'fastapi', 'snowflake']}
+                skills={['react', 'python', 'fastapi', 'azure', 'snowflake']}
               />
             </div>
             <div className="py-10 items-start">
@@ -66,7 +66,7 @@ const Experience: NextPageWithLayout = () => {
                   "Optimized application infrastructure on cloud platforms by implementing advanced CI/CD pipelines, streamlining deployment processes, and enhancing operational efficiency.",
                   "Improved code quality and maintainability by refactoring legacy code, adhering to clean coding principles, and systematically increasing test coverage with robust unit testing practices."
                 ]}
-                skills={['vue', 'dotnet', 'express', 'aws', 'azure']}
+                skills={['vue', 'angular', 'dotnet', 'express', 'aws', 'azure']}
               />
             </div>
           </div>
