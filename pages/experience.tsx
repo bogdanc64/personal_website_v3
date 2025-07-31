@@ -50,7 +50,7 @@ const Experience: NextPageWithLayout = () => {
                   "Contributed to improving and maintaining existing codebases across multiple projects.",
                   "Collaborated effectively with cross-functional teams to ensure smooth development workflows."
                 ]}
-                skills={['react', 'python', 'fastapi', 'azure', 'snowflake']}
+                skills={['react', 'python', 'fastapi', 'azure', 'snowflake', 'tableau']}
               />
             </div>
             <div className="py-10 items-start">

@@ -1,4 +1,4 @@
-import { SiTypescript, SiAngular, SiDotnet, SiDatabricks, SiVuedotjs, SiGo, SiJest, SiNestjs, SiSnowflake, SiPython, SiFastapi, SiReact, SiMicrosoftazure, SiAmazonaws, SiExpress, SiNextdotjs, SiTailwindcss } from "react-icons/si"
+import { SiTypescript, SiAngular, SiDotnet, SiDatabricks, SiVuedotjs, SiGo, SiJest, SiNestjs, SiSnowflake, SiPython, SiFastapi, SiReact, SiMicrosoftazure, SiAmazonaws, SiExpress, SiNextdotjs, SiTailwindcss, SiTableau } from "react-icons/si"
 
 interface Props {
     type: string,
@@ -174,13 +174,14 @@ function SkillIcon(props: Props) {
                     }
                 </div>
             )
-        case 'tailwind':
+
+        case 'tableau':
             return (
                 <div className="flex flex-col items-center text-primary">
-                    <SiTailwindcss className='hover:text-[#00BCFF] transition duration-200' size={props.size} />
+                    <SiTableau className='hover:text-[#1C4481] transition duration-200' size={props.size} />
                     {
                         props.title === true
-                            ? <p className="pt-2">Tailwind</p>
+                            ? <p className="pt-2">Tableau</p>
                             : null
                     }
                 </div>
