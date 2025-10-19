@@ -30,7 +30,7 @@ const Projects: NextPageWithLayout = () => {
   const projects = [
     {
       index: 1,
-      technologies: ['vue', 'nestjs', 'aws'],
+      technologies: ['vue', 'nestjs', 'socket.io'],
       title: 'Runnie',
       description: 'An app that helps you run end-to-end (E2E) tests for websites by automating user actions and checking that everything works as expected from start to finish. It makes sure your site behaves correctly in real-world scenarios.',
       linkCode: 'https://github.com/bogdanc64/runnie',

@@ -1,4 +1,4 @@
-import { SiTypescript, SiAngular, SiDotnet, SiDatabricks, SiVuedotjs, SiGo, SiJest, SiNestjs, SiSnowflake, SiPython, SiFastapi, SiReact, SiMicrosoftazure, SiAmazonaws, SiExpress, SiNextdotjs, SiTailwindcss, SiTableau } from "react-icons/si"
+import { SiTypescript, SiAngular, SiDotnet, SiDatabricks, SiVuedotjs, SiGo, SiJest, SiNestjs, SiSnowflake, SiPython, SiFastapi, SiReact, SiMicrosoftazure, SiAmazonaws, SiExpress, SiNextdotjs, SiTailwindcss, SiTableau, SiSocketdotio } from "react-icons/si"
 
 interface Props {
     type: string,
@@ -16,6 +16,28 @@ function SkillIcon(props: Props) {
                     {
                         props.title === true
                             ? <p className="pt-2">Angular</p>
+                            : null
+                    }
+                </div>
+            )
+        case 'tailwind':
+            return (
+                <div className="flex flex-col items-center text-primary">
+                    <SiTailwindcss className='hover:text-[#000000] transition duration-200' size={props.size} />
+                    {
+                        props.title === true
+                            ? <p className="pt-2">Tailwind</p>
+                            : null
+                    }
+                </div>
+            )
+        case 'socket.io':
+            return (
+                <div className="flex flex-col items-center text-primary">
+                    <SiSocketdotio className='hover:text-[#000000] transition duration-200' size={props.size} />
+                    {
+                        props.title === true
+                            ? <p className="pt-2">Socket.IO</p>
                             : null
                     }
                 </div>
@@ -182,6 +204,17 @@ function SkillIcon(props: Props) {
                     {
                         props.title === true
                             ? <p className="pt-2">Tableau</p>
+                            : null
+                    }
+                </div>
+            )
+        case 'express':
+            return (
+                <div className="flex flex-col items-center text-primary">
+                    <SiTableau className='hover:text-[#1C4481] transition duration-200' size={props.size} />
+                    {
+                        props.title === true
+                            ? <p className="pt-2">Express</p>
                             : null
                     }
                 </div>
