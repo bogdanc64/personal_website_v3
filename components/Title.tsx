@@ -1,15 +1,15 @@
-interface TitleProps{
-    value : string;
+interface TitleProps {
+  value: string
+  level?: 1 | 2
+  id?: string
 }
 
-function Title(props:TitleProps) {
-  return (
-    <div className="flex items-center justify-center">
-        <div className="w-16 md:w-32 bg-opacity-40 h-px bg-gray-500"></div> 
-        <h2 className="flex-shrink px-4">{props.value}</h2>
-        <div className="w-16 md:w-32 bg-opacity-40 h-px bg-gray-500"></div>
-    </div>
-  )
+function Title({ value, level = 1, id }: TitleProps) {
+  if (level === 2) {
+    return <h2 id={id} className="section-head">{value}</h2>
+  }
+
+  return <h1 id={id} className="page-title">{value}</h1>
 }
 
 export default Title

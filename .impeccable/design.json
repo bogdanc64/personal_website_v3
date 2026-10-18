@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-18T21:10:00.000Z",
+  "title": "Design System: Bogdan Maftei",
+  "extensions": {
+    "colorMeta": {
+      "ground": {
+        "role": "neutral",
+        "displayName": "Cool paper",
+        "canonical": "#f4f6f3",
+        "tonalRamp": ["#121614", "#1b221e", "#2c3530", "#3e4a44", "#6d7872", "#a3ada7", "#d5ddd6", "#f4f6f3"]
+      },
+      "ink": {
+        "role": "primary",
+        "displayName": "Near black",
+        "canonical": "#17211c",
+        "tonalRamp": ["#0c1411", "#17211c", "#24302a", "#3e4a44", "#5c6a63", "#8b9891", "#c5cfc8", "#f3f5f2"]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted ink",
+        "canonical": "#3e4a44",
+        "tonalRamp": ["#17211c", "#24302a", "#3e4a44", "#5c6a63", "#7d8a83", "#a3ada7", "#c5cfc8", "#e7eeea"]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#d5ddd6",
+        "tonalRamp": ["#2c3530", "#3e4a44", "#5c6a63", "#7d8a83", "#a3ada7", "#c5cfc8", "#d5ddd6", "#f4f6f3"]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "White field",
+        "canonical": "#ffffff",
+        "tonalRamp": ["#121614", "#1b221e", "#2c3530", "#5c6a63", "#8b9891", "#c5cfc8", "#e7eeea", "#ffffff"]
+      },
+      "focus": {
+        "role": "focus",
+        "displayName": "Focus ring",
+        "canonical": "#0b57d0",
+        "tonalRamp": ["#041833", "#082a66", "#0b57d0", "#3b7fe0", "#6ea4ea", "#9ec1ff", "#c9dbff", "#eef4ff"]
+      },
+      "error": {
+        "role": "error",
+        "displayName": "Send error",
+        "canonical": "#8c1d18",
+        "tonalRamp": ["#3b0c09", "#8c1d18", "#b33932", "#d46b68", "#f0a8a4", "#ffb4ab", "#ffd8d4", "#fff1ef"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Name", "purpose": "The home-page name, Bogdan Maftei." },
+      "role": { "displayName": "Appointment", "purpose": "Senior Technical Consultant." },
+      "section": { "displayName": "Section", "purpose": "Page titles and section headings." },
+      "title": { "displayName": "Record title", "purpose": "An employer or a project." },
+      "body": { "displayName": "Body", "purpose": "Biography, keypoints, and the contact sentence." },
+      "label": { "displayName": "Label", "purpose": "Form labels and compact navigation." }
+    },
+    "shadows": [
+      {
+        "name": "photo",
+        "value": "0 18px 40px rgba(23, 33, 28, 0.1)",
+        "purpose": "The only lift, under the portrait and project screenshots."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ink-bar",
+        "value": "700ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "The short bar under the name draws once from the left. Reduced motion shows it still."
+      }
+    ],
+    "breakpoints": [
+      { "name": "page-margin", "value": "720px" },
+      { "name": "split", "value": "860px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The only filled control. Get in touch, or Send message.",
+      "html": "<a class=\"ds-btn\">Get in touch</a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 1.05rem; border: 0; border-radius: 8px; background: #17211c; color: #f4f6f3; font-family: 'Schibsted Grotesk', 'Helvetica Neue', sans-serif; font-weight: 600; font-size: 0.95rem; letter-spacing: -0.01em; text-decoration: none; } .ds-btn:hover { background: #0c1411; } .ds-btn:focus-visible { outline: 2px solid #0b57d0; outline-offset: 3px; }"
+    },
+    {
+      "name": "Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "A labeled field. No placeholder.",
+      "html": "<label class=\"ds-field\"><span>Name</span><input type=\"text\" /></label>",
+      "css": ".ds-field { display: grid; gap: 0.35rem; font-family: 'Schibsted Grotesk', 'Helvetica Neue', sans-serif; color: #17211c; } .ds-field span { font-size: 0.95rem; font-weight: 500; } .ds-field input { min-height: 48px; border: 1px solid #d5ddd6; border-radius: 8px; background: #ffffff; color: #17211c; font: inherit; padding: 0.7rem 0.8rem; } .ds-field input:focus-visible { outline: 2px solid #0b57d0; outline-offset: 3px; border-color: #17211c; }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "button-primary",
+      "description": "Wordmark, quiet links, and the filled action.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-mark\">Bogdan Maftei</a><a>About</a><a class=\"ds-btn\">Get in touch</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: 1.35rem; min-height: 4.25rem; font-family: 'Schibsted Grotesk', 'Helvetica Neue', sans-serif; color: #17211c; background: #f4f6f3; border-bottom: 1px solid #d5ddd6; } .ds-mark { font-weight: 600; letter-spacing: -0.02em; text-decoration: none; color: inherit; } .ds-nav a { color: #3e4a44; text-decoration: none; } .ds-btn { display: inline-flex; align-items: center; min-height: 44px; padding: 0 1.05rem; border-radius: 8px; background: #17211c; color: #f4f6f3; font-weight: 600; text-decoration: none; }"
+    },
+    {
+      "name": "Portrait",
+      "kind": "card",
+      "refersTo": "button-primary",
+      "description": "The photograph, 12px radius, one shadow.",
+      "html": "<div class=\"ds-photo\"></div>",
+      "css": ".ds-photo { width: 16rem; aspect-ratio: 4 / 5; border-radius: 12px; background: #d7ddd8; box-shadow: 0 18px 40px rgba(23, 33, 28, 0.1); }"
+    },
+    {
+      "name": "Logo plate",
+      "kind": "custom",
+      "refersTo": "button-primary",
+      "description": "Dark plate behind an employer mark drawn on black.",
+      "html": "<div class=\"ds-plate\"></div>",
+      "css": ".ds-plate { width: 7.75rem; height: 3.35rem; border-radius: 8px; background: #101412; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "A practice, not a publication.",
+    "overview": "The site is the page a client opens between meetings. Home is one dark screen: the name, the appointment, the photograph, and a filled button. The record lives on its own pages, on cool paper. Softwire’s clarity and Cursor’s restraint are the craft bar. Their identities are not copied.\n\nThe broadsheet was rejected: no masthead, dateline, edition language, column rules, or coral flag. Light is the default for the reading pages. Dark mode reverses those pages. Home stays a dark opening either way.",
+    "keyCharacteristics": [
+      "One face, Schibsted Grotesk, for the name, the role, and the body",
+      "A short ink bar under the name, drawn once",
+      "Photographs with a 12px radius and one soft shadow",
+      "Records separated by hairlines, never by cards",
+      "One filled control"
+    ],
+    "rules": [
+      { "name": "The Ink Rule", "body": "Near-black does the reading and the action. Color does not decorate a status.", "section": "colors" },
+      { "name": "The One Voice Rule", "body": "Schibsted Grotesk sets every word. Weight and size make the hierarchy. There is no second face and no italic.", "section": "typography" },
+      { "name": "The Page Rule", "body": "Content sits in min(72rem, calc(100% - 2rem)), widening the side margin from 720px. The header is sticky, 4.25rem, with a hairline under it.", "section": "layout" },
+      { "name": "The Quiet Lift Rule", "body": "The page is flat. A shadow appears only under a photograph.", "section": "elevation" },
+      { "name": "The Soft Corner Rule", "body": "Controls, fields, and the logo plate use 8px. Photographs use 12px. Nothing is a pill, and nothing is a hard square.", "section": "shapes" }
+    ],
+    "dos": [
+      "Do keep the biography, employers, dates, keypoints, skills, project descriptions, email, and links as recorded facts.",
+      "Do let the name, the photograph, and Get in touch lead the first screen.",
+      "Do use one grotesque and one filled button."
+    ],
+    "donts": [
+      "Don't rebuild the broadsheet: no masthead, dateline, edition, column rule, or coral flag.",
+      "Don't put a kicker above a heading.",
+      "Don't turn roles, projects, or skills into equal cards or rainbow icons.",
+      "Don't invent a promotion date, a client, or a metric."
+    ]
+  }
+}

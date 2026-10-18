@@ -1,94 +1,106 @@
-import { useState } from 'react'
-import LoadingSpinner from './LoadingSpinner'
+import { FormEvent, useId, useState } from 'react'
 
 function ContactForm() {
+  const baseId = useId()
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [subject, setSubject] = useState('')
+  const [message, setMessage] = useState('')
+  const [submitted, setSubmitted] = useState(false)
+  const [response, setResponse] = useState<string | null>(null)
 
-    const [name, setName] = useState('')
-    const [email, setEmail] = useState('')
-    const [subject, setSubject] = useState('')
-    const [message, setMessage] = useState('')
-    const [submitted, setSubmitted] = useState<boolean>(false)
-    const [response, setResponse] = useState<string | null>(null)
+  const sending = submitted && response === null
 
-    const inputs = document.querySelectorAll("input");
-    const textarea = document.querySelector("textarea");
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    setSubmitted(true)
+    setResponse(null)
 
-    const handleSubmit = (e:any) => { 
-      e.preventDefault()
-      
-      setSubmitted(true)
-      
-      const data = {
-        name,
-        email,
-        subject,
-        message
-      }
-      fetch('/api/contact', {
-            method: 'POST',
-            headers: {
-              'Accept': 'application/json, text/plain, */*',
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-          }).then((res) => {
-            setResponse(res.status === 200 ? "Success" : "Error");
-            resetForm();
-          })
-    }
+    const data = { name, email, subject, message }
 
-    const resetForm = () => {
-      setName('');
-      setEmail('');
-      setSubject('');
-      setMessage('');
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json, text/plain, */*',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => {
+        if (res.status === 200) {
+          setResponse('Success')
+          setName('')
+          setEmail('')
+          setSubject('')
+          setMessage('')
+          return
+        }
+        setResponse('Error')
+      })
+      .catch(() => {
+        setResponse('Error')
+      })
+  }
 
-      inputs.forEach((input) => (input.value = ""));
-
-      if (textarea) {
-        textarea.value  = "";
-      }
-    }
-
-    return (
-        <form id="contactForm" className='flex flex-col text-center items-center justify-center' onSubmit={(e)=>{handleSubmit(e)}}>
-            <input
-            type="text" 
-            onChange={(e)=>{setName(e.target.value)}} 
-            className="form-control shadow w-2/5 px-3 py-1.5 text-base font-normal text-primary bg-primary border border-solid border-gray-300 rounded transition ease-in-out my-3   "
-            placeholder="Name"
-            required
-            />
-            <input
-            type="email"
-            onChange={(e)=>{setEmail(e.target.value)}} 
-            className="form-control shadow w-2/5 px-3 py-1.5 text-base font-normal text-primary bg-primary border border-solid border-gray-300 rounded transition ease-in-out my-3 "
-            placeholder="Email"
-            required
-            />
-            <input
-            type="text"
-            onChange={(e)=>{setSubject(e.target.value)}} 
-            className="form-control shadow w-2/5 px-3 py-1.5 text-base font-normal text-primary bg-primary border border-solid border-gray-300 rounded transition ease-in-out my-3   "
-            placeholder="Subject"
-            required
-            />
-            <textarea
-            rows={6}
-            onChange={(e)=>{setMessage(e.target.value)}} 
-            className="form-control shadow w-2/5 px-3 py-1.5 text-base font-normal text-primary bg-primary border border-solid border-gray-300 rounded transition ease-in-out my-3 "
-            placeholder="Your message"
-            required
-            />
-            <input type="submit" className="bg-primary text-color font-semibold py-2 px-4 border hover:text-color transition-all duration-300 rounded cursor-pointer shadow my-3" />
-            {
-              submitted !== true ? null : (response === null)
-                                 ? <LoadingSpinner /> : (response === "Success")
-                                 ? <p className="my-6">Message has been sent sucessfully!</p> : <p className="my-6 text-red-500">An error has been occured!</p>
-            }
-          
-        </form>
-        )
+  return (
+    <form onSubmit={handleSubmit}>
+      <label className="field" htmlFor={`${baseId}-name`}>
+        <span>Name</span>
+        <input
+          id={`${baseId}-name`}
+          name="name"
+          type="text"
+          autoComplete="name"
+          value={name}
+          onChange={(event) => setName(event.target.value)}
+          required
+        />
+      </label>
+      <label className="field" htmlFor={`${baseId}-email`}>
+        <span>Email</span>
+        <input
+          id={`${baseId}-email`}
+          name="email"
+          type="email"
+          autoComplete="email"
+          value={email}
+          onChange={(event) => setEmail(event.target.value)}
+          required
+        />
+      </label>
+      <label className="field" htmlFor={`${baseId}-subject`}>
+        <span>Subject</span>
+        <input
+          id={`${baseId}-subject`}
+          name="subject"
+          type="text"
+          value={subject}
+          onChange={(event) => setSubject(event.target.value)}
+          required
+        />
+      </label>
+      <label className="field" htmlFor={`${baseId}-message`}>
+        <span>Your message</span>
+        <textarea
+          id={`${baseId}-message`}
+          name="message"
+          rows={4}
+          value={message}
+          onChange={(event) => setMessage(event.target.value)}
+          required
+        />
+      </label>
+      <button className="button" type="submit" disabled={sending}>
+        {sending ? 'Sending…' : 'Send message'}
+      </button>
+      {response === 'Success' && <p className="form-status" role="status">Message sent.</p>}
+      {response === 'Error' && (
+        <p className="form-status error" role="alert">
+          The message did not send. Try again in a moment.
+        </p>
+      )}
+    </form>
+  )
 }
 
 export default ContactForm

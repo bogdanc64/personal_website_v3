@@ -1,35 +1,19 @@
 import Navbar from './Navbar'
 import Footer from './Footer'
-import { useEffect, useState } from 'react';
-import { motion } from "framer-motion"
 
 type Props = {
-    children?: React.ReactNode;
-  };
+  children?: React.ReactNode
+}
 
-export default function Layout({children}:Props) {
-  
-    // fix hydration mismatch bug (ssr vs csr) 
-
-    const [mounted, setMounted] = useState<boolean>(false)
-
-    useEffect(()=>{
-        setMounted(true);   
-    })
-    if(!mounted) return null;
-  
-    return (
-    <motion.div
-        className="min-h-screen flex flex-col md:pt-6"
-        initial={{ opacity: 0, scale: 1 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.4 }}
-    >  
+export default function Layout({ children }: Props) {
+  return (
+    <>
+      <a className="skip" href="#page-content">Skip to main content</a>
       <Navbar />
-         <main className="pt-6 md:pt-14">
-             {children}
-         </main>
+      <main id="page-content" tabIndex={-1}>
+        {children}
+      </main>
       <Footer />
-    </motion.div>
+    </>
   )
 }
