@@ -19,7 +19,8 @@ module.exports = {
         accent: 'var(--color-border-avatar)',
       },
       fontFamily:{
-        sans:['Manrope', 'sans-serif']
+        sans:['"Schibsted Grotesk"', 'Helvetica Neue', 'sans-serif'],
+        serif:['"Source Serif 4"', 'Georgia', 'serif'],
       },
       boxShadow:{
         avatar:  '0 0 0 1px var(--color-border-avatar)',

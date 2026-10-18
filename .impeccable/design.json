@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-18T13:45:00.000Z",
+  "title": "Design System: Bogdan Maftei",
+  "extensions": {
+    "colorMeta": {
+      "sheet": {
+        "role": "neutral",
+        "displayName": "Mint sheet",
+        "canonical": "#f4f5f0",
+        "tonalRamp": ["#2a2c28", "#3e423c", "#5c615a", "#8a8f86", "#b7bbb2", "#d5d8d0", "#e8ebe4", "#f7f8f4"]
+      },
+      "ink": {
+        "role": "primary",
+        "displayName": "Gunmetal",
+        "canonical": "#414141",
+        "tonalRamp": ["#141414", "#222222", "#333333", "#414141", "#676767", "#8d8d8d", "#b3b3b3", "#e7e7e7"]
+      },
+      "flag": {
+        "role": "tertiary",
+        "displayName": "Present flag",
+        "canonical": "#f38380",
+        "tonalRamp": ["#4a1c1a", "#7a3330", "#a84e4a", "#d46b68", "#f38380", "#f7aaa8", "#fbd0ce", "#fdeeed"]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Write paper",
+        "canonical": "#ffffff",
+        "tonalRamp": ["#1c1e1c", "#2c2e2c", "#454845", "#6a6e6a", "#9a9e9a", "#c8ccc8", "#e7ebe7", "#ffffff"]
+      },
+      "focus": {
+        "role": "focus",
+        "displayName": "Focus ring",
+        "canonical": "#1b65c5",
+        "tonalRamp": ["#061833", "#0c2d5c", "#13478f", "#1b65c5", "#4d8ad6", "#7aade3", "#b3d0f1", "#e7f1fb"]
+      }
+    },
+    "typographyMeta": {
+      "nameplate": { "displayName": "Nameplate", "purpose": "The sheet’s name, Bogdan Maftei." },
+      "display": { "displayName": "Lead", "purpose": "The page’s main headline." },
+      "section": { "displayName": "Section", "purpose": "Experience, Projects, and the inner page titles’ siblings." },
+      "body": { "displayName": "Column", "purpose": "Sentences, navigation, labels, and the send button." },
+      "caption": { "displayName": "Caption", "purpose": "Italic line under the portrait." }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "rule-draw",
+        "value": "720ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "The masthead double rule draws once from the center. Removed when reduced motion is requested."
+      }
+    ],
+    "breakpoints": [
+      { "name": "engagement-columns", "value": "720px" },
+      { "name": "sheet-wide", "value": "900px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Send button",
+      "kind": "button",
+      "refersTo": "button-send",
+      "description": "The only filled control. It sends the message.",
+      "html": "<button class=\"ds-send\" type=\"submit\">Send message</button>",
+      "css": ".ds-send { font-family: \"Schibsted Grotesk\", Helvetica, sans-serif; font-size: 1.0625rem; font-weight: 600; background: #414141; color: #f4f5f0; border: 1px solid #414141; border-radius: 0; min-height: 44px; padding: 0.65rem 1.05rem; cursor: pointer; } .ds-send:hover { background: #2a2a2a; color: #f4f5f0; } .ds-send:focus-visible { outline: 2px solid #1b65c5; outline-offset: 3px; } .ds-send:disabled { background: transparent; color: #414141; cursor: not-allowed; }"
+    },
+    {
+      "name": "Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "A labeled square field on the mint sheet.",
+      "html": "<label class=\"ds-field\"><span>Name</span><input type=\"text\" /></label>",
+      "css": ".ds-field { display: flex; flex-direction: column; gap: 0.2rem; font-family: \"Schibsted Grotesk\", Helvetica, sans-serif; color: #414141; } .ds-field span { font-size: 0.92rem; font-weight: 500; } .ds-field input { font: inherit; color: #414141; background: #f4f5f0; border: 1px solid #414141; border-radius: 0; padding: 0.55rem 0.65rem; caret-color: #414141; } .ds-field input:focus-visible { outline: 2px solid #1b65c5; outline-offset: 3px; }"
+    },
+    {
+      "name": "Section index",
+      "kind": "nav",
+      "refersTo": "button-send",
+      "description": "The newspaper’s section names. The current one is underlined.",
+      "html": "<nav class=\"ds-index\"><a href=\"/about\">About me</a><a href=\"/experience\" aria-current=\"page\">Experience</a></nav>",
+      "css": ".ds-index { display: flex; gap: 1.15rem; font-family: \"Schibsted Grotesk\", Helvetica, sans-serif; font-size: 0.98rem; } .ds-index a { color: #414141; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; } .ds-index a:hover, .ds-index a[aria-current=\"page\"] { text-decoration: underline; text-underline-offset: 0.22em; } .ds-index a:focus-visible { outline: 2px solid #1b65c5; outline-offset: 3px; }"
+    },
+    {
+      "name": "Present flag",
+      "kind": "chip",
+      "refersTo": "flag",
+      "description": "Marks the role he holds now. Coral is not used anywhere else.",
+      "html": "<span class=\"ds-flag\">Present</span>",
+      "css": ".ds-flag { display: inline-flex; align-items: center; background: #f38380; color: #1a1c1b; font-family: \"Schibsted Grotesk\", Helvetica, sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; line-height: 1; padding: 0.28rem 0.42rem; border-radius: 0; }"
+    },
+    {
+      "name": "Write box",
+      "kind": "custom",
+      "refersTo": "field",
+      "description": "The ruled inset that holds the contact sentence and the form.",
+      "html": "<aside class=\"ds-write\"><h2>Write</h2><p>Get in touch or shoot me an email directly on <a href=\"mailto:maftei.bogdan@outlook.com\">maftei.bogdan@outlook.com</a></p></aside>",
+      "css": ".ds-write { background: #ffffff; border: 1px solid #414141; border-radius: 0; padding: 0.85rem 0.95rem 0.95rem; color: #414141; font-family: \"Schibsted Grotesk\", Helvetica, sans-serif; max-width: 36rem; } .ds-write h2 { font-family: \"Source Serif 4\", Georgia, serif; font-weight: 600; font-size: 1.85rem; letter-spacing: -0.025em; margin: 0 0 0.55rem; } .ds-write a { color: inherit; text-underline-offset: 0.18em; } .ds-write a:focus-visible { outline: 2px solid #1b65c5; outline-offset: 3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The front page of a practice.",
+    "overview": "Bogdan Maftei’s site is one newspaper, not a stack of cards. The sheet is named for him. The lead is the appointment, Senior Technical Consultant, and the record of employers, projects, and skills continues in columns under hairline rules. The only filled control sends a message.\n\nThe day edition is mint paper read at a desk. The night edition is the same sheet with the ink reversed, chosen explicitly, not inherited from the operating system.",
+    "keyCharacteristics": [
+      "A serif nameplate and headlines, a grotesque for everything a person has to read",
+      "Hairline rules that run through the sheet, including one vertical rule through the engagements",
+      "Coral used once, as the flag on the current role",
+      "Square corners, no shadow, no gradient",
+      "Body copy held to a readable measure"
+    ],
+    "rules": [
+      { "name": "The Ink Rule", "body": "Gunmetal carries the reading. Coral is a status mark, never a decoration, a link, or a second button.", "section": "colors" },
+      { "name": "The Two Voices Rule", "body": "Source Serif 4, weight 600, sets the nameplate, the lead, section titles, roles, and project titles. Schibsted Grotesk sets navigation, body, labels, dates, and the send button. Italic Source Serif 4, weight 400, is reserved for the portrait caption.", "section": "typography" },
+      { "name": "The Sheet Rule", "body": "Content lives in one centered sheet, min(68rem, calc(100% - 1.5rem)), widening its side margin from 900px. The nameplate spans the sheet. A double rule sits under it: a 1px line and a 3px line. The dateline holds the date, the section index, and the edition control, closed by a 1px rule.", "section": "layout" },
+      { "name": "The One Motion Rule", "body": "The masthead double rule draws once from the center, 720ms, with an ease-out. Reduced motion removes it. Nothing else enters, fades, or hides until scroll.", "section": "layout" },
+      { "name": "The Flat Sheet Rule", "body": "The page has no drop shadow and no blur. Depth is the difference between sheet and the white Write box, plus the weight of the rules. The logo plate is a flat black field, not a raised tile.", "section": "elevation" },
+      { "name": "The Square Rule", "body": "Corners are 0. Buttons, fields, the Write box, the Present flag, and the logo plate are rectangles. The portrait is a straight photograph with a caption rule, not a circle.", "section": "shapes" }
+    ],
+    "dos": [
+      "Keep the biography, employers, dates, keypoints, skills, project descriptions, email, and links as recorded facts.",
+      "Put new reading on the same sheet: nameplate, double rule, dateline, then the story.",
+      "Use the serif for titles and the grotesque for sentences.",
+      "Keep coral on the Present flag.",
+      "Leave the send button as the only filled control."
+    ],
+    "donts": [
+      "Don’t add a kicker above a heading.",
+      "Don’t turn engagements or projects into equal cards, circles, or icon tiles.",
+      "Don’t invent a promotion date, a client, or a metric.",
+      "Don’t put a second filled button beside Send message.",
+      "Don’t hide body copy until an animation or a scroll trigger fires."
+    ]
+  }
+}

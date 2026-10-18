@@ -1,44 +1,27 @@
-import { useEffect, useState } from 'react';
-import {DarkModeSwitch} from 'react-toggle-dark-mode'
-import {useTheme} from 'next-themes'
+import { useEffect, useState } from 'react'
+import { useTheme } from 'next-themes'
 
-type DarkModeToggleProps = {
-    size:string;
-}
+const DarkModeToggle = () => {
+  const { resolvedTheme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
 
-const DarkModeToggle = (props:DarkModeToggleProps) => {
-  
-    const {systemTheme , theme, setTheme} = useTheme();
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
-    const currentTheme = theme === "system" ? systemTheme : theme;
-    const initialTheme = theme === 'dark' ? true : false;
+  const dark = mounted && resolvedTheme === 'dark'
 
-    const [checked, setChecked] = useState<boolean>(initialTheme)
-
-    useEffect(() => {
-        if (currentTheme === 'dark') {
-            setChecked(true)
-        } else {
-            setChecked(false)
-        }
-    }, [checked])
-
-    const onClick = () => {
-        setChecked(!checked)
-        currentTheme === 'light' ? setTheme('dark') : setTheme('light')
-    }
-  
-
-    return (
-    <DarkModeSwitch 
-        checked={checked}
-        onChange={onClick}
-        size={props.size}
-        moonColor={'#f7fafc'}
-        sunColor={'#2d3748'}
-        style={{marginTop:'5'}}
-    />
+  return (
+    <button
+      type="button"
+      className="edition"
+      aria-pressed={dark}
+      aria-label={dark ? 'Switch to day edition' : 'Switch to night edition'}
+      onClick={() => setTheme(dark ? 'light' : 'dark')}
+    >
+      {dark ? 'Night edition' : 'Day edition'}
+    </button>
   )
 }
 
-export default DarkModeToggle;
+export default DarkModeToggle
