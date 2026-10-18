@@ -4,18 +4,19 @@ import { useState } from 'react'
 import DarkModeToggle from './DarkModeToggle'
 
 const links = [
-  { href: '/about', label: 'About' },
+  { href: '/projects', label: 'Work' },
   { href: '/experience', label: 'Experience' },
-  { href: '/projects', label: 'Projects' },
+  { href: '/about', label: 'About' },
 ]
 
 const Navbar = () => {
   const { pathname } = useRouter()
   const [open, setOpen] = useState(false)
   const contactCurrent = pathname === '/contact'
+  const home = pathname === '/'
 
   return (
-    <header className="site-header">
+    <header className={home ? 'site-header is-home' : 'site-header'}>
       <div className="page header-bar">
         <Link href="/">
           <a className="wordmark">Bogdan Maftei</a>

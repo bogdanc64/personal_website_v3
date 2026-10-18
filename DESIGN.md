@@ -23,16 +23,17 @@ colors:
   night-focus: "#9ec1ff"
   night-error: "#ffb4ab"
   night-selection: "#234237"
+  opening: "#0c0f0e"
 typography:
   display:
     fontFamily: "Schibsted Grotesk, Helvetica Neue, sans-serif"
-    fontSize: "clamp(2.7rem, 6.2vw, 4.5rem)"
+    fontSize: "clamp(2.7rem, 7.4vw, 5.5rem)"
     fontWeight: 600
-    lineHeight: 1.05
-    letterSpacing: "-0.03em"
+    lineHeight: 0.96
+    letterSpacing: "-0.035em"
   role:
     fontFamily: "Schibsted Grotesk, Helvetica Neue, sans-serif"
-    fontSize: "clamp(1.25rem, 2vw, 1.5rem)"
+    fontSize: "clamp(1.3rem, 2vw, 1.65rem)"
     fontWeight: 500
     lineHeight: 1.25
     letterSpacing: "-0.02em"
@@ -44,7 +45,7 @@ typography:
     letterSpacing: "-0.03em"
   title:
     fontFamily: "Schibsted Grotesk, Helvetica Neue, sans-serif"
-    fontSize: "1.35rem"
+    fontSize: "clamp(1.55rem, 2.4vw, 2rem)"
     fontWeight: 600
     lineHeight: 1.2
     letterSpacing: "-0.02em"
@@ -94,13 +95,13 @@ components:
 
 **Creative North Star: "A practice, not a publication."**
 
-The site is the page a client opens between meetings. The name is large, the photograph is a real person, and the next step is a filled button that reaches him. Cool paper, near-black type, and one grotesque carry the whole thing. Softwire’s clarity and Cursor’s restraint are the craft bar. Their identities are not copied.
+The site is the page a client opens between meetings. Home is one dark screen: the name, the appointment, the photograph, and a filled button. The record lives on its own pages, on cool paper. Softwire’s clarity and Cursor’s restraint are the craft bar. Their identities are not copied.
 
 The broadsheet was rejected: no masthead, dateline, edition language, column rules, or coral flag. Light is the default, because the scene is a desk in daylight. Dark mode is the same layout with the ink reversed.
 
 **Key Characteristics:**
 
-- One face, Schibsted Grotesk, for the name, the role, and the body
+- Home is a dark opening; Experience, Work, About, and Contact stay on cool paper
 - A short ink bar under the name, drawn once
 - Photographs with a 12px radius and one soft shadow
 - Records separated by hairlines, never by cards
@@ -122,6 +123,8 @@ The broadsheet was rejected: no masthead, dateline, edition language, column rul
 - **Selection** (`#d5e4da`): selected text on the light ground.
 - **Portrait well** (`#d7ddd8`): the ground behind the photograph before it paints.
 
+**Opening** (`#0c0f0e`): the home screen and its header. The photograph meets it on a 1px line.
+
 Night mode sets the ground to `#121614`, the ink to `#f3f5f2`, muted text to `#c5cfc8`, lines to `#2c3530`, and surfaces to `#1b221e`. The button fills with the night ink and labels with the night ground. Focus becomes `#9ec1ff`, the error `#ffb4ab`, and selection `#234237`.
 
 ## Typography
@@ -141,11 +144,11 @@ The face is self-hosted at 400, 500, and 600 in `public/fonts`. Display tracking
 
 ## Layout
 
-**The Page Rule.** Content sits in `min(72rem, calc(100% - 2rem))`, widening the side margin from `720px`. The header is sticky, `4.25rem`, with a hairline under it.
+**The Page Rule.** Reading pages sit in `min(72rem, calc(100% - 2rem))`, widening the side margin from `720px`. The header is sticky, `4.25rem`, with a hairline under it. On home the header matches the opening, `#0c0f0e`.
 
-Home opens with the name, the ink bar, the role, and the Softwire line. From `860px` the portrait occupies a column up to `22rem` and the actions plus biography occupy the rest, aligned to the top. Below `860px` the actions come first, then a `16.5rem` photograph, then the biography.
+Home is one viewport. The name, the ink bar, the role, the Softwire line, and Get in touch sit on the dark ground. From `960px` the photograph fills the right side, edge to edge, divided by a 1px light line. On a phone the type and the button come first, then the photograph.
 
-Sections take `5.5rem` above the heading and less below it. Experience is a sequence of rules. Projects sit on a full-width white band on the home page. The contact form is at most `38rem` wide.
+Experience is two chapters on a 1px path, Software Business Partners then Softwire. The current stop is filled. Work gives each project a full-width screenshot. About holds the biography, the portrait, the skill lines, and the résumé. The contact form is at most `38rem` wide.
 
 ## Elevation & Depth
 

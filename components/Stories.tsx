@@ -14,7 +14,7 @@ function Stories() {
       {projects.map((project) => {
         const shot = shots[project.title]
         return (
-          <article className="project" key={project.title}>
+          <article className="project work-piece" key={project.title}>
             {shot && (
               <figure className="shot">
                 <Image

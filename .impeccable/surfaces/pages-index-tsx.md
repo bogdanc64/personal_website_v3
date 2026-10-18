@@ -31,7 +31,7 @@ OWN-WORLD: Cool office ground (#f4f6f3), near-black ink (#17211c), white only as
 
 STORY: The visitor reads the name, the appointment, and the record, then emails or sends the form.
 
-FIRST VIEWPORT: Sticky header with the name, the section links, and a filled “Get in touch”. Below it, “Bogdan Maftei” at display size, a short ink bar that draws once, “Senior Technical Consultant”, and the Softwire line. From 860px the portrait sits beside the actions and the existing about paragraph. On a phone the actions come first, then a 16.5rem photograph, then the paragraph. Signature motion: that bar scales from the left once, 700ms, ease-out; content stays visible; reduced motion shows the bar still.
+FIRST VIEWPORT: A dark opening, #0c0f0e, one viewport. Sticky header in the same dark, with Work, Experience, About, and a light “Get in touch”. Below, “Bogdan Maftei” at display size, a short light bar that draws once, “Senior Technical Consultant”, and the Softwire line, then Get in touch. From 960px the photograph fills the right edge. On a phone the type and the button come first, then the photograph. The biography, roles, and projects are not on this page. Signature motion: that bar scales from the left once, 700ms, ease-out; content stays visible; reduced motion shows the bar still.
 
 FORM: User-pinned professional practice site, placed beside Softwire and Cursor. It overrides the direction roll. seed:a9b08aeb320b115b.
 

@@ -9,12 +9,22 @@ const logos: Record<string, StaticImageData> = {
 }
 
 function Engagements() {
+  const ordered = [...engagements].sort(
+    (a, b) => a.startingDate.getTime() - b.startingDate.getTime(),
+  )
+
   return (
-    <div>
-      {engagements.map((engagement) => {
+    <div className="practice">
+      {ordered.map((engagement) => {
         const logo = logos[engagement.companyName]
         return (
-          <article className="role-block" key={engagement.companyName}>
+          <article
+            className={engagement.current ? 'chapter is-current' : 'chapter'}
+            key={engagement.companyName}
+          >
+            <div className="stop" aria-hidden="true">
+              <span className="stop-mark" />
+            </div>
             <div className="logo-plate">
               {logo && (
                 <Image src={logo} alt="" width={112} height={36} objectFit="contain" />

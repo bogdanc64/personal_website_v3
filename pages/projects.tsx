@@ -8,10 +8,10 @@ const Projects: NextPageWithLayout = () => {
   return (
     <>
       <Head>
-        <title>Projects — Bogdan Maftei</title>
+        <title>Work — Bogdan Maftei</title>
       </Head>
       <div className="page">
-        <h1 className="page-title">Projects</h1>
+        <h1 className="page-title">Work</h1>
         <Stories />
       </div>
     </>
