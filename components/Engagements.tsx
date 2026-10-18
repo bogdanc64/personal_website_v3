@@ -1,8 +1,7 @@
 import Image, { StaticImageData } from 'next/image'
 import softwireLogo from '../assets/logos/softwire.png'
 import sbpLogo from '../assets/logos/sbp.png'
-import { engagements, formatPeriod } from '../data/profile'
-import SkillIcon from './SkillIcon'
+import { engagements, formatPeriod, skillLabel } from '../data/profile'
 
 const logos: Record<string, StaticImageData> = {
   Softwire: softwireLogo,
@@ -11,29 +10,22 @@ const logos: Record<string, StaticImageData> = {
 
 function Engagements() {
   return (
-    <div className="engagements">
+    <div>
       {engagements.map((engagement) => {
         const logo = logos[engagement.companyName]
         return (
-          <article className="engagement" key={engagement.companyName}>
-            <div className="mark">
+          <article className="role-block" key={engagement.companyName}>
+            <div className="logo-plate">
               {logo && (
-                <Image
-                  src={logo}
-                  alt=""
-                  width={150}
-                  height={48}
-                  objectFit="contain"
-                />
+                <Image src={logo} alt="" width={112} height={36} objectFit="contain" />
               )}
             </div>
             <div>
-              <h3 className="company">
-                {engagement.companyName}
-                {engagement.current && <span className="flag">Present</span>}
-              </h3>
-              <p className="role">{engagement.position}</p>
-              <p className="date">{formatPeriod(engagement.startingDate, engagement.endingDate)}</p>
+              <div className="role-head">
+                <h3>{engagement.companyName}</h3>
+                <p className="when">{formatPeriod(engagement.startingDate, engagement.endingDate)}</p>
+              </div>
+              <p className="position">{engagement.position}</p>
               {engagement.joinedAs && (
                 <p className="joined">Joined as {engagement.joinedAs}.</p>
               )}
@@ -42,13 +34,7 @@ function Engagements() {
                   <li key={keypoint}>{keypoint}</li>
                 ))}
               </ul>
-              <ul className="skill-line">
-                {engagement.skills.map((skill) => (
-                  <li key={skill}>
-                    <SkillIcon title size={16} type={skill} />
-                  </li>
-                ))}
-              </ul>
+              <p className="skill-text">{engagement.skills.map(skillLabel).join(', ')}</p>
             </div>
           </article>
         )

@@ -1,182 +1,193 @@
 ---
 name: Bogdan Maftei
-description: A broadsheet portfolio for a senior technical consultant, set like a newspaper on mint paper.
+description: A light practice site for a senior technical consultant, set in one grotesque on cool paper.
 colors:
-  sheet: "#f4f5f0"
-  paper: "#ffffff"
-  ink: "#414141"
-  ink-press: "#2a2a2a"
-  on-press: "#f4f5f0"
-  rule: "#414141"
-  flag: "#f38380"
-  flag-ink: "#1a1c1b"
-  mint: "#e4e5d9"
-  focus: "#1b65c5"
+  ground: "#f4f6f3"
+  ink: "#17211c"
+  muted: "#3e4a44"
+  line: "#d5ddd6"
+  surface: "#ffffff"
+  action: "#17211c"
+  action-ink: "#f4f6f3"
+  action-hover: "#0c1411"
+  focus: "#0b57d0"
   error: "#8c1d18"
-  logo-plate: "#0a0a0a"
-  night-sheet: "#1c1e1c"
-  night-paper: "#262824"
-  night-ink: "#f3f4ee"
-  night-rule: "#a3a69e"
+  plate: "#101412"
+  selection: "#d5e4da"
+  portrait-well: "#d7ddd8"
+  night-ground: "#121614"
+  night-ink: "#f3f5f2"
+  night-muted: "#c5cfc8"
+  night-line: "#2c3530"
+  night-surface: "#1b221e"
   night-focus: "#9ec1ff"
   night-error: "#ffb4ab"
-  night-selection: "#fbd25f"
+  night-selection: "#234237"
 typography:
-  nameplate:
-    fontFamily: "Source Serif 4, Georgia, serif"
-    fontSize: "clamp(2.55rem, 6.4vw, 4.75rem)"
-    fontWeight: 600
-    lineHeight: 0.92
-    letterSpacing: "-0.03em"
   display:
-    fontFamily: "Source Serif 4, Georgia, serif"
-    fontSize: "clamp(2.15rem, 4.4vw, 3.45rem)"
-    fontWeight: 600
-    lineHeight: 1.02
-    letterSpacing: "-0.025em"
-  section:
-    fontFamily: "Source Serif 4, Georgia, serif"
-    fontSize: "clamp(1.85rem, 3vw, 2.45rem)"
+    fontFamily: "Schibsted Grotesk, Helvetica Neue, sans-serif"
+    fontSize: "clamp(2.7rem, 6.2vw, 4.5rem)"
     fontWeight: 600
     lineHeight: 1.05
+    letterSpacing: "-0.03em"
+  role:
+    fontFamily: "Schibsted Grotesk, Helvetica Neue, sans-serif"
+    fontSize: "clamp(1.25rem, 2vw, 1.5rem)"
+    fontWeight: 500
+    lineHeight: 1.25
+    letterSpacing: "-0.02em"
+  section:
+    fontFamily: "Schibsted Grotesk, Helvetica Neue, sans-serif"
+    fontSize: "clamp(1.85rem, 3vw, 2.35rem)"
+    fontWeight: 600
+    lineHeight: 1.05
+    letterSpacing: "-0.03em"
+  title:
+    fontFamily: "Schibsted Grotesk, Helvetica Neue, sans-serif"
+    fontSize: "1.35rem"
+    fontWeight: 600
+    lineHeight: 1.2
     letterSpacing: "-0.02em"
   body:
     fontFamily: "Schibsted Grotesk, Helvetica Neue, sans-serif"
     fontSize: "1.0625rem"
     fontWeight: 400
-    lineHeight: 1.55
+    lineHeight: 1.6
     letterSpacing: "0"
-  caption:
-    fontFamily: "Source Serif 4, Georgia, serif"
-    fontSize: "0.98rem"
-    fontWeight: 400
+  label:
+    fontFamily: "Schibsted Grotesk, Helvetica Neue, sans-serif"
+    fontSize: "0.95rem"
+    fontWeight: 500
     lineHeight: 1.4
     letterSpacing: "0"
 rounded:
-  none: "0"
+  control: "8px"
+  photo: "12px"
 spacing:
-  sheet: "min(68rem, calc(100% - 1.5rem))"
-  field: "0.42rem"
-  section-top: "3.75rem"
-  section-bottom: "0.9rem"
+  page: "min(72rem, calc(100% - 2rem))"
+  header: "4.25rem"
+  section: "5.5rem"
 components:
-  button-send:
-    backgroundColor: "{colors.ink}"
-    textColor: "{colors.sheet}"
-    rounded: "{rounded.none}"
-    padding: "0.65rem 1.05rem"
+  button-primary:
+    backgroundColor: "{colors.action}"
+    textColor: "{colors.action-ink}"
+    rounded: "{rounded.control}"
+    padding: "0 1.05rem"
     height: "44px"
-  button-send-hover:
-    backgroundColor: "{colors.ink-press}"
-    textColor: "{colors.on-press}"
-    rounded: "{rounded.none}"
-    padding: "0.65rem 1.05rem"
+  button-primary-hover:
+    backgroundColor: "{colors.action-hover}"
+    textColor: "{colors.action-ink}"
+    rounded: "{rounded.control}"
+    padding: "0 1.05rem"
+    height: "44px"
   field:
-    backgroundColor: "{colors.sheet}"
+    backgroundColor: "{colors.surface}"
     textColor: "{colors.ink}"
-    rounded: "{rounded.none}"
-    padding: "0.55rem 0.65rem"
-  flag:
-    backgroundColor: "{colors.flag}"
-    textColor: "{colors.flag-ink}"
-    rounded: "{rounded.none}"
-    padding: "0.28rem 0.42rem"
+    rounded: "{rounded.control}"
+    padding: "0.7rem 0.8rem"
+    height: "48px"
 ---
+
+# Design System: Bogdan Maftei
 
 ## Overview
 
-**Creative North Star: "The front page of a practice."**
+**Creative North Star: "A practice, not a publication."**
 
-Bogdan Maftei’s site is one newspaper, not a stack of cards. The sheet is named for him. The lead is the appointment, Senior Technical Consultant, and the record of employers, projects, and skills continues in columns under hairline rules. The only filled control sends a message.
+The site is the page a client opens between meetings. The name is large, the photograph is a real person, and the next step is a filled button that reaches him. Cool paper, near-black type, and one grotesque carry the whole thing. Softwire’s clarity and Cursor’s restraint are the craft bar. Their identities are not copied.
 
-The day edition is mint paper read at a desk. The night edition is the same sheet with the ink reversed, chosen explicitly, not inherited from the operating system.
+The broadsheet was rejected: no masthead, dateline, edition language, column rules, or coral flag. Light is the default, because the scene is a desk in daylight. Dark mode is the same layout with the ink reversed.
 
 **Key Characteristics:**
 
-- A serif nameplate and headlines, a grotesque for everything a person has to read
-- Hairline rules that run through the sheet, including one vertical rule through the engagements
-- Coral used once, as the flag on the current role
-- Square corners, no shadow, no gradient
-- Body copy held to a readable measure
+- One face, Schibsted Grotesk, for the name, the role, and the body
+- A short ink bar under the name, drawn once
+- Photographs with a 12px radius and one soft shadow
+- Records separated by hairlines, never by cards
+- One filled control
 
 ## Colors
 
-**The Ink Rule.** Gunmetal carries the reading. Coral is a status mark, never a decoration, a link, or a second button.
+**The Ink Rule.** Near-black does the reading and the action. Color does not decorate a status.
 
-- **Sheet** (`#f4f5f0`): the page ground, a mint newsprint. Also the fill inside form fields, so the field sits in the sheet rather than on a floating card.
-- **Paper** (`#ffffff`): the Write box only, so the form is a ruled inset on the sheet.
-- **Ink** (`#414141`): text, rules, the day-edition send button, and focus-adjacent structure.
-- **Ink press** (`#2a2a2a`): the send button while the pointer is over it.
-- **Flag** (`#f38380`) with **flag ink** (`#1a1c1b`): the Present mark beside Softwire. The word is in the mark, so color is not the only signal.
-- **Mint** (`#e4e5d9`): text selection on the day edition.
-- **Focus** (`#1b65c5`): the keyboard ring. It is not used as a brand accent.
-- **Error** (`#8c1d18`): the sentence shown when a message does not send.
-- **Logo plate** (`#0a0a0a`): the small ground behind employer marks whose files are drawn on black.
+- **Ground** (`#f4f6f3`): the page, a cool office paper.
+- **Ink** (`#17211c`): text and the filled button.
+- **Muted** (`#3e4a44`): dates, the Softwire line, skill names, and resting navigation.
+- **Line** (`#d5ddd6`): header, footer, and the rules between roles and keypoints.
+- **Surface** (`#ffffff`): the projects band and form fields.
+- **Action hover** (`#0c1411`): the button while the pointer is over it.
+- **Focus** (`#0b57d0`): the keyboard ring. It is not a brand accent.
+- **Error** (`#8c1d18`): the sentence when a message does not send.
+- **Plate** (`#101412`): the ground behind employer marks drawn on black.
+- **Selection** (`#d5e4da`): selected text on the light ground.
+- **Portrait well** (`#d7ddd8`): the ground behind the photograph before it paints.
 
-Night edition swaps the sheet to `#1c1e1c`, the paper to `#262824`, and the ink to `#f3f4ee`. Rules lighten to `#a3a69e`. Selection becomes `#fbd25f`. The flag colors stay. Focus becomes `#9ec1ff` and the error becomes `#ffb4ab`.
+Night mode sets the ground to `#121614`, the ink to `#f3f5f2`, muted text to `#c5cfc8`, lines to `#2c3530`, and surfaces to `#1b221e`. The button fills with the night ink and labels with the night ground. Focus becomes `#9ec1ff`, the error `#ffb4ab`, and selection `#234237`.
 
 ## Typography
 
-**The Two Voices Rule.** Source Serif 4, weight 600, sets the nameplate, the lead, section titles, roles, and project titles. Schibsted Grotesk sets navigation, body, labels, dates, and the send button. Italic Source Serif 4, weight 400, is reserved for the portrait caption.
+**The One Voice Rule.** Schibsted Grotesk sets every word. Weight and size make the hierarchy. There is no second face and no italic.
 
-Both faces are self-hosted in `public/fonts`. Tracking on display type stays at `-0.03em` or looser. Body size is `1.0625rem` on a `1.55` line height. Paragraphs stop at `68ch`.
+The face is self-hosted at 400, 500, and 600 in `public/fonts`. Display tracking is `-0.03em`. Body copy stops at `68ch`. Dates use tabular numerals.
 
-Dates use tabular numerals.
+### Hierarchy
+
+- **Display** (600, `clamp(2.7rem, 6.2vw, 4.5rem)`, 1.05): the name on the home page.
+- **Role** (500, `clamp(1.25rem, 2vw, 1.5rem)`, 1.25): “Senior Technical Consultant”.
+- **Section** (600, `clamp(1.85rem, 3vw, 2.35rem)`, 1.05): page titles and section headings.
+- **Title** (600, `1.35rem`, 1.2): an employer or a project.
+- **Body** (400, `1.0625rem`, 1.6): biography, keypoints, and the contact sentence.
+- **Label** (500, `0.95rem`): form labels and compact navigation.
 
 ## Layout
 
-**The Sheet Rule.** Content lives in one centered sheet, `min(68rem, calc(100% - 1.5rem))`, widening its side margin from `900px`. The nameplate spans the sheet. A double rule sits under it: a 1px line and a 3px line. The dateline holds the date, the section index, and the edition control, closed by a 1px rule.
+**The Page Rule.** Content sits in `min(72rem, calc(100% - 2rem))`, widening the side margin from `720px`. The header is sticky, `4.25rem`, with a hairline under it.
 
-The lead headline spans the sheet. Under it, from `900px`, the portrait and biography occupy the wide column and the Write box occupies the narrow one. Below `900px` the Write box comes first, then the biography, so the message can be sent before the long copy.
+Home opens with the name, the ink bar, the role, and the Softwire line. From `860px` the portrait occupies a column up to `22rem` and the actions plus biography occupy the rest, aligned to the top. Below `860px` the actions come first, then a `16.5rem` photograph, then the biography.
 
-Engagements hang on a 1px vertical rule. From `720px` the employer mark sits in a fixed first column. Projects place the picture and the description side by side from `900px`, with the title spanning both.
-
-Section headings take more space above (`3.75rem`) than below (`0.9rem`).
-
-**The One Motion Rule.** The masthead double rule draws once from the center, `720ms`, with an ease-out. Reduced motion removes it. Nothing else enters, fades, or hides until scroll.
+Sections take `5.5rem` above the heading and less below it. Experience is a sequence of rules. Projects sit on a full-width white band on the home page. The contact form is at most `38rem` wide.
 
 ## Elevation & Depth
 
-**The Flat Sheet Rule.** The page has no drop shadow and no blur. Depth is the difference between sheet and the white Write box, plus the weight of the rules. The logo plate is a flat black field, not a raised tile.
+**The Quiet Lift Rule.** The page is flat. A shadow appears only under a photograph: `0 18px 40px rgba(23, 33, 28, 0.1)` in daylight, and `0 18px 40px rgba(0, 0, 0, 0.4)` at night. Nothing else lifts.
 
 ## Shapes
 
-**The Square Rule.** Corners are `0`. Buttons, fields, the Write box, the Present flag, and the logo plate are rectangles. The portrait is a straight photograph with a caption rule, not a circle.
+**The Soft Corner Rule.** Controls, fields, and the logo plate use `8px`. Photographs use `12px`. Nothing is a pill, and nothing is a hard square.
 
 ## Components
 
-**Nameplate.** The words “Bogdan Maftei” in the display serif, linking home. No underline until hover.
+### Buttons
 
-**Section index.** About me, Experience, Projects, Contact. The current section is underlined. Below `900px` the index is behind a Sections control that becomes Close when open. Targets are at least `44px` tall.
+The filled button reads “Get in touch” or “Send message”. It is `44px` tall, ink on ground-colored type, radius `8px`. Hover darkens the fill. While a message is sending, the label is “Sending…” and the control is dimmed. Text links stay underlined: Resumé, the email, View Code.
 
-**Edition control.** A text button reading “Day edition” or “Night edition” for the edition on screen. It is not filled.
+### Inputs
 
-**Write box.** A 1px ruled rectangle on paper. It holds the existing contact sentence, with the email as a mailto link, then the form.
+A label sits above a white field with a `1px` line, `8px` radius, and at least `48px` of height. Focus keeps the keyboard ring and darkens the border to the ink. There is no placeholder. Failure keeps the typed text and says “The message did not send. Try again in a moment.” Success says “Message sent.” and clears the fields.
 
-**Send button.** The only filled control. Ink ground, sheet-colored label, square, `44px` tall. While a message is in flight the fill drops and the label reads “Sending…”. Success reads “Message sent.” Failure keeps the typed text and reads “The message did not send. Try again in a moment.”
+### Navigation
 
-**Field.** A visible label (Name, Email, Subject, Your message) above a square input. The border is the ink color. Placeholder text is not used.
+The wordmark is the name. About, Experience, and Projects are quiet links; the current one is ink and underlined. “Get in touch” is the filled button. “Dark mode” or “Light mode” names the switch. Below `860px` those links sit in a Menu panel. Targets are at least `44px` tall.
 
-**Engagement.** Employer mark on the black plate, company name, Present flag when current, role in the serif, the date span, an optional “Joined as” line, hairline-marked keypoints, then a wrapping row of skill names with small icons.
+### Practice record
 
-**Project story.** A serif title, the screenshot, the existing description, the skill row, then either “View Code” or “Private repository”.
+An employer mark sits on the dark plate. The company and the date share a row. The role, the “Joined as” line, the keypoints, and a comma-separated skill line follow. No icons.
 
-**Folio.** A still double rule, the copyright line, then email, GitHub, LinkedIn, and Resumé as underlined links.
+### Project
+
+A screenshot with a `12px` radius and the quiet shadow, then the title, the existing description, the technologies, and either “View Code” or “Private repository”. From `860px` the rows alternate which side holds the picture.
 
 ## Do's and Don'ts
 
-**Do**
+### Do
 
-- Keep the biography, employers, dates, keypoints, skills, project descriptions, email, and links as recorded facts.
-- Put new reading on the same sheet: nameplate, double rule, dateline, then the story.
-- Use the serif for titles and the grotesque for sentences.
-- Keep coral on the Present flag.
-- Leave the send button as the only filled control.
+- **Do** keep the biography, employers, dates, keypoints, skills, project descriptions, email, and links as recorded facts.
+- **Do** let the name, the photograph, and Get in touch lead the first screen.
+- **Do** use one grotesque and one filled button.
 
-**Don't**
+### Don't
 
-- Don’t add a kicker above a heading.
-- Don’t turn engagements or projects into equal cards, circles, or icon tiles.
-- Don’t invent a promotion date, a client, or a metric.
-- Don’t put a second filled button beside Send message.
-- Don’t hide body copy until an animation or a scroll trigger fires.
+- **Don't** rebuild the broadsheet: no masthead, dateline, edition, column rule, or coral flag.
+- **Don't** put a kicker above a heading.
+- **Don't** turn roles, projects, or skills into equal cards or rainbow icons.
+- **Don't** invent a promotion date, a client, or a metric.

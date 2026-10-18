@@ -93,6 +93,31 @@ const monthYear = new Intl.DateTimeFormat('en-GB', {
   timeZone: 'UTC',
 })
 
+const skillLabels: Record<string, string> = {
+  typescript: 'TypeScript',
+  angular: 'Angular',
+  vue: 'Vue',
+  nestjs: 'NestJS',
+  go: 'Go',
+  jest: 'Jest',
+  aws: 'AWS',
+  azure: 'Azure',
+  tailwind: 'Tailwind',
+  dotnet: '.NET',
+  react: 'React',
+  python: 'Python',
+  fastapi: 'FastAPI',
+  snowflake: 'Snowflake',
+  tableau: 'Tableau',
+  express: 'Express',
+  'socket.io': 'Socket.IO',
+  nextjs: 'Next.js',
+}
+
+export function skillLabel(id: string) {
+  return skillLabels[id] ?? id
+}
+
 export function formatPeriod(startingDate: Date, endingDate?: Date) {
   const start = monthYear.format(startingDate)
   const end = endingDate ? monthYear.format(endingDate) : 'Present'

@@ -7,12 +7,11 @@ function Avatar() {
       <Image
         src={portrait}
         alt="Bogdan Maftei"
-        width={900}
-        height={1100}
-        layout="responsive"
+        layout="fill"
+        objectFit="cover"
+        objectPosition="center 18%"
         priority
       />
-      <figcaption>Bogdan Maftei</figcaption>
     </figure>
   )
 }

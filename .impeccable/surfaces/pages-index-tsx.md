@@ -9,30 +9,30 @@ related_targets: ["pages/about.tsx","pages/experience.tsx","pages/projects.tsx",
 
 ## Scope
 
-Persuade. The front page of Bogdan Maftei’s portfolio, shared with About, Experience, Projects, and Contact through one masthead.
+Persuade. Bogdan Maftei’s practice site, shared with About, Experience, Projects, and Contact.
 
 ## Audience
 
-A client or hiring manager who needs to know who he is, what he has done, and how to write, on a phone or a laptop.
+A client or hiring manager deciding whether to work with him, on a phone or a laptop, in daylight.
 
 ## Job
 
-Read the appointment and the existing record, then send a message.
+See who he is, what he has done, and write to him.
 
 ## Constraints
 
-Keep the confirmed copy, employers, dates, skills, projects, email, résumé, and social links. Do not invent a promotion date. Mobile is a primary surface.
+Keep the confirmed copy, employers, dates, skills, projects, email, résumé, and social links. Do not invent a promotion date. The newspaper treatment was rejected.
 
 ## Direction contract
 
-THESIS: The front page is the broadsheet named Bogdan Maftei, and it refuses the centered portrait greeting and the row of equal cards.
+THESIS: A senior consultant’s practice, set as a calm website a client can trust, refusing the broadsheet, the dateline, and the row of skill tiles.
 
-OWN-WORLD: A mint-cream sheet (#f4f5f0) with white columns and gunmetal ink (#414141), hairline rules, square corners. Coral (#f38380) is only the flag on the current role. Source Serif 4 sets the masthead and headlines; Schibsted Grotesk sets the columns. Salmon newsprint is translated into this mint sheet because the brief pinned the Softwire palette. Minihompy raise: the opening is one complete sheet. Cutting-bench raise: engagements are one continuous rule, flagged where he is now. Reference-setting discipline kept as short column measure. Consumer-app raise: the only filled control is the one that sends a message. Streetwear raise: section names are literal. Azulejo raise: the column rule runs through the sheet.
+OWN-WORLD: Cool office ground (#f4f6f3), near-black ink (#17211c), white only as a project field and form surfaces. One grotesque, Schibsted Grotesk. Photographs with a 12px radius and a soft offset shadow. One filled control, near-black, radius 8px. Hairlines separate records; they do not draw a newspaper.
 
-STORY: The visitor reads the masthead, the appointment, and the record, and sends a message from the form on the page.
+STORY: The visitor reads the name, the appointment, and the record, then emails or sends the form.
 
-FIRST VIEWPORT: Full-width serif masthead “Bogdan Maftei”, a double rule, then a dateline with the role, Softwire, and the section index. The headline “Senior Technical Consultant” spans the sheet. Under it, the existing about sentences run in columns with the portrait set into the story and captioned, and a ruled Write box holds the working contact form. Signature motion: the double rule reveals once by clip-path; content stays visible. On a phone the Write box comes before the long copy.
+FIRST VIEWPORT: Sticky header with the name, the section links, and a filled “Get in touch”. Below it, “Bogdan Maftei” at display size, a short ink bar that draws once, “Senior Technical Consultant”, and the Softwire line. From 860px the portrait sits beside the actions and the existing about paragraph. On a phone the actions come first, then a 16.5rem photograph, then the paragraph. Signature motion: that bar scales from the left once, 700ms, ease-out; content stays visible; reduced motion shows the bar still.
 
-FORM: Business-section broadsheet, fifth of seven, seed ba0f2a9f.
+FORM: User-pinned professional practice site, placed beside Softwire and Cursor. It overrides the direction roll. seed:a9b08aeb320b115b.
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance

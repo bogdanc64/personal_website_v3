@@ -43,7 +43,7 @@ Constraints from the request: keep those details, make the site simple and reada
 
 ## Brand Commitments
 
-The user named https://softwire.com as the aesthetic to take inspiration from: a clear, professional technology consultancy, not a copy of Softwire’s identity, copy, patterns, or assets. The site remains Bogdan’s.
+The user named https://softwire.com as the aesthetic to take inspiration from: a clear, professional technology consultancy, not a copy of Softwire’s identity, copy, patterns, or assets. After seeing the broadsheet, he rejected it and asked for the site to be redone as a professional practice page at the craft level of Softwire and Cursor. The site remains Bogdan’s.
 
 ## Evidence on Hand
 

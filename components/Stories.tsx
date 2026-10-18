@@ -1,8 +1,7 @@
 import Image, { StaticImageData } from 'next/image'
 import runnie from '../assets/images/runnie.png'
 import personalWebsite from '../assets/images/personal_website.png'
-import { projects } from '../data/profile'
-import SkillIcon from './SkillIcon'
+import { projects, skillLabel } from '../data/profile'
 
 const shots: Record<string, StaticImageData> = {
   Runnie: runnie,
@@ -15,8 +14,7 @@ function Stories() {
       {projects.map((project) => {
         const shot = shots[project.title]
         return (
-          <article className="report" key={project.title}>
-            <h3>{project.title}</h3>
+          <article className="project" key={project.title}>
             {shot && (
               <figure className="shot">
                 <Image
@@ -25,27 +23,24 @@ function Stories() {
                   width={1280}
                   height={800}
                   layout="responsive"
-                  objectFit="contain"
+                  objectFit="cover"
                 />
               </figure>
             )}
-            <div className="report-copy">
+            <div>
+              <h3>{project.title}</h3>
               <p>{project.description}</p>
+              <p className="skill-text">{project.technologies.map(skillLabel).join(', ')}</p>
+              {project.privateRepository ? (
+                <p className="repo-note">Private repository</p>
+              ) : (
+                <p>
+                  <a className="quiet" href={project.linkCode} target="_blank" rel="noreferrer">
+                    View Code
+                  </a>
+                </p>
+              )}
             </div>
-            <ul className="skill-line">
-              {project.technologies.map((technology) => (
-                <li key={technology}>
-                  <SkillIcon title size={16} type={technology} />
-                </li>
-              ))}
-            </ul>
-            {project.privateRepository ? (
-              <p className="repo-note">Private repository</p>
-            ) : (
-              <a className="repo-link" href={project.linkCode} target="_blank" rel="noreferrer">
-                View Code
-              </a>
-            )}
           </article>
         )
       })}

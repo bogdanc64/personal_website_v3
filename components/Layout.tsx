@@ -7,13 +7,13 @@ type Props = {
 
 export default function Layout({ children }: Props) {
   return (
-    <div className="sheet">
+    <>
       <a className="skip" href="#page-content">Skip to main content</a>
       <Navbar />
       <main id="page-content" tabIndex={-1}>
         {children}
       </main>
       <Footer />
-    </div>
+    </>
   )
 }

@@ -2,7 +2,6 @@ import type { NextPageWithLayout } from './_app'
 import { ReactElement } from 'react'
 import Head from 'next/head'
 import Layout from '../components/Layout'
-import Title from '../components/Title'
 import Engagements from '../components/Engagements'
 
 const Experience: NextPageWithLayout = () => {
@@ -11,8 +10,10 @@ const Experience: NextPageWithLayout = () => {
       <Head>
         <title>Experience — Bogdan Maftei</title>
       </Head>
-      <Title value="Experience" />
-      <Engagements />
+      <div className="page">
+        <h1 className="page-title">Experience</h1>
+        <Engagements />
+      </div>
     </>
   )
 }

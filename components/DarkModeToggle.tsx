@@ -14,12 +14,12 @@ const DarkModeToggle = () => {
   return (
     <button
       type="button"
-      className="edition"
+      className="theme-button"
       aria-pressed={dark}
-      aria-label={dark ? 'Switch to day edition' : 'Switch to night edition'}
+      aria-label={dark ? 'Switch to light mode' : 'Switch to dark mode'}
       onClick={() => setTheme(dark ? 'light' : 'dark')}
     >
-      {dark ? 'Night edition' : 'Day edition'}
+      {dark ? 'Light mode' : 'Dark mode'}
     </button>
   )
 }

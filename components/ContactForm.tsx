@@ -90,7 +90,7 @@ function ContactForm() {
           required
         />
       </label>
-      <button className="send" type="submit" disabled={sending}>
+      <button className="button" type="submit" disabled={sending}>
         {sending ? 'Sending…' : 'Send message'}
       </button>
       {response === 'Success' && <p className="form-status" role="status">Message sent.</p>}
