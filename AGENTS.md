@@ -37,3 +37,13 @@ Geist was already in place, and it was close enough to Manrope that it read as t
 - Wordmark is 15px medium ink. Links are 14px quieter ink. The current page is full ink. No growing underline.
 - The theme toggle stays in the bar, including on small screens. Below `md`, links open in a full-screen canvas sheet.
 - Do not bring back the tall `h-28` bar or the center-out underline on nav links. The homepage sentence can still use that underline.
+
+### 3. Home lockup
+
+The home page is no longer a centered profile card. The first viewport is a left-aligned lockup in the same quiet register as a Softwire hero, with the portrait as part of the name rather than the subject of the page.
+
+- The name is two lines, large, medium weight, tracking `-0.04em`. Do not go tighter than that, and do not exceed 6rem.
+- The portrait is one hairline circle, aligned to the baseline of the name, on the right. No triple ring, no wave emoji.
+- Under the lockup: the role in secondary ink, then the existing invitation, then the social links. Do not invent a new biography on this page.
+- Invitation links draw a 1px underline on hover. Social icons change color only. No size jump.
+- One entrance: a 14px rise and fade, staggered, power3 out. Skip it when `prefers-reduced-motion` is set. Do not add a second animation on the home page.

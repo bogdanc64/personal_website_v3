@@ -1,64 +1,79 @@
 import type { NextPageWithLayout } from './_app'
 import { ReactElement, useRef } from 'react'
 import Layout from '../components/Layout'
-import { motion } from 'framer-motion'
 import Avatar from '../components/Avatar'
 import { useIsomorphicLayoutEffect } from '../utils/useIsomorphicLayoutEffect'
-import { stagger } from '../utils/animations'
 import SocialButtons from '../components/SocialButtons'
 import Link from 'next/link'
-
+import gsap from 'gsap'
 
 const Home: NextPageWithLayout = () => {
-
-  //refs
-
-  const firstHeader = useRef(null);
-  const secondHeader = useRef(null);
-  const thirdHeader = useRef(null);
-  const socialButtons = useRef(null);
-  const avatar = useRef(null);
+  const portrait = useRef<HTMLDivElement>(null)
+  const name = useRef<HTMLHeadingElement>(null)
+  const role = useRef<HTMLParagraphElement>(null)
+  const intro = useRef<HTMLParagraphElement>(null)
+  const socials = useRef<HTMLDivElement>(null)
 
   useIsomorphicLayoutEffect(() => {
-    stagger(
-      [avatar.current, firstHeader.current, secondHeader.current, thirdHeader.current, socialButtons.current],
-      { y: 20 },
-      { y: 0 },
-      0.2
-    );
-  }, []);
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const nodes = [name.current, portrait.current, role.current, intro.current, socials.current]
+    if (reduce) return
+
+    const tween = gsap.fromTo(
+      nodes,
+      { opacity: 0, y: 14 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.85,
+        delay: 0.12,
+        stagger: 0.08,
+        ease: 'power3.out',
+      }
+    )
+
+    return () => {
+      tween.kill()
+    }
+  }, [])
 
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 1 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.25 }}
-    >
-      <div className="text-primary flex flex-col place-items-center text-center">
-        <div ref={avatar}>
+    <section className="flex min-h-[calc(100dvh-6.5rem)] flex-col justify-center py-8">
+      <div className="flex items-end justify-between gap-6 sm:gap-10">
+        <h1
+          ref={name}
+          className="text-[3.15rem] font-medium leading-[0.96] tracking-[-0.04em] sm:text-7xl"
+        >
+          Bogdan
+          <br />
+          Maftei
+        </h1>
+        <div ref={portrait} className="mb-1 shrink-0 sm:mb-2">
           <Avatar />
         </div>
-        <h1 ref={firstHeader} className='text-2xl sm:text-3xl mt-6 mb-3'>Hey, I&apos;m Bogdan Maftei! <span className="wave">👋🏻</span></h1>
-        <h3 ref={secondHeader} className='font-normal my-3 text-xl text-secondary'>Software Developer</h3>
-        <h3 ref={thirdHeader} className='font-normal my-3 text-xl text-secondary'>
-          <Link href={"/about"}>
-            <span className="font-medium text-primary inline-block hover-animation relative cursor-pointer">Get to know me better</span>
-          </Link>
-          , check out&nbsp;
-          <Link href={"/experience"}>
-            <span className="font-medium text-primary inline-block hover-animation relative cursor-pointer">my experience</span>
-          </Link>
-          , and&nbsp;
-          <Link href={"/contact"}>
-            <span className="font-medium text-primary inline-block hover-animation relative cursor-pointer">let&apos;s get in touch</span>
-          </Link>
-          .
-        </h3>
-        <div ref={socialButtons} className="mt-3">
-          <SocialButtons />
-        </div>
       </div>
-    </motion.div>
+
+      <p ref={role} className="mt-10 text-lg text-secondary sm:mt-12">
+        Software developer
+      </p>
+      <p ref={intro} className="mt-3 max-w-[38rem] text-lg leading-relaxed text-secondary">
+        <Link href="/about">
+          <a className="hero-link font-medium text-primary">Get to know me better</a>
+        </Link>
+        , check out{' '}
+        <Link href="/experience">
+          <a className="hero-link font-medium text-primary">my experience</a>
+        </Link>
+        , and{' '}
+        <Link href="/contact">
+          <a className="hero-link font-medium text-primary">let&apos;s get in touch</a>
+        </Link>
+        .
+      </p>
+      <div ref={socials} className="mt-8">
+        <SocialButtons />
+      </div>
+    </section>
   )
 }
 

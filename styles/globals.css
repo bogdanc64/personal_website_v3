@@ -85,6 +85,20 @@
     left: 0; 
 }
 
+.hero-link {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 0 1px;
+    padding-bottom: 1px;
+    transition: background-size 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-link:hover,
+.hero-link:focus-visible {
+    background-size: 100% 1px;
+}
+
 .wave {
     animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
     animation-duration: 2.5s; /* Change to speed up or slow down */

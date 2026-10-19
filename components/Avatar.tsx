@@ -3,12 +3,16 @@ import avatar from '../assets/images/portrait-min2.jpg'
 
 function Avatar() {
   return (
-    <div className="shadow-avatar3 rounded-full flex justify-center p-2">
-        <div className="shadow-avatar2 rounded-full flex justify-center p-2">
-          <div className="shadow-avatar rounded-full flex justify-center itens-center w-48 h-48">
-            <Image className="rounded-full z-[-10]" objectFit="cover" src={avatar} quality={75} width={700} height={700}></Image>
-          </div>
-        </div>
+    <div className="h-28 w-28 overflow-hidden rounded-full shadow-avatar sm:h-36 sm:w-36">
+      <Image
+        className="rounded-full"
+        objectFit="cover"
+        src={avatar}
+        alt="Portrait of Bogdan Maftei"
+        quality={75}
+        width={320}
+        height={320}
+      />
     </div>
   )
 }

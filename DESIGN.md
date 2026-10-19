@@ -135,11 +135,15 @@ The neutrals are the overlapping palette of cursor.com and softwire.com. The acc
 
 ## Layout
 
-The page is a single centered column. Horizontal padding is 24px on small screens and steps up through Tailwind’s `md` and `lg` to 256px at `xl`, then wider at the `bigger-desktops` breakpoint (1650px). Sections stack vertically. This pass did not change the grid. Later layout work should keep the wide, quiet margins.
+Horizontal padding is 24px on small screens and steps up through Tailwind’s `md` and `lg` to 256px at `xl`, then wider at the `bigger-desktops` breakpoint (1650px). Inner pages stay a single centered column. Later layout work should keep the wide, quiet margins.
+
+### Home
+
+The first view is a lockup, not a centered profile card. The name is set large on two lines, up to 4.5rem, tracking `-0.04em`. A single hairline circle sits on the baseline of the name, at the right. Under that, with more space above than between the lines, the role and the existing invitation. Social links sit beneath, small and quiet. The block fills the first viewport. Entrance is one rise and fade (14px, 0.85s, stagger 0.08s, power3 out), skipped when the visitor prefers reduced motion. Do not put the wave emoji or a triple portrait ring back on this page.
 
 ## Elevation & Depth
 
-Depth is tonal. Light pages sit on Paper; a raised area, when needed, uses Raised Paper. Dark pages sit on Night and raise to Raised Night. Shadows are a 1px resting shade on fields and buttons only (`--shadow-rest`), warm in light and black in dark. Avatar rings are 1px ink strokes at three opacities, not glowing halos.
+Depth is tonal. Light pages sit on Paper; a raised area, when needed, uses Raised Paper. Dark pages sit on Night and raise to Raised Night. Shadows are a 1px resting shade on fields and buttons only (`--shadow-rest`), warm in light and black in dark. The home portrait is one 1px ink ring, not a stack of halos.
 
 **The Flat Sheet Rule.** Do not add drop shadows to cards, portraits, or sections to create depth. A hairline or a one-step surface change is the depth system.
 
