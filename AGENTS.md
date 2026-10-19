@@ -47,3 +47,12 @@ The home page is no longer a centered profile card. The first viewport is a left
 - Under the lockup: the role in secondary ink, then the existing invitation, then the social links. Do not invent a new biography on this page.
 - Invitation links draw a 1px underline on hover. Social icons change color only. No size jump.
 - One entrance: a 14px rise and fade, staggered, power3 out. Skip it when `prefers-reduced-motion` is set. Do not add a second animation on the home page.
+
+### 4. A pitch that can book the work
+
+The name-only lockup left a gap between the type and a small portrait. The home page now asks to be hired, using only facts already on the experience page.
+
+- The headline is the offer: “From the first technical decision to the release.” It fills the left column. The name and “Software Developer II at Softwire” sit under it, then one proof line: advise clients, shape the roadmap, and lead the build, then the previous title, Full-stack Developer at Software Business Partners.
+- Primary action is “Let’s get in touch” (contact). Secondary is “See the work” (experience). Social icons stay in that row.
+- The portrait is still one hairline circle, at 11rem on small screens, 16rem from `sm`, and 22rem from `lg`, on the right. On small screens it leads.
+- Do not return to a tiny circle, a centered profile card, a metric strip, or a new biography that is not already on the site.

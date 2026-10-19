@@ -139,7 +139,7 @@ Horizontal padding is 24px on small screens and steps up through Tailwind’s `m
 
 ### Home
 
-The first view is a lockup, not a centered profile card. The name is set large on two lines, up to 4.5rem, tracking `-0.04em`. A single hairline circle sits on the baseline of the name, at the right. Under that, with more space above than between the lines, the role and the existing invitation. Social links sit beneath, small and quiet. The block fills the first viewport. Entrance is one rise and fade (14px, 0.85s, stagger 0.08s, power3 out), skipped when the visitor prefers reduced motion. Do not put the wave emoji or a triple portrait ring back on this page.
+The first view is a hiring pitch in two columns, still on the same hairlines and type. The headline is the offer, up to 3.75rem, tracking `-0.04em`, max about 14 characters wide so it stacks into a block: “From the first technical decision to the release.” The name, the Softwire role, and one proof line sit under it. The action is “Let’s get in touch”, with “See the work” as a text link. The portrait is one hairline circle, 22rem from the `lg` breakpoint, on the right. On small screens the portrait comes first, at 11rem and up. Entrance is one rise and fade. Do not go back to a name-only lockup, a tiny baseline circle, a wave emoji, or a triple ring. Do not add a metric row.
 
 ## Elevation & Depth
 

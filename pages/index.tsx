@@ -9,14 +9,14 @@ import gsap from 'gsap'
 
 const Home: NextPageWithLayout = () => {
   const portrait = useRef<HTMLDivElement>(null)
-  const name = useRef<HTMLHeadingElement>(null)
-  const role = useRef<HTMLParagraphElement>(null)
-  const intro = useRef<HTMLParagraphElement>(null)
-  const socials = useRef<HTMLDivElement>(null)
+  const headline = useRef<HTMLHeadingElement>(null)
+  const identity = useRef<HTMLParagraphElement>(null)
+  const proof = useRef<HTMLParagraphElement>(null)
+  const actions = useRef<HTMLDivElement>(null)
 
   useIsomorphicLayoutEffect(() => {
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    const nodes = [name.current, portrait.current, role.current, intro.current, socials.current]
+    const nodes = [headline.current, identity.current, proof.current, actions.current, portrait.current]
     if (reduce) return
 
     const tween = gsap.fromTo(
@@ -39,39 +39,36 @@ const Home: NextPageWithLayout = () => {
 
   return (
     <section className="flex min-h-[calc(100dvh-6.5rem)] flex-col justify-center py-8">
-      <div className="flex items-end justify-between gap-6 sm:gap-10">
-        <h1
-          ref={name}
-          className="text-[3.15rem] font-medium leading-[0.96] tracking-[-0.04em] sm:text-7xl"
-        >
-          Bogdan
-          <br />
-          Maftei
-        </h1>
-        <div ref={portrait} className="mb-1 shrink-0 sm:mb-2">
-          <Avatar />
+      <div className="grid w-full items-center gap-10 md:grid-cols-[minmax(0,1fr)_18rem] md:gap-12 lg:grid-cols-[minmax(0,1fr)_22rem] lg:gap-16">
+        <div>
+          <h1
+            ref={headline}
+            className="max-w-[14ch] text-[2.6rem] font-medium leading-[1.02] tracking-[-0.04em] sm:text-5xl lg:text-6xl"
+          >
+            From the first technical decision to the release.
+          </h1>
+          <p ref={identity} className="mt-8 text-lg leading-snug">
+            <span className="font-medium text-primary">Bogdan Maftei</span>
+            <span className="text-secondary">, Software Developer II at Softwire</span>
+          </p>
+          <p ref={proof} className="mt-3 max-w-[42rem] text-lg leading-relaxed text-secondary">
+            I advise clients, shape the roadmap, and lead the build. Before Softwire, I was a Full{"\u2011"}stack Developer at Software Business Partners.
+          </p>
+          <div ref={actions} className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
+            <Link href="/contact">
+              <a className="inline-block border border-line bg-primary px-4 py-2 font-medium text-primary shadow transition-colors duration-200 hover:border-accent rounded">
+                Let&apos;s get in touch
+              </a>
+            </Link>
+            <Link href="/experience">
+              <a className="hero-link font-medium text-primary">See the work</a>
+            </Link>
+            <SocialButtons />
+          </div>
         </div>
-      </div>
-
-      <p ref={role} className="mt-10 text-lg text-secondary sm:mt-12">
-        Software developer
-      </p>
-      <p ref={intro} className="mt-3 max-w-[38rem] text-lg leading-relaxed text-secondary">
-        <Link href="/about">
-          <a className="hero-link font-medium text-primary">Get to know me better</a>
-        </Link>
-        , check out{' '}
-        <Link href="/experience">
-          <a className="hero-link font-medium text-primary">my experience</a>
-        </Link>
-        , and{' '}
-        <Link href="/contact">
-          <a className="hero-link font-medium text-primary">let&apos;s get in touch</a>
-        </Link>
-        .
-      </p>
-      <div ref={socials} className="mt-8">
-        <SocialButtons />
+        <div ref={portrait} className="order-first justify-self-start md:order-last md:justify-self-end">
+          <Avatar size="lg" />
+        </div>
       </div>
     </section>
   )
