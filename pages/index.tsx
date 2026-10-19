@@ -52,7 +52,7 @@ const Home: NextPageWithLayout = () => {
             <span className="text-secondary">, Software Developer II at Softwire</span>
           </p>
           <p ref={proof} className="mt-3 max-w-[42rem] text-lg leading-relaxed text-secondary">
-            I advise clients, shape the roadmap, and lead the build. Before Softwire, I was a Full{"\u2011"}stack Developer at Software Business Partners.
+            I advise clients, shape the roadmap, and lead the build.
           </p>
           <div ref={actions} className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
             <Link href="/contact">

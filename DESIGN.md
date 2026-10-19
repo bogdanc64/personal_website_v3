@@ -139,11 +139,11 @@ Horizontal padding is 24px on small screens and steps up through Tailwind’s `m
 
 ### Home
 
-The first view is a hiring pitch in two columns, still on the same hairlines and type. The headline is the offer, up to 3.75rem, tracking `-0.04em`, max about 14 characters wide so it stacks into a block: “From the first technical decision to the release.” The name, the Softwire role, and one proof line sit under it. The action is “Let’s get in touch”, with “See the work” as a text link. The portrait is one hairline circle, 22rem from the `lg` breakpoint, on the right. On small screens the portrait comes first, at 11rem and up. Entrance is one rise and fade. Do not go back to a name-only lockup, a tiny baseline circle, a wave emoji, or a triple ring. Do not add a metric row.
+The first view is a hiring pitch in two columns, still on the same hairlines and type. The headline is the offer, up to 3.75rem, tracking `-0.04em`, max about 14 characters wide so it stacks into a block: “From the first technical decision to the release.” The name, the Softwire role, and one proof line sit under it: advise clients, shape the roadmap, and lead the build. Earlier employers stay on the experience page. The action is “Let’s get in touch”, with “See the work” as a text link. The portrait is a circle, 22rem from the `lg` breakpoint, on the right, inside the original three hairline rings. On small screens the portrait comes first, at 11rem and up. Entrance is one rise and fade. Do not go back to a name-only lockup, a tiny baseline circle, a wave emoji, or a single ring. Do not add a metric row.
 
 ## Elevation & Depth
 
-Depth is tonal. Light pages sit on Paper; a raised area, when needed, uses Raised Paper. Dark pages sit on Night and raise to Raised Night. Shadows are a 1px resting shade on fields and buttons only (`--shadow-rest`), warm in light and black in dark. The home portrait is one 1px ink ring, not a stack of halos.
+Depth is tonal. Light pages sit on Paper; a raised area, when needed, uses Raised Paper. Dark pages sit on Night and raise to Raised Night. Shadows are a 1px resting shade on fields and buttons only (`--shadow-rest`), warm in light and black in dark. The home portrait keeps three 1px ink rings, each a step quieter, with 8px of canvas between them. They are strokes around the photo, not a drop shadow.
 
 **The Flat Sheet Rule.** Do not add drop shadows to cards, portraits, or sections to create depth. A hairline or a one-step surface change is the depth system.
 

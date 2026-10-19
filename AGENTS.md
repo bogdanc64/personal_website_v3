@@ -56,3 +56,10 @@ The name-only lockup left a gap between the type and a small portrait. The home 
 - Primary action is “Let’s get in touch” (contact). Secondary is “See the work” (experience). Social icons stay in that row.
 - The portrait is still one hairline circle, at 11rem on small screens, 16rem from `sm`, and 22rem from `lg`, on the right. On small screens it leads.
 - Do not return to a tiny circle, a centered profile card, a metric strip, or a new biography that is not already on the site.
+
+### 5. Rings back, previous role off the home page
+
+The three hairline rings around the portrait stay. They were the original surround: a 1px stroke on the photo, then two quieter strokes, 8px apart. A single ring is retired again.
+
+- The proof line is only “I advise clients, shape the roadmap, and lead the build.” The Software Business Partners sentence does not belong on the home page.
+- The portrait size is unchanged: 11rem, 16rem from `sm`, 22rem from `lg`. The rings sit outside that circle.
