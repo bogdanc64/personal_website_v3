@@ -1,5 +1,5 @@
 import Image from "next/image"
-import avatar from '../assets/images/portrait-min2.jpg'
+import avatar from '../assets/images/portrait.jpg'
 
 function Avatar({ size = 'md' }: { size?: 'md' | 'lg' }) {
   const frame = size === 'lg'

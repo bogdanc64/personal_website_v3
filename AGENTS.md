@@ -63,3 +63,7 @@ The three hairline rings around the portrait stay. They were the original surrou
 
 - The proof line is only “I advise clients, shape the roadmap, and lead the build.” The Software Business Partners sentence does not belong on the home page.
 - The portrait size is unchanged: 11rem, 16rem from `sm`, 22rem from `lg`. The rings sit outside that circle.
+
+### 6. Color headshot
+
+The home portrait is `assets/images/portrait.jpg`, the square color photo against the brick wall. The older grayscale outdoor portrait is retired. Keep the circular crop centered. Do not switch back to `portrait-min2.jpg`.
