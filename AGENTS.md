@@ -63,6 +63,7 @@ The three hairline rings around the portrait stay. They were the original surrou
 
 - The proof line is only “I advise clients, shape the roadmap, and lead the build.” The Software Business Partners sentence does not belong on the home page.
 - The portrait size is unchanged: 11rem, 16rem from `sm`, 22rem from `lg`. The rings sit outside that circle.
+- The home hero fills the space above the footer. Do not give it a min-height of nearly `100dvh` as well: that stacks on the nav offset and the footer and leaves a short extra scroll.
 
 ### 6. Color headshot
 

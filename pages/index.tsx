@@ -38,7 +38,7 @@ const Home: NextPageWithLayout = () => {
   }, [])
 
   return (
-    <section className="flex min-h-[calc(100dvh-6.5rem)] flex-col justify-center py-8">
+    <section className="flex flex-1 flex-col justify-center py-8">
       <div className="grid w-full items-center gap-10 md:grid-cols-[minmax(0,1fr)_18rem] md:gap-12 lg:grid-cols-[minmax(0,1fr)_22rem] lg:gap-16">
         <div>
           <h1
