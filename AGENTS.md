@@ -27,3 +27,13 @@ Direction: warm paper and quiet ink. Neutrals are the shared palette of cursor.c
 - Chrome (nav links, role line, company, dates, footer) uses secondary text. Names, headings, and inline actions stay primary.
 - The teal Softwire wordmark is the logo image, not site text. Do not recolor it.
 - Tokens live on `.light` and `.dark` in `styles/globals.css` and are mapped in `tailwind.config.js`.
+
+### 2. Navbar and a visible type change
+
+Geist was already in place, and it was close enough to Manrope that it read as the old font. The family is now Switzer, a Swiss grotesk nearer to Neue Haas Grotesk and Cursor Gothic, self-hosted from `public/fonts` so it cannot fall back silently.
+
+- One family still: Switzer, weights 400, 500, and 600. Geist is retired.
+- The nav is a fixed 56px bar with a hairline, canvas fill, and the same horizontal inset as the page.
+- Wordmark is 15px medium ink. Links are 14px quieter ink. The current page is full ink. No growing underline.
+- The theme toggle stays in the bar, including on small screens. Below `md`, links open in a full-screen canvas sheet.
+- Do not bring back the tall `h-28` bar or the center-out underline on nav links. The homepage sentence can still use that underline.

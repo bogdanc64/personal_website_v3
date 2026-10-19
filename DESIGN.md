@@ -15,31 +15,31 @@ colors:
   danger-dark: "#ff8fa8"
 typography:
   display:
-    fontFamily: "Geist, Helvetica Neue, Helvetica, Arial, sans-serif"
+    fontFamily: "Switzer, Helvetica Neue, Helvetica, Arial, sans-serif"
     fontSize: "3rem"
     fontWeight: 500
     lineHeight: 1.2
     letterSpacing: "-0.03em"
   headline:
-    fontFamily: "Geist, Helvetica Neue, Helvetica, Arial, sans-serif"
+    fontFamily: "Switzer, Helvetica Neue, Helvetica, Arial, sans-serif"
     fontSize: "2.25rem"
     fontWeight: 500
     lineHeight: 1.2
     letterSpacing: "-0.03em"
   title:
-    fontFamily: "Geist, Helvetica Neue, Helvetica, Arial, sans-serif"
+    fontFamily: "Switzer, Helvetica Neue, Helvetica, Arial, sans-serif"
     fontSize: "1.5rem"
     fontWeight: 500
     lineHeight: 1.2
     letterSpacing: "-0.03em"
   body:
-    fontFamily: "Geist, Helvetica Neue, Helvetica, Arial, sans-serif"
+    fontFamily: "Switzer, Helvetica Neue, Helvetica, Arial, sans-serif"
     fontSize: "1rem"
     fontWeight: 400
     lineHeight: 1.6
     letterSpacing: "-0.011em"
   label:
-    fontFamily: "Geist, Helvetica Neue, Helvetica, Arial, sans-serif"
+    fontFamily: "Switzer, Helvetica Neue, Helvetica, Arial, sans-serif"
     fontSize: "1rem"
     fontWeight: 400
     lineHeight: 1.6
@@ -80,7 +80,7 @@ The old cool gray and purple system is retired. Purple avatar rings, teal accent
 
 **Key Characteristics:**
 
-- One grotesque family, Geist, at regular and medium weights.
+- One grotesque family, Switzer, at regular and medium weights.
 - Ink does the hierarchy. Orange appears a few times per page at most.
 - Structure is a hairline, not a shadow or a filled card.
 - Secondary text is the same hue as the ink, stepped quieter.
@@ -113,25 +113,25 @@ The neutrals are the overlapping palette of cursor.com and softwire.com. The acc
 
 ## Typography
 
-**Display Font:** Geist (with Helvetica Neue, Helvetica, Arial, sans-serif)
-**Body Font:** Geist (same stack)
+**Display Font:** Switzer (with Helvetica Neue, Helvetica, Arial, sans-serif)
+**Body Font:** Switzer (same stack)
 **Label/Mono Font:** none. Do not add a monospace voice for decoration.
 
-**Character:** A single neo-grotesque, closer to Neue Haas Grotesk and Cursor Gothic than to the rounded Manrope it replaced. Regular for reading, medium for headings and emphasis. Bold is retired as the default heading weight.
+**Character:** Switzer is a Swiss grotesk, in the same family as Neue Haas Grotesk and Cursor Gothic, with straight terminals and a high x-height. It replaced Geist, which was too close to the rounded Manrope it had already replaced. The files are self-hosted. Regular for reading, medium for headings and emphasis. Bold is retired as the default heading weight.
 
 ### Hierarchy
 
 - **Display** (500, 3rem from the `md` heading scale, 1.2, `-0.03em`): Page-level headings. The home name is set smaller, at `text-2xl` / `sm:text-3xl`, and stays medium.
 - **Headline** (500, 2.25rem, 1.2, `-0.03em`): Section titles such as Experience.
-- **Title** (500, 1.5rem, 1.2, `-0.03em`): The name in the nav, and role titles.
+- **Title** (500, 1.25rem on role titles, 1.2, `-0.03em`): Role titles. The nav wordmark is smaller on purpose, 15px medium at `-0.02em`.
 - **Body** (400, 1rem base, often `text-xl` in prose, 1.6, `-0.011em`): Paragraphs and lists. Keep prose in a comfortable measure; do not add a second tracking value.
-- **Label** (400, secondary color): Nav items, metadata, footer, placeholders.
+- **Label** (400, 14px, secondary color, `-0.01em`): Nav items, metadata, footer, placeholders. The current page is the same size in primary ink.
 
 ### Named Rules
 
 **The Two Weights Rule.** Use 400 and 500. Reach for 600 only when a single word must separate from a medium heading. Do not set headings in 700 or 800.
 
-**The One Family Rule.** Load Geist only, weights 400, 500, and 600. Do not add Roboto, Open Sans, Manrope, or a display serif in a later pass unless the task explicitly changes the type system.
+**The One Family Rule.** Load Switzer only, weights 400, 500, and 600, from `public/fonts`. Do not add Geist, Roboto, Open Sans, Manrope, or a display serif unless the task explicitly changes the type system.
 
 ## Layout
 
@@ -164,7 +164,7 @@ Controls use a small radius (6px, Tailwind `rounded-md`). The portrait is a circ
 
 ### Navigation
 
-- **Style:** The name is medium ink. Desktop links are quieter ink and turn to full ink on hover, with a 2px ink underline growing from the center. The theme toggle uses ivory for the moon and ink for the sun. The mobile sheet is the canvas color with primary text.
+- **Style:** A fixed 56px bar, flush to the viewport, with a hairline along the bottom and the canvas color behind it. The wordmark is 15px medium ink. Desktop links are 14px quieter ink; the current page and the hover state are full ink, with no underline. The theme toggle sits in the bar. Below `md`, the links move into a full-screen canvas sheet, 20px medium, left aligned.
 
 ### Experience mark
 

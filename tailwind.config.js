@@ -24,7 +24,7 @@ module.exports = {
         accent: 'var(--color-accent)',
       },
       fontFamily:{
-        sans:['Geist', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif']
+        sans:['Switzer', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif']
       },
       boxShadow:{
         DEFAULT: 'var(--shadow-rest)',

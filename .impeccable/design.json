@@ -107,7 +107,7 @@
       "refersTo": "button",
       "description": "Hairline button. Orange appears only on the border, on hover or focus.",
       "html": "<button class=\"ds-btn\">Resumé</button>",
-      "css": ".ds-btn { background: #f7f7f4; color: #26251e; font-family: Geist, Helvetica Neue, Helvetica, Arial, sans-serif; font-weight: 500; font-size: 1rem; padding: 8px 16px; border: 1px solid rgba(38, 37, 30, 0.16); border-radius: 6px; box-shadow: 0 1px 2px rgba(38, 37, 30, 0.06); transition: border-color 0.2s; } .ds-btn:hover { border-color: #f54e00; } .ds-btn:focus-visible { outline: 2px solid #f54e00; outline-offset: 3px; }"
+      "css": ".ds-btn { background: #f7f7f4; color: #26251e; font-family: Switzer, Helvetica Neue, Helvetica, Arial, sans-serif; font-weight: 500; font-size: 1rem; padding: 8px 16px; border: 1px solid rgba(38, 37, 30, 0.16); border-radius: 6px; box-shadow: 0 1px 2px rgba(38, 37, 30, 0.06); transition: border-color 0.2s; } .ds-btn:hover { border-color: #f54e00; } .ds-btn:focus-visible { outline: 2px solid #f54e00; outline-offset: 3px; }"
     },
     {
       "name": "Input",
@@ -115,15 +115,15 @@
       "refersTo": "input",
       "description": "Paper field with a hairline and an orange focus border.",
       "html": "<input class=\"ds-input\" placeholder=\"Name\" />",
-      "css": ".ds-input { background: #f7f7f4; color: #26251e; font-family: Geist, Helvetica Neue, Helvetica, Arial, sans-serif; font-weight: 400; font-size: 1rem; padding: 6px 12px; border: 1px solid rgba(38, 37, 30, 0.16); border-radius: 6px; box-shadow: 0 1px 2px rgba(38, 37, 30, 0.06); caret-color: #26251e; } .ds-input::placeholder { color: #5c5b56; } .ds-input:focus { border-color: #f54e00; outline: 2px solid #f54e00; outline-offset: 3px; }"
+      "css": ".ds-input { background: #f7f7f4; color: #26251e; font-family: Switzer, Helvetica Neue, Helvetica, Arial, sans-serif; font-weight: 400; font-size: 1rem; padding: 6px 12px; border: 1px solid rgba(38, 37, 30, 0.16); border-radius: 6px; box-shadow: 0 1px 2px rgba(38, 37, 30, 0.06); caret-color: #26251e; } .ds-input::placeholder { color: #5c5b56; } .ds-input:focus { border-color: #f54e00; outline: 2px solid #f54e00; outline-offset: 3px; }"
     },
     {
       "name": "Nav link",
       "kind": "nav",
       "refersTo": "label",
-      "description": "Quieter ink at rest, full ink on hover.",
+      "description": "14px quieter ink. The current page is full ink. No underline.",
       "html": "<a class=\"ds-nav\" href=\"#\">Experience</a>",
-      "css": ".ds-nav { color: #5c5b56; font-family: Geist, Helvetica Neue, Helvetica, Arial, sans-serif; font-weight: 400; text-decoration: none; letter-spacing: -0.011em; } .ds-nav:hover { color: #26251e; } .ds-nav:focus-visible { outline: 2px solid #f54e00; outline-offset: 3px; }"
+      "css": ".ds-nav { color: #5c5b56; font-family: Switzer, Helvetica Neue, Helvetica, Arial, sans-serif; font-weight: 400; font-size: 14px; letter-spacing: -0.01em; text-decoration: none; } .ds-nav:hover, .ds-nav[aria-current=page] { color: #26251e; } .ds-nav:focus-visible { outline: 2px solid #f54e00; outline-offset: 3px; }"
     },
     {
       "name": "Section title",
@@ -131,14 +131,14 @@
       "refersTo": "headline",
       "description": "Centered heading between two hairlines.",
       "html": "<div class=\"ds-title\"><span class=\"ds-title-rule\"></span><h2>Experience</h2><span class=\"ds-title-rule\"></span></div>",
-      "css": ".ds-title { display: flex; align-items: center; justify-content: center; gap: 16px; } .ds-title h2 { margin: 0; color: #26251e; font-family: Geist, Helvetica Neue, Helvetica, Arial, sans-serif; font-weight: 500; font-size: 2.25rem; letter-spacing: -0.03em; line-height: 1.2; } .ds-title-rule { width: 128px; height: 1px; background: rgba(38, 37, 30, 0.16); }"
+      "css": ".ds-title { display: flex; align-items: center; justify-content: center; gap: 16px; } .ds-title h2 { margin: 0; color: #26251e; font-family: Switzer, Helvetica Neue, Helvetica, Arial, sans-serif; font-weight: 500; font-size: 2.25rem; letter-spacing: -0.03em; line-height: 1.2; } .ds-title-rule { width: 128px; height: 1px; background: rgba(38, 37, 30, 0.16); }"
     }
   ],
   "narrative": {
     "northStar": "Warm paper, quiet ink",
     "overview": "The site should feel as quiet as cursor.com and softwire.com: a warm sheet of paper, type that sits on it without shouting, and almost no color. Light and dark are two finished rooms, not a mechanical invert. Light is a warm sheet (#f7f7f4) with warm-black ink (#26251e). Dark is a warm night (#14120b) with ivory type (#edecec).\n\nThe old cool gray and purple system is retired. Purple avatar rings, teal accent text, and the Chakra-style slate text colors do not belong in later passes.",
     "keyCharacteristics": [
-      "One grotesque family, Geist, at regular and medium weights.",
+      "One grotesque family, Switzer, at regular and medium weights.",
       "Ink does the hierarchy. Orange appears a few times per page at most.",
       "Structure is a hairline, not a shadow or a filled card.",
       "Secondary text is the same hue as the ink, stepped quieter.",
@@ -162,7 +162,7 @@
       },
       {
         "name": "The One Family Rule",
-        "body": "Load Geist only, weights 400, 500, and 600. Do not add Roboto, Open Sans, Manrope, or a display serif in a later pass unless the task explicitly changes the type system.",
+        "body": "Load Switzer only, weights 400, 500, and 600, from public/fonts. Do not add Geist, Roboto, Open Sans, Manrope, or a display serif unless the task explicitly changes the type system.",
         "section": "typography"
       },
       {

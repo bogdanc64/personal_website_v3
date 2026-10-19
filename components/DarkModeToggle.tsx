@@ -36,7 +36,7 @@ const DarkModeToggle = (props:DarkModeToggleProps) => {
         size={props.size}
         moonColor={'#edecec'}
         sunColor={'#26251e'}
-        style={{marginTop:'5'}}
+        style={{ display: 'block' }}
     />
   )
 }
