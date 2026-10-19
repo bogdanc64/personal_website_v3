@@ -34,8 +34,8 @@ const DarkModeToggle = (props:DarkModeToggleProps) => {
         checked={checked}
         onChange={onClick}
         size={props.size}
-        moonColor={'#f7fafc'}
-        sunColor={'#2d3748'}
+        moonColor={'#edecec'}
+        sunColor={'#26251e'}
         style={{marginTop:'5'}}
     />
   )

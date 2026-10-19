@@ -33,7 +33,7 @@ const Contact: NextPageWithLayout  = () => {
       <div ref={title}>
         <Title value="Contact me" />
       </div>
-      <h3 ref={description} className='justify-center text-center font-light mt-10 mb-5 text-lg'>Get in touch or shoot me an email directly on <span className='font-bold'>maftei.bogdan@outlook.com</span></h3>
+      <h3 ref={description} className='justify-center text-center font-normal text-secondary mt-10 mb-5 text-lg'>Get in touch or shoot me an email directly on <span className='font-medium text-primary'>maftei.bogdan@outlook.com</span></h3>
       <div ref={form}>
         <ContactForm />
       </div>

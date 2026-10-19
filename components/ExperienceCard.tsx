@@ -27,13 +27,13 @@ function ExperienceCard(props: Props) {
                                 <Image src={props.companyImage} objectFit='contain' objectPosition='top' quality={90}></Image>
                             </div>
                             <div className="flex flex-col items-center text-center justify-center">
-                                <h2 className="font-medium font-extrabold title-font mt-4 text-xl">{props.position}</h2>
-                                <p className="font-normal mt-2 text-lg">{props.companyName}</p>
+                                <h2 className="font-medium title-font mt-4 text-xl">{props.position}</h2>
+                                <p className="font-normal mt-2 text-lg text-secondary">{props.companyName}</p>
                                 <div className="w-12 h-1 bg-accent rounded mt-4 mb-4"></div>
-                                <p><span className="mr-2">🗓️</span>{retrieveDatePeriod(props.startingDate, props.endingDate)}</p>
+                                <p className="text-secondary"><span className="mr-2">🗓️</span>{retrieveDatePeriod(props.startingDate, props.endingDate)}</p>
                             </div>
                         </div>
-                        <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-opacity-40 border-gray-500 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-justify sm:text-left">
+                        <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-line sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-justify sm:text-left">
                             {(props.keypoints && props.keypoints.length > 0) && <div className="pb-10">
                                 <ul className="list-disc list-outside">
                                     {

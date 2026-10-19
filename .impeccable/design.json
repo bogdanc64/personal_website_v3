@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-19T07:30:00Z",
+  "title": "Design System: Bogdan Maftei",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#f7f7f4",
+        "tonalRamp": ["#14120b", "#1d1b15", "#3a3830", "#6b6a64", "#a3a29c", "#ebeae5", "#f7f7f4", "#fcfcf9"]
+      },
+      "paper-elevated": {
+        "role": "neutral",
+        "displayName": "Raised Paper",
+        "canonical": "#ebeae5",
+        "tonalRamp": ["#14120b", "#1d1b15", "#3a3830", "#6b6a64", "#a3a29c", "#d9d8d2", "#ebeae5", "#f7f7f4"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#26251e",
+        "tonalRamp": ["#14120b", "#26251e", "#3d3c34", "#5c5b56", "#6b6a64", "#a3a29c", "#edecec", "#f7f7f4"]
+      },
+      "ink-secondary-light": {
+        "role": "neutral",
+        "displayName": "Quieter Ink",
+        "canonical": "#5c5b56",
+        "tonalRamp": ["#26251e", "#3d3c34", "#5c5b56", "#6b6a64", "#8a8984", "#a3a29c", "#edecec", "#f7f7f4"]
+      },
+      "night": {
+        "role": "neutral",
+        "displayName": "Night",
+        "canonical": "#14120b",
+        "tonalRamp": ["#0c0b07", "#14120b", "#1d1b15", "#3a3830", "#6b6a64", "#a3a29c", "#edecec", "#f7f7f4"]
+      },
+      "night-elevated": {
+        "role": "neutral",
+        "displayName": "Raised Night",
+        "canonical": "#1d1b15",
+        "tonalRamp": ["#14120b", "#1d1b15", "#2a2820", "#3a3830", "#6b6a64", "#a3a29c", "#edecec", "#f7f7f4"]
+      },
+      "ivory": {
+        "role": "neutral",
+        "displayName": "Ivory",
+        "canonical": "#edecec",
+        "tonalRamp": ["#14120b", "#26251e", "#5c5b56", "#6b6a64", "#a3a29c", "#d4d3cd", "#edecec", "#f7f7f4"]
+      },
+      "ivory-secondary": {
+        "role": "neutral",
+        "displayName": "Quieter Ivory",
+        "canonical": "#a3a29c",
+        "tonalRamp": ["#26251e", "#3d3c34", "#5c5b56", "#6b6a64", "#8a8984", "#a3a29c", "#edecec", "#f7f7f4"]
+      },
+      "signal": {
+        "role": "primary",
+        "displayName": "Signal Orange",
+        "canonical": "#f54e00",
+        "tonalRamp": ["#3d1400", "#7a2a00", "#a33900", "#c2410c", "#f54e00", "#ff7a3d", "#ffb088", "#ffe8dc"]
+      },
+      "danger-light": {
+        "role": "semantic",
+        "displayName": "Light Danger",
+        "canonical": "#a61e3c",
+        "tonalRamp": ["#3d0a16", "#6e1428", "#a61e3c", "#c43b5a", "#e07a90", "#f0b3c0", "#f8d5dc", "#fdeef1"]
+      },
+      "danger-dark": {
+        "role": "semantic",
+        "displayName": "Dark Danger",
+        "canonical": "#ff8fa8",
+        "tonalRamp": ["#3d0a16", "#6e1428", "#a61e3c", "#c43b5a", "#e07a90", "#ff8fa8", "#ffc2d0", "#fdeef1"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Page headings at the md scale." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles." },
+      "title": { "displayName": "Title", "purpose": "Nav name and role titles." },
+      "body": { "displayName": "Body", "purpose": "Paragraphs and lists." },
+      "label": { "displayName": "Label", "purpose": "Nav, metadata, footer, placeholders. Same face as body, secondary color." }
+    },
+    "shadows": [
+      {
+        "name": "rest",
+        "value": "0 1px 2px rgba(38, 37, 30, 0.06)",
+        "purpose": "Light-theme resting shade on fields and buttons. Dark theme uses 0 1px 2px rgba(0, 0, 0, 0.45)."
+      }
+    ],
+    "motion": [
+      {
+        "name": "color",
+        "value": "200ms ease",
+        "purpose": "Border and background color changes."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" },
+      { "name": "bigger-desktops", "value": "1650px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Button",
+      "kind": "button",
+      "refersTo": "button",
+      "description": "Hairline button. Orange appears only on the border, on hover or focus.",
+      "html": "<button class=\"ds-btn\">Resumé</button>",
+      "css": ".ds-btn { background: #f7f7f4; color: #26251e; font-family: Geist, Helvetica Neue, Helvetica, Arial, sans-serif; font-weight: 500; font-size: 1rem; padding: 8px 16px; border: 1px solid rgba(38, 37, 30, 0.16); border-radius: 6px; box-shadow: 0 1px 2px rgba(38, 37, 30, 0.06); transition: border-color 0.2s; } .ds-btn:hover { border-color: #f54e00; } .ds-btn:focus-visible { outline: 2px solid #f54e00; outline-offset: 3px; }"
+    },
+    {
+      "name": "Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Paper field with a hairline and an orange focus border.",
+      "html": "<input class=\"ds-input\" placeholder=\"Name\" />",
+      "css": ".ds-input { background: #f7f7f4; color: #26251e; font-family: Geist, Helvetica Neue, Helvetica, Arial, sans-serif; font-weight: 400; font-size: 1rem; padding: 6px 12px; border: 1px solid rgba(38, 37, 30, 0.16); border-radius: 6px; box-shadow: 0 1px 2px rgba(38, 37, 30, 0.06); caret-color: #26251e; } .ds-input::placeholder { color: #5c5b56; } .ds-input:focus { border-color: #f54e00; outline: 2px solid #f54e00; outline-offset: 3px; }"
+    },
+    {
+      "name": "Nav link",
+      "kind": "nav",
+      "refersTo": "label",
+      "description": "Quieter ink at rest, full ink on hover.",
+      "html": "<a class=\"ds-nav\" href=\"#\">Experience</a>",
+      "css": ".ds-nav { color: #5c5b56; font-family: Geist, Helvetica Neue, Helvetica, Arial, sans-serif; font-weight: 400; text-decoration: none; letter-spacing: -0.011em; } .ds-nav:hover { color: #26251e; } .ds-nav:focus-visible { outline: 2px solid #f54e00; outline-offset: 3px; }"
+    },
+    {
+      "name": "Section title",
+      "kind": "custom",
+      "refersTo": "headline",
+      "description": "Centered heading between two hairlines.",
+      "html": "<div class=\"ds-title\"><span class=\"ds-title-rule\"></span><h2>Experience</h2><span class=\"ds-title-rule\"></span></div>",
+      "css": ".ds-title { display: flex; align-items: center; justify-content: center; gap: 16px; } .ds-title h2 { margin: 0; color: #26251e; font-family: Geist, Helvetica Neue, Helvetica, Arial, sans-serif; font-weight: 500; font-size: 2.25rem; letter-spacing: -0.03em; line-height: 1.2; } .ds-title-rule { width: 128px; height: 1px; background: rgba(38, 37, 30, 0.16); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Warm paper, quiet ink",
+    "overview": "The site should feel as quiet as cursor.com and softwire.com: a warm sheet of paper, type that sits on it without shouting, and almost no color. Light and dark are two finished rooms, not a mechanical invert. Light is a warm sheet (#f7f7f4) with warm-black ink (#26251e). Dark is a warm night (#14120b) with ivory type (#edecec).\n\nThe old cool gray and purple system is retired. Purple avatar rings, teal accent text, and the Chakra-style slate text colors do not belong in later passes.",
+    "keyCharacteristics": [
+      "One grotesque family, Geist, at regular and medium weights.",
+      "Ink does the hierarchy. Orange appears a few times per page at most.",
+      "Structure is a hairline, not a shadow or a filled card.",
+      "Secondary text is the same hue as the ink, stepped quieter.",
+      "Skill-icon brand colors are content, not chrome."
+    ],
+    "rules": [
+      {
+        "name": "The One Accent Rule",
+        "body": "Signal Orange is not a theme color. Do not use it for body copy, headings, or large fills. On Paper it is 3.3:1, enough for a control or a large mark, not for small text.",
+        "section": "colors"
+      },
+      {
+        "name": "The Same-Hue Text Rule",
+        "body": "Secondary text is a step of the active ink. Do not introduce cool gray, blue-gray, or Tailwind gray-* for type or borders.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Weights Rule",
+        "body": "Use 400 and 500. Reach for 600 only when a single word must separate from a medium heading. Do not set headings in 700 or 800.",
+        "section": "typography"
+      },
+      {
+        "name": "The One Family Rule",
+        "body": "Load Geist only, weights 400, 500, and 600. Do not add Roboto, Open Sans, Manrope, or a display serif in a later pass unless the task explicitly changes the type system.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Sheet Rule",
+        "body": "Do not add drop shadows to cards, portraits, or sections to create depth. A hairline or a one-step surface change is the depth system.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep both themes, and set every new color as a pair on .light and .dark in styles/globals.css.",
+      "Do use text-primary for anything the reader must read, and text-secondary for chrome and metadata.",
+      "Do use border-line and bg-line for structure.",
+      "Do append a dated iteration to AGENTS.md after a design pass, and update this file when a token changes.",
+      "Do check body text at 4.5:1 and large text or controls at 3:1 in both themes."
+    ],
+    "donts": [
+      "Don't bring back purple, teal, or cool slate as the site palette.",
+      "Don't use Signal Orange for paragraphs, links in running text, or large backgrounds.",
+      "Don't load a second font for headings.",
+      "Don't restyle layout, spacing, or copy during a color or type pass.",
+      "Don't recolor skill icons or employer logos. Their brand hues are content."
+    ]
+  }
+}

@@ -55,36 +55,36 @@ function ContactForm() {
             <input
             type="text" 
             onChange={(e)=>{setName(e.target.value)}} 
-            className="form-control shadow w-2/5 px-3 py-1.5 text-base font-normal text-primary bg-primary border border-solid border-gray-300 rounded transition ease-in-out my-3   "
+            className="form-control shadow w-2/5 px-3 py-1.5 text-base font-normal text-primary bg-primary border border-solid border-line rounded transition ease-in-out my-3 focus:border-accent"
             placeholder="Name"
             required
             />
             <input
             type="email"
             onChange={(e)=>{setEmail(e.target.value)}} 
-            className="form-control shadow w-2/5 px-3 py-1.5 text-base font-normal text-primary bg-primary border border-solid border-gray-300 rounded transition ease-in-out my-3 "
+            className="form-control shadow w-2/5 px-3 py-1.5 text-base font-normal text-primary bg-primary border border-solid border-line rounded transition ease-in-out my-3 focus:border-accent"
             placeholder="Email"
             required
             />
             <input
             type="text"
             onChange={(e)=>{setSubject(e.target.value)}} 
-            className="form-control shadow w-2/5 px-3 py-1.5 text-base font-normal text-primary bg-primary border border-solid border-gray-300 rounded transition ease-in-out my-3   "
+            className="form-control shadow w-2/5 px-3 py-1.5 text-base font-normal text-primary bg-primary border border-solid border-line rounded transition ease-in-out my-3 focus:border-accent"
             placeholder="Subject"
             required
             />
             <textarea
             rows={6}
             onChange={(e)=>{setMessage(e.target.value)}} 
-            className="form-control shadow w-2/5 px-3 py-1.5 text-base font-normal text-primary bg-primary border border-solid border-gray-300 rounded transition ease-in-out my-3 "
+            className="form-control shadow w-2/5 px-3 py-1.5 text-base font-normal text-primary bg-primary border border-solid border-line rounded transition ease-in-out my-3 focus:border-accent"
             placeholder="Your message"
             required
             />
-            <input type="submit" className="bg-primary text-color font-semibold py-2 px-4 border hover:text-color transition-all duration-300 rounded cursor-pointer shadow my-3" />
+            <input type="submit" value="Send" className="bg-primary text-primary font-medium py-2 px-4 border border-line hover:border-accent transition-colors duration-200 rounded cursor-pointer shadow my-3" />
             {
               submitted !== true ? null : (response === null)
                                  ? <LoadingSpinner /> : (response === "Success")
-                                 ? <p className="my-6">Message has been sent sucessfully!</p> : <p className="my-6 text-red-500">An error has been occured!</p>
+                                 ? <p className="my-6">Message has been sent sucessfully!</p> : <p className="my-6 text-danger">An error has been occured!</p>
             }
           
         </form>

@@ -37,7 +37,7 @@ const Navbar = () => {
         <div className="flex pt-4 items-center justify-between w-full h-full">
             
             <Link href={"/"}>
-                <p className="text-2xl dark:text-primary cursor-pointer">Bogdan Maftei</p>
+                <p className="text-2xl font-medium text-primary cursor-pointer">Bogdan Maftei</p>
             </Link>
             
             {/* Hamburger button*/}
@@ -49,19 +49,19 @@ const Navbar = () => {
 
             <ul className="hidden xl:flex">
                 <Link href={"/"}>
-                    <li className="mx-5 relative inline-block hover-animation text-l dark:text-primary">Home</li>
+                    <li className="mx-5 relative inline-block hover-animation text-l text-secondary hover:text-primary">Home</li>
                 </Link>
                 <Link href={"/about"}>
-                    <li className="mx-5 relative inline-block hover-animation text-l dark:text-primary">About me</li>
+                    <li className="mx-5 relative inline-block hover-animation text-l text-secondary hover:text-primary">About me</li>
                 </Link>
                 <Link href={"/experience"}>
-                    <li className="mx-5 relative inline-block hover-animation text-l dark:text-primary">Experience</li>
+                    <li className="mx-5 relative inline-block hover-animation text-l text-secondary hover:text-primary">Experience</li>
                 </Link>
                 <Link href={"/projects"}>
-                    <li className="mx-5 relative inline-block hover-animation text-l dark:text-primary">Projects</li>
+                    <li className="mx-5 relative inline-block hover-animation text-l text-secondary hover:text-primary">Projects</li>
                 </Link>
                 <Link href={"/contact"}>
-                    <li className="ml-5 relative inline-block hover-animation mr-10 text-l dark:text-primary">Contact</li>
+                    <li className="ml-5 relative inline-block hover-animation mr-10 text-l text-secondary hover:text-primary">Contact</li>
                 </Link>
                 
                 <DarkModeToggle size="15" />
