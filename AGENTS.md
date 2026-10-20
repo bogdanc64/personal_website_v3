@@ -91,7 +91,7 @@ The experience page was a two-column résumé card: a logo, an orange dash, a ca
 - Do not bring back the icon grid, the emoji, or the orange dash on this page. Skill icons still exist for the projects page.
 - The company logo stays with the role. Do not put a rule between the page title and the first role.
 - The open role is the date that ends in “Present”. Do not add a separate “Current” label beside the title.
-- The points are a two-column list with an ink dot and clear space between them. Each tool has its skill icon before the name.
+- Each point is its own line, with an ink dot and clear space between lines. Each tool has its skill icon before the name.
 
 ### 6. Color headshot
 

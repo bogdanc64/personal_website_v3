@@ -147,7 +147,7 @@ About is an account of the work, not a skill grid. A short opening, then three h
 
 ### Experience
 
-Each role is a block in the same 40rem column. A hairline sits between roles, not under the page title. The open role ends its date with “Present” in full ink. The company logo sits at the right of the heading, at its own color: Softwire’s teal wordmark, and the SBP mark knocked out of its black plate so it reads ink on paper and white on night. The work is a two-column list with a small ink dot and room between the points. Each tool is its own icon and name, in a quiet row. No calendar glyph, no orange dash, no separate “Current” label.
+Each role is a block in the same 40rem column. A hairline sits between roles, not under the page title. The open role ends its date with “Present” in full ink. The company logo sits at the right of the heading, at its own color: Softwire’s teal wordmark, and the SBP mark knocked out of its black plate so it reads ink on paper and white on night. The work is one point per line, with a small ink dot and room between the lines. Each tool is its own icon and name, in a quiet row. No calendar glyph, no orange dash, no separate “Current” label.
 
 ## Elevation & Depth
 

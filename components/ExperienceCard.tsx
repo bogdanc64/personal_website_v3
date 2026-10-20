@@ -62,7 +62,7 @@ function ExperienceCard(props: Props) {
                 </div>
             </div>
             {props.keypoints && props.keypoints.length > 0 && (
-                <ul className="mt-8 grid gap-x-12 gap-y-6 sm:grid-cols-2">
+                <ul className="mt-8 space-y-6">
                     {props.keypoints.map((keypoint) => (
                         <li className="flex gap-3 text-lg leading-relaxed" key={keypoint}>
                             <span aria-hidden="true" className="mt-[0.65rem] h-1.5 w-1.5 shrink-0 rounded-full bg-current" />
