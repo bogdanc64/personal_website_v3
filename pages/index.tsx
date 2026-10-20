@@ -45,14 +45,14 @@ const Home: NextPageWithLayout = () => {
             ref={headline}
             className="max-w-[14ch] text-[2.6rem] font-medium leading-[1.02] tracking-[-0.04em] sm:text-5xl lg:text-6xl"
           >
-            From the first technical decision to the release.
+            From the hard part or an idea to the real thing.
           </h1>
           <p ref={identity} className="mt-8 text-lg leading-snug">
             <span className="font-medium text-primary">Bogdan Maftei</span>
             <span className="text-secondary">, Software Developer II at Softwire</span>
           </p>
           <p ref={proof} className="mt-3 max-w-[42rem] text-lg leading-relaxed text-secondary">
-            I advise clients, shape the roadmap, and lead the build.
+            I talk with clients, find what&apos;s in the way, and build what makes life easier.
           </p>
           <div ref={actions} className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
             <Link href="/contact">

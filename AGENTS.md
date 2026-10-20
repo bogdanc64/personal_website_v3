@@ -65,6 +65,14 @@ The three hairline rings around the portrait stay. They were the original surrou
 - The portrait size is unchanged: 11rem, 16rem from `sm`, 22rem from `lg`. The rings sit outside that circle.
 - The home hero fills the space above the footer. Do not give it a min-height of nearly `100dvh` as well: that stacks on the nav offset and the footer and leaves a short extra scroll.
 
+### 7. The offer is wider than the technical decision
+
+The headline is no longer only about technical decisions and a release. Bogdan talks with clients, finds the hard part of the business, and builds something that makes life easier. He also takes an idea through to something real.
+
+- Headline: “From the hard part or an idea to the real thing.”
+- Proof line: “I talk with clients, find what’s in the way, and build what makes life easier.”
+- Keep it to those two lines. Do not put the earlier employer back on the home page, and do not add a metric row.
+
 ### 6. Color headshot
 
 The home portrait is `assets/images/portrait.jpg`, the square color photo against the brick wall. The older grayscale outdoor portrait is retired. Keep the circular crop centered. Do not switch back to `portrait-min2.jpg`.
