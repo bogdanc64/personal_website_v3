@@ -64,7 +64,7 @@ function ExperienceCard(props: Props) {
             {props.keypoints && props.keypoints.length > 0 && (
                 <ul className="mt-8 space-y-6">
                     {props.keypoints.map((keypoint) => (
-                        <li className="flex gap-3 text-lg leading-relaxed" key={keypoint}>
+                        <li className="flex cursor-default gap-3 text-lg leading-relaxed" key={keypoint}>
                             <span aria-hidden="true" className="mt-[0.65rem] h-1.5 w-1.5 shrink-0 rounded-full bg-current" />
                             <span>{keypoint}</span>
                         </li>
@@ -74,7 +74,7 @@ function ExperienceCard(props: Props) {
             {(props.skills ?? []).length > 0 && (
                 <ul className="mt-8 flex flex-wrap gap-x-5 gap-y-3">
                     {(props.skills ?? []).map((skill) => (
-                        <li className="flex items-center gap-2 text-secondary" key={skill}>
+                        <li className="flex cursor-default items-center gap-2 text-secondary" key={skill}>
                             <SkillIcon type={skill} size={16} title={false} />
                             <span>{skillNames[skill] ?? skill}</span>
                         </li>
