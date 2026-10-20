@@ -92,7 +92,7 @@ The neutrals are the overlapping palette of cursor.com and softwire.com. The acc
 
 ### Primary
 
-- **Signal Orange** (`#f54e00`): Focus rings, the route progress bar, button and field hover borders, and the short rule under a role on the experience page. Its rarity is the point.
+- **Signal Orange** (`#f54e00`): Focus rings, the route progress bar, and button and field hover borders. Its rarity is the point. The short orange rule under an experience role is retired.
 
 ### Neutral
 
@@ -143,7 +143,11 @@ The first view is a hiring pitch in two columns, still on the same hairlines and
 
 ### About
 
-About is an account of the work, not a skill grid. A short opening, then three hairline rows: the first conversation, a build from nothing, and a system already in use. A closing paragraph links to experience, and a résumé link sits under that. The column is about 40rem, left aligned, under the existing centered title. Do not bring back “Proficient at”, “Other skills”, or a logo wall on this page. Skill icons stay on the experience cards, where they belong to a job.
+About is an account of the work, not a skill grid. A short opening, then three hairline rows: the first conversation, a build from nothing, and a system already in use. A closing paragraph links to experience, and a résumé link sits under that. The column is about 40rem, left aligned, under the existing centered title. Do not bring back “Proficient at”, “Other skills”, or a logo wall on this page.
+
+### Experience
+
+Each role is a hairline block in the same 40rem column. The job title and the dates share a line. The company sits under the title. The work is a few plain sentences, then the tools as words on one line. No logo box, no calendar glyph, no orange dash, no icon grid. The employer logos stay in the repo and keep their own color. They are not the experience layout.
 
 ## Elevation & Depth
 

@@ -82,6 +82,14 @@ The about page was a justified bio plus two skill grids. That read as a junior p
 - The résumé stays, as a text link. Do not center a button under the writing.
 - Do not add a metric, a years count, or a self-applied “senior” title. The seniority is the scope of the work.
 
+### 9. Experience a client can read
+
+The experience page was a two-column résumé card: a logo, an orange dash, a calendar glyph, disc bullets, and a skill-icon grid. A client had to translate it.
+
+- Each role is a hairline block. Title and dates on one line, company under the title, then plain sentences, then the tools as words.
+- The sentences paraphrase the existing bullets. Do not add a client, a metric, or a project that is not already there.
+- Do not bring back the icon grid, the emoji, or the orange dash on this page. Skill icons still exist for the projects page.
+
 ### 6. Color headshot
 
 The home portrait is `assets/images/portrait.jpg`, the square color photo against the brick wall. The older grayscale outdoor portrait is retired. Keep the circular crop centered. Do not switch back to `portrait-min2.jpg`.
