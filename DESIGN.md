@@ -143,7 +143,7 @@ The first view is a hiring pitch in two columns, still on the same hairlines and
 
 ### About
 
-About is a short account of the work, not a skill grid. Two paragraphs, left aligned, in a column of about 40rem under the existing centered title. The first is how a client engagement starts. The second is the scope: technical decisions, the roadmap, and the build through to release, with a link to experience. A résumé link sits under that. Do not bring back “Proficient at”, “Other skills”, or a logo wall on this page. Skill icons stay on the experience cards, where they belong to a job.
+About is an account of the work, not a skill grid. A short opening, then three hairline rows: the first conversation, a build from nothing, and a system already in use. A closing paragraph links to experience, and a résumé link sits under that. The column is about 40rem, left aligned, under the existing centered title. Do not bring back “Proficient at”, “Other skills”, or a logo wall on this page. Skill icons stay on the experience cards, where they belong to a job.
 
 ## Elevation & Depth
 

@@ -75,8 +75,9 @@ The headline is no longer only about technical decisions and a release. It names
 
 ### 8. About is how the work happens
 
-The about page was a justified bio plus two skill grids. That read as a junior profile. It is now two paragraphs in the same voice as the home offer: start with the client, find what is in the way or take an idea through, then advise, shape the roadmap, and lead the build.
+The about page was a justified bio plus two skill grids. That read as a junior profile. It is now an opening, three hairline rows, and a close, in the same voice as the home offer.
 
+- The rows are the first conversation, a build from nothing, and a system already in use. They come from the experience page. Do not turn them into skill icons.
 - No “Proficient at” or “Other skills” on this page. Skill icons stay on the experience cards.
 - The résumé stays, as a text link. Do not center a button under the writing.
 - Do not add a metric, a years count, or a self-applied “senior” title. The seniority is the scope of the work.
