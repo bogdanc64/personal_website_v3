@@ -73,6 +73,14 @@ The headline is no longer only about technical decisions and a release. It names
 - Proof line: “I talk with clients, find what’s in the way, and build what makes life easier.”
 - Keep it to those two lines. Do not put the earlier employer back on the home page, and do not add a metric row.
 
+### 8. About is how the work happens
+
+The about page was a justified bio plus two skill grids. That read as a junior profile. It is now two paragraphs in the same voice as the home offer: start with the client, find what is in the way or take an idea through, then advise, shape the roadmap, and lead the build.
+
+- No “Proficient at” or “Other skills” on this page. Skill icons stay on the experience cards.
+- The résumé stays, as a text link. Do not center a button under the writing.
+- Do not add a metric, a years count, or a self-applied “senior” title. The seniority is the scope of the work.
+
 ### 6. Color headshot
 
 The home portrait is `assets/images/portrait.jpg`, the square color photo against the brick wall. The older grayscale outdoor portrait is retired. Keep the circular crop centered. Do not switch back to `portrait-min2.jpg`.

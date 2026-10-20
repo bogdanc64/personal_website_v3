@@ -141,6 +141,10 @@ Horizontal padding is 24px on small screens and steps up through Tailwind’s `m
 
 The first view is a hiring pitch in two columns, still on the same hairlines and type. The headline is the offer, up to 3.75rem, tracking `-0.04em`, max about 14 characters wide so it stacks into a block: “From a client's problem, or a new idea, to something real.” The name, the Softwire role, and one proof line sit under it: talk with clients, find what’s in the way, and build what makes life easier. Earlier employers stay on the experience page. The action is “Let’s get in touch”, with “See the work” as a text link. The portrait is a circle, 22rem from the `lg` breakpoint, on the right, inside the original three hairline rings. On small screens the portrait comes first, at 11rem and up. The hero fills the viewport above the footer, so the first view does not scroll. Entrance is one rise and fade. Do not go back to a name-only lockup, a tiny baseline circle, a wave emoji, or a single ring. Do not add a metric row.
 
+### About
+
+About is a short account of the work, not a skill grid. Two paragraphs, left aligned, in a column of about 40rem under the existing centered title. The first is how a client engagement starts. The second is the scope: technical decisions, the roadmap, and the build through to release, with a link to experience. A résumé link sits under that. Do not bring back “Proficient at”, “Other skills”, or a logo wall on this page. Skill icons stay on the experience cards, where they belong to a job.
+
 ## Elevation & Depth
 
 Depth is tonal. Light pages sit on Paper; a raised area, when needed, uses Raised Paper. Dark pages sit on Night and raise to Raised Night. Shadows are a 1px resting shade on fields and buttons only (`--shadow-rest`), warm in light and black in dark. The home portrait keeps three 1px ink rings, each a step quieter, with 8px of canvas between them. They are strokes around the photo, not a drop shadow.
