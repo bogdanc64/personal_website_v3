@@ -67,9 +67,9 @@ The three hairline rings around the portrait stay. They were the original surrou
 
 ### 7. The offer is wider than the technical decision
 
-The headline is no longer only about technical decisions and a release. Bogdan talks with clients, finds the hard part of the business, and builds something that makes life easier. He also takes an idea through to something real.
+The headline is no longer only about technical decisions and a release. It names a client's problem, or a new idea, and the outcome: something real. The proof line still carries the client conversation and making life easier.
 
-- Headline: “From the hard part or an idea to the real thing.”
+- Headline: “From a client's problem, or a new idea, to something real.”
 - Proof line: “I talk with clients, find what’s in the way, and build what makes life easier.”
 - Keep it to those two lines. Do not put the earlier employer back on the home page, and do not add a metric row.
 

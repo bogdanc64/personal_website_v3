@@ -45,7 +45,7 @@ const Home: NextPageWithLayout = () => {
             ref={headline}
             className="max-w-[14ch] text-[2.6rem] font-medium leading-[1.02] tracking-[-0.04em] sm:text-5xl lg:text-6xl"
           >
-            From the hard part or an idea to the real thing.
+            From a client's problem, or a new idea, to something real.
           </h1>
           <p ref={identity} className="mt-8 text-lg leading-snug">
             <span className="font-medium text-primary">Bogdan Maftei</span>
