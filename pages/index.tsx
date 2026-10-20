@@ -1,64 +1,76 @@
 import type { NextPageWithLayout } from './_app'
 import { ReactElement, useRef } from 'react'
 import Layout from '../components/Layout'
-import { motion } from 'framer-motion'
 import Avatar from '../components/Avatar'
 import { useIsomorphicLayoutEffect } from '../utils/useIsomorphicLayoutEffect'
-import { stagger } from '../utils/animations'
 import SocialButtons from '../components/SocialButtons'
 import Link from 'next/link'
-
+import gsap from 'gsap'
 
 const Home: NextPageWithLayout = () => {
-
-  //refs
-
-  const firstHeader = useRef(null);
-  const secondHeader = useRef(null);
-  const thirdHeader = useRef(null);
-  const socialButtons = useRef(null);
-  const avatar = useRef(null);
+  const portrait = useRef<HTMLDivElement>(null)
+  const headline = useRef<HTMLHeadingElement>(null)
+  const identity = useRef<HTMLParagraphElement>(null)
+  const proof = useRef<HTMLParagraphElement>(null)
+  const actions = useRef<HTMLDivElement>(null)
 
   useIsomorphicLayoutEffect(() => {
-    stagger(
-      [avatar.current, firstHeader.current, secondHeader.current, thirdHeader.current, socialButtons.current],
-      { y: 20 },
-      { y: 0 },
-      0.2
-    );
-  }, []);
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const nodes = [headline.current, identity.current, proof.current, actions.current, portrait.current]
+    if (reduce) return
+
+    const tween = gsap.fromTo(
+      nodes,
+      { opacity: 0, y: 14 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.85,
+        delay: 0.12,
+        stagger: 0.08,
+        ease: 'power3.out',
+      }
+    )
+
+    return () => {
+      tween.kill()
+    }
+  }, [])
 
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 1 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.25 }}
-    >
-      <div className="dark:text-primary flex flex-col place-items-center text-center">
-        <div ref={avatar}>
-          <Avatar />
+    <section className="flex flex-1 flex-col justify-center py-8">
+      <div className="grid w-full items-center gap-10 md:grid-cols-[minmax(0,1fr)_18rem] md:gap-12 lg:grid-cols-[minmax(0,1fr)_22rem] lg:gap-16">
+        <div>
+          <h1
+            ref={headline}
+            className="max-w-[14ch] text-[2.6rem] font-medium leading-[1.02] tracking-[-0.04em] sm:text-5xl lg:text-6xl"
+          >
+            From a client's problem, or a new idea, to something real.
+          </h1>
+          <p ref={identity} className="mt-8 text-lg leading-snug">
+            <span className="font-medium text-primary">Bogdan Maftei</span>
+            <span className="text-secondary">, Software Developer II at Softwire</span>
+          </p>
+          <p ref={proof} className="mt-3 max-w-[42rem] text-lg leading-relaxed text-secondary">
+            I talk with clients, find what&apos;s in the way, and build what makes life easier.
+          </p>
+          <div ref={actions} className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
+            <Link href="/contact">
+              <a className="inline-block border border-line bg-primary px-4 py-2 font-medium text-primary shadow transition-colors duration-200 hover:border-accent rounded">
+                Let&apos;s get in touch
+              </a>
+            </Link>
+            <Link href="/experience">
+              <a className="hero-link font-medium text-primary">See the work</a>
+            </Link>
+            <SocialButtons />
+          </div>
         </div>
-        <h1 ref={firstHeader} className='text-2xl sm:text-3xl mt-6 mb-3'>Hey, I&apos;m Bogdan Maftei! <span className="wave">👋🏻</span></h1>
-        <h3 ref={secondHeader} className='font-light my-3 text-xl'>Software Developer</h3>
-        <h3 ref={thirdHeader} className='font-light my-3 text-xl'>
-          <Link href={"/about"}>
-            <span className="font-bold inline-block hover-animation relative cursor-pointer">Get to know me better</span>
-          </Link>
-          , check out&nbsp;
-          <Link href={"/experience"}>
-            <span className="font-bold inline-block hover-animation relative cursor-pointer">my experience</span>
-          </Link>
-          , and&nbsp;
-          <Link href={"/contact"}>
-            <span className="font-bold inline-block hover-animation relative cursor-pointer">let&apos;s get in touch</span>
-          </Link>
-          .
-        </h3>
-        <div ref={socialButtons} className="mt-3">
-          <SocialButtons />
+        <div ref={portrait} className="order-first justify-self-start md:order-last md:justify-self-end">
+          <Avatar size="lg" />
         </div>
       </div>
-    </motion.div>
+    </section>
   )
 }
 

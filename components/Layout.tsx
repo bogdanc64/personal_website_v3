@@ -20,13 +20,13 @@ export default function Layout({children}:Props) {
   
     return (
     <motion.div
-        className="min-h-screen flex flex-col md:pt-6"
+        className="flex min-h-[100dvh] flex-col"
         initial={{ opacity: 0, scale: 1 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.4 }}
     >  
       <Navbar />
-         <main className="pt-6 md:pt-14">
+         <main className="flex flex-1 flex-col pt-20 md:pt-24">
              {children}
          </main>
       <Footer />

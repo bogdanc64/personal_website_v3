@@ -2,31 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,600;1,400;1,600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap');
-
-  
-.dark {
-    --color-bg-primary: rgb(10, 8, 23); /* 0c0a18 0e0c17 */
-    --color-bg-secondary: #283141;
-    --color-border-avatar:#43348de8;
-    --color-border-avatar-2:#43348da2;
-    --color-border-avatar-3:#43348d70;
-    --color-text-primary: #f7fafc;
-    --color-text-secondary: #e2e8f0;
-    --color-text-accent: #81e6d9;
+@font-face {
+    font-family: "Switzer";
+    src: url("/fonts/switzer-400.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
 }
-  
+
+@font-face {
+    font-family: "Switzer";
+    src: url("/fonts/switzer-500.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Switzer";
+    src: url("/fonts/switzer-600.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Warm paper and ink, shared by cursor.com and softwire.com.
+   Light and dark are each composed. Accent is rare. */
+
+.dark {
+    color-scheme: dark;
+    --color-bg-primary: #14120b;
+    --color-bg-secondary: #1d1b15;
+    --color-text-primary: #edecec;
+    --color-text-secondary: #a3a29c;
+    --color-accent: #f54e00;
+    --color-danger: #ff8fa8;
+    --color-border: rgba(237, 236, 236, 0.16);
+    --color-border-strong: rgba(237, 236, 236, 0.32);
+    --color-border-avatar: rgba(237, 236, 236, 0.28);
+    --color-border-avatar-2: rgba(237, 236, 236, 0.16);
+    --color-border-avatar-3: rgba(237, 236, 236, 0.08);
+    --color-selection: rgba(245, 78, 0, 0.35);
+    --shadow-rest: 0 1px 2px rgba(0, 0, 0, 0.45);
+}
+
 .light {
-    --color-bg-primary: #f0f0f0;
-    --color-bg-secondary: #edf2f7;
-    --color-border-avatar:#43348de8;
-    --color-border-avatar-2:#43348da2;
-    --color-border-avatar-3:#43348d70;
-    --color-text-primary: #2d3748;
-    --color-text-secondary: #4a5568;
-    --color-text-accent: #43348d;
+    color-scheme: light;
+    --color-bg-primary: #f7f7f4;
+    --color-bg-secondary: #ebeae5;
+    --color-text-primary: #26251e;
+    --color-text-secondary: #5c5b56;
+    --color-accent: #f54e00;
+    --color-danger: #a61e3c;
+    --color-border: rgba(38, 37, 30, 0.16);
+    --color-border-strong: rgba(38, 37, 30, 0.32);
+    --color-border-avatar: rgba(38, 37, 30, 0.22);
+    --color-border-avatar-2: rgba(38, 37, 30, 0.12);
+    --color-border-avatar-3: rgba(38, 37, 30, 0.06);
+    --color-selection: rgba(245, 78, 0, 0.22);
+    --shadow-rest: 0 1px 2px rgba(38, 37, 30, 0.06);
 }
 
 .fix-navbar-overflow{
@@ -49,6 +83,20 @@
 .hover-animation:hover:after { 
     width: 100%; 
     left: 0; 
+}
+
+.hero-link {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 0 1px;
+    padding-bottom: 1px;
+    transition: background-size 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-link:hover,
+.hero-link:focus-visible {
+    background-size: 100% 1px;
 }
 
 .wave {
@@ -94,6 +142,32 @@
     }
 }
 
+::selection {
+    background: var(--color-selection);
+    color: var(--color-text-primary);
+}
+
+input,
+textarea {
+    caret-color: var(--color-text-primary);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--color-text-secondary);
+    opacity: 1;
+}
+
+:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-border-strong) transparent;
+}
+
 @layer base  {
     
     html {
@@ -101,11 +175,15 @@
     }
 
     body {
-        @apply w-[100vw] overflow-x-hidden m-0 pt-0 bg-primary transition duration-200 px-6 md:px-10 lg:px-10 xl:px-64 bigger-desktops:px-96 tracking-tight 
+        @apply w-[100vw] overflow-x-hidden m-0 pt-0 bg-primary font-sans text-primary transition duration-200 px-6 md:px-10 lg:px-10 xl:px-64 bigger-desktops:px-96;
+        letter-spacing: -0.011em;
+        line-height: 1.6;
     }
 
     h1,h2,h3,h4,h5,h6{
-        @apply font-bold text-primary
+        @apply font-medium text-primary;
+        letter-spacing: -0.03em;
+        line-height: 1.2;
     }
 
     p{
