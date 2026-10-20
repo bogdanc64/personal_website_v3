@@ -6,6 +6,8 @@ import Title from '../components/Title'
 import { useIsomorphicLayoutEffect } from '../utils/useIsomorphicLayoutEffect'
 import { stagger } from '../utils/animations'
 import ExperienceCard from '../components/ExperienceCard'
+import softwireLogo from '../assets/logos/softwire.png'
+import sbpLogo from '../assets/logos/sbp-mark.png'
 
 const Experience: NextPageWithLayout = () => {
   const experienceTitle = useRef(null);
@@ -35,9 +37,11 @@ const Experience: NextPageWithLayout = () => {
           <div ref={experienceTitle}>
             <Title value="Experience" />
           </div>
-          <div ref={experienceSection} className="mx-auto max-w-[40rem] pt-6">
+          <div ref={experienceSection} className="mx-auto max-w-[40rem] divide-y divide-line pt-4">
             <ExperienceCard
               companyName="Softwire"
+              companyLogo={softwireLogo}
+              logoTone="color"
               position="Software Developer II"
               startingDate={new Date(2025, 3, 22)}
               keypoints={[
@@ -50,6 +54,8 @@ const Experience: NextPageWithLayout = () => {
             />
             <ExperienceCard
               companyName="Software Business Partners"
+              companyLogo={sbpLogo}
+              logoTone="light"
               position="Full-stack Developer"
               startingDate={new Date(2022, 7, 22)}
               endingDate={new Date(2025, 3, 15)}

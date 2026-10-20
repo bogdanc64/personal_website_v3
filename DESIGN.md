@@ -147,7 +147,7 @@ About is an account of the work, not a skill grid. A short opening, then three h
 
 ### Experience
 
-Each role is a hairline block in the same 40rem column. The job title and the dates share a line. The company sits under the title. The work is a few plain sentences, then the tools as words on one line. No logo box, no calendar glyph, no orange dash, no icon grid. The employer logos stay in the repo and keep their own color. They are not the experience layout.
+Each role is a block in the same 40rem column. A hairline sits between roles, not under the page title. The current role is marked “Current” and “Since …”. The company logo sits at the right of the heading, at its own color: Softwire’s teal wordmark, and the SBP mark knocked out of its black plate so it reads ink on paper and white on night. The work is a two-column list with a small ink dot, then the tools as words on one line. No calendar glyph, no orange dash, no icon grid.
 
 ## Elevation & Depth
 

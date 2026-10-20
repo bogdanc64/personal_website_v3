@@ -89,6 +89,8 @@ The experience page was a two-column résumé card: a logo, an orange dash, a ca
 - Each role is a hairline block. Title and dates on one line, company under the title, then plain sentences, then the tools as words.
 - The sentences paraphrase the existing bullets. Do not add a client, a metric, or a project that is not already there.
 - Do not bring back the icon grid, the emoji, or the orange dash on this page. Skill icons still exist for the projects page.
+- The company logo stays with the role. Do not put a rule between the page title and the first role.
+- The open role carries the word “Current”. The points are a two-column list with an ink dot, not bare sentences and not a browser disc.
 
 ### 6. Color headshot
 
