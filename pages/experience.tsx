@@ -1,43 +1,23 @@
 import type { NextPageWithLayout } from './_app'
-import { ReactElement, useRef } from 'react'
+import { ReactElement } from 'react'
 import Layout from '../components/Layout'
-import { motion } from 'framer-motion'
 import Title from '../components/Title'
-import { useIsomorphicLayoutEffect } from '../utils/useIsomorphicLayoutEffect'
-import { stagger } from '../utils/animations'
+import { useReveal } from '../utils/useReveal'
 import ExperienceCard from '../components/ExperienceCard'
 import softwireLogo from '../assets/logos/softwire.png'
 import sbpLogo from '../assets/logos/sbp-mark.png'
 
 const Experience: NextPageWithLayout = () => {
-  const experienceTitle = useRef(null);
-  const experienceSection = useRef(null);
-
-  useIsomorphicLayoutEffect(() => {
-    stagger(
-      [
-        experienceTitle.current,
-        experienceSection.current,
-      ],
-      { y: 20 },
-      { y: 0 },
-      0.2
-    );
-  }, []);
+  const root = useReveal<HTMLDivElement>()
 
   return (
-    <motion.div
-      //className="xl:px-60"
-      initial={{ opacity: 0, scale: 1 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.25 }}
-    >
-      <div> {/* xl:grid grid-cols-2 */}
-        <div className="mt-10"> {/* sm:mt-10 lg:mt-0 xl:pr-10 */}
-          <div ref={experienceTitle}>
+    <div ref={root}>
+      <div>
+        <div className="mt-10">
+          <div data-reveal>
             <Title value="Experience" />
           </div>
-          <div ref={experienceSection} className="mx-auto max-w-[40rem] divide-y divide-line pt-4">
+          <div className="mx-auto max-w-[40rem] divide-y divide-line pt-4">
             <ExperienceCard
               companyName="Softwire"
               companyLogo={softwireLogo}
@@ -70,7 +50,7 @@ const Experience: NextPageWithLayout = () => {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }
 

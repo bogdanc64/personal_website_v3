@@ -139,7 +139,7 @@ Horizontal padding is 24px on small screens and steps up through Tailwind’s `m
 
 ### Home
 
-The first view is a hiring pitch in two columns, still on the same hairlines and type. The headline is the offer, up to 3.75rem, tracking `-0.04em`, max about 14 characters wide so it stacks into a block: “From a client's problem, or a new idea, to something real.” The name, the Softwire role, and one proof line sit under it: talk with clients, find what’s in the way, and build what makes life easier. Earlier employers stay on the experience page. The action is “Let’s get in touch”, with “See the work” as a text link. The portrait is a circle, 22rem from the `lg` breakpoint, on the right, inside the original three hairline rings. On small screens the portrait comes first, at 11rem and up. The hero fills the viewport above the footer, so the first view does not scroll. Entrance is one rise and fade. Do not go back to a name-only lockup, a tiny baseline circle, a wave emoji, or a single ring. Do not add a metric row.
+The first view is a hiring pitch in two columns, still on the same hairlines and type. The headline is the offer, up to 3.75rem, tracking `-0.04em`, max about 14 characters wide so it stacks into a block: “From a client's problem, or a new idea, to something real.” The name, the Softwire role, and one proof line sit under it: talk with clients, find what’s in the way, and build what makes life easier. Earlier employers stay on the experience page. The action is “Let’s get in touch”, with “See the work” as a text link. The portrait is a circle, 22rem from the `lg` breakpoint, on the right, inside the original three hairline rings. On small screens the portrait comes first, at 11rem and up. The hero fills the viewport above the footer, so the first view does not scroll. Entrance is the shared line settle in Motion. Do not go back to a name-only lockup, a tiny baseline circle, a wave emoji, or a single ring. Do not add a metric row.
 
 ### About
 
@@ -148,6 +148,10 @@ About is an account of the work, not a skill grid. A short opening, then three h
 ### Experience
 
 Each role is a block in the same 40rem column. A hairline sits between roles, not under the page title. The open role ends its date with “Present” in full ink. The company logo sits at the right of the heading, at its own color: Softwire’s teal wordmark, and the SBP mark knocked out of its black plate so it reads ink on paper and white on night. The work is one point per line, with a small ink dot and room between the lines. Each tool is its own icon and name, in a quiet row. No calendar glyph, no orange dash, no separate “Current” label.
+
+## Motion
+
+Home, about, and experience share one entrance. Each marked line rises 16px and fades in, staggered by about 70ms, with an exponential ease-out (`power3.out`). On about, that is the introduction, each way of working, the close, and the résumé. On experience, it is the title and then each role as a whole block. The portrait uses that same rise and eases from a scale of 0.97. The navbar and the footer stay still. Nothing loops. Skip the entrance when the visitor prefers reduced motion. Do not fade the whole frame, and do not add a second animation on top of this one.
 
 ## Elevation & Depth
 
