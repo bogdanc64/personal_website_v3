@@ -147,7 +147,7 @@ About is an account of the work, not a skill grid. A short opening, then three h
 
 ### Contact
 
-Contact is the same 40rem column as about. An opening line, then two hairline rows: the email address, and GitHub and LinkedIn as text links. The form sits under that, left aligned, with a visible label on every field. Name and email share a row from the `sm` breakpoint. The button reads “Send the message” and sits on the right. A sent note or a danger-colored failure note sits under the button, on the left. Do not bring back a centered stack of placeholder-only fields at 40% width, the word “Send” alone, a spinner under the button, or the address set as a large display link above the form.
+The page title is “Contact me”. Contact is the same 40rem column as about. An opening line, then two hairline rows: the email address, and GitHub and LinkedIn as text links. The form sits under that, left aligned, with a visible label on every field. Name and email share a row from the `sm` breakpoint. The button reads “Send the message” and sits on the right. A sent note or a danger-colored failure note sits under the button, on the left. Do not bring back a centered stack of placeholder-only fields at 40% width, the word “Send” alone, a spinner under the button, or the address set as a large display link above the form.
 
 ### Experience
 

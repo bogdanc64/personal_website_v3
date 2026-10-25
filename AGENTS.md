@@ -117,6 +117,7 @@ The large address was set aside. The hairline rows read more clearly: email, the
 - “Send the message” sits on the right edge of the column.
 - The sent note and the failure note stay on the left, under the button.
 - Do not put the address back into display type above the form.
+- The page title is “Contact me”. The nav label stays “Contact”.
 
 ### 6. Color headshot
 

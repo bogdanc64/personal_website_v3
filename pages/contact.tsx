@@ -28,7 +28,7 @@ const Contact: NextPageWithLayout = () => {
   return (
     <div className="mt-10">
       <div ref={title}>
-        <Title value="Contact" />
+        <Title value="Contact me" />
       </div>
       <div ref={writing} className="mx-auto max-w-[40rem] py-10">
         <p className="text-lg leading-relaxed">
