@@ -36,7 +36,7 @@ function ContactForm() {
   }
 
   return (
-    <form className="mt-10" onSubmit={handleSubmit}>
+    <form className="mt-8" onSubmit={handleSubmit}>
       <div className="grid gap-6 sm:grid-cols-2">
         <label className="block">
           <span className="font-medium">Name</span>

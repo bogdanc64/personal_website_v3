@@ -102,6 +102,14 @@ The contact page was a centered title, a centered email sentence, and a narrow s
 - Success keeps the words “Message sent.” Failure names the recovery: write to the same email. Do not clear the form when the send fails.
 - Do not bring back the 40% centered column, placeholder-only fields, or the spinner under the button.
 
+### 12. The address is the contact page
+
+The directory rows made the email and the profiles look like a table, and the form sat under them as a second page.
+
+- The address is the large link. GitHub and LinkedIn sit on the line under it, without an “Elsewhere” label.
+- The form is the other way to write, under a hairline: “Or send it from here.”
+- Do not put the email back into a labeled row, and do not put the form above the address.
+
 ### 6. Color headshot
 
 The home portrait is `assets/images/portrait.jpg`, the square color photo against the brick wall. The older grayscale outdoor portrait is retired. Keep the circular crop centered. Do not switch back to `portrait-min2.jpg`.

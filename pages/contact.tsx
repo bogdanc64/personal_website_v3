@@ -9,15 +9,16 @@ import ContactForm from '../components/ContactForm'
 const Contact: NextPageWithLayout = () => {
   const title = useRef(null)
   const writing = useRef(null)
+  const note = useRef(null)
 
   useIsomorphicLayoutEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
     const tween = stagger(
-      [title.current, writing.current],
+      [title.current, writing.current, note.current],
       { y: 16 },
       { y: 0 },
-      0.12
+      0.1
     )
 
     return () => {
@@ -30,43 +31,41 @@ const Contact: NextPageWithLayout = () => {
       <div ref={title}>
         <Title value="Contact" />
       </div>
-      <div ref={writing} className="mx-auto max-w-[40rem] py-10">
-        <p className="text-lg leading-relaxed">
-          Tell me what is getting in the way, or the idea you want to make real.
-        </p>
-        <dl className="mt-10 border-t border-line">
-          <div className="border-b border-line py-5">
-            <dt className="font-medium">Email</dt>
-            <dd className="mt-1 text-lg">
-              <a className="hero-link font-medium text-primary" href="mailto:maftei.bogdan@outlook.com">
-                maftei.bogdan@outlook.com
-              </a>
-            </dd>
-          </div>
-          <div className="border-b border-line py-5">
-            <dt className="font-medium">Elsewhere</dt>
-            <dd className="mt-1 text-lg text-secondary">
-              <a
-                className="hero-link font-medium text-primary"
-                href="https://github.com/bogdanc64"
-                target="_blank"
-                rel="noreferrer"
-              >
-                GitHub
-              </a>
-              {' and '}
-              <a
-                className="hero-link font-medium text-primary"
-                href="https://www.linkedin.com/in/bogdan-cosmin-maftei-412018215/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                LinkedIn
-              </a>
-            </dd>
-          </div>
-        </dl>
-        <ContactForm />
+      <div className="mx-auto max-w-[40rem] py-10">
+        <div ref={writing}>
+          <p className="text-lg leading-relaxed">
+            Tell me what is getting in the way, or the idea you want to make real.
+          </p>
+          <a
+            className="hero-link mt-8 block max-w-full text-2xl font-medium leading-snug tracking-[-0.03em] text-primary sm:text-3xl"
+            href="mailto:maftei.bogdan@outlook.com"
+          >
+            maftei.bogdan@outlook.com
+          </a>
+          <p className="mt-4 text-lg text-secondary">
+            <a
+              className="hero-link font-medium text-primary"
+              href="https://github.com/bogdanc64"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </a>
+            {' and '}
+            <a
+              className="hero-link font-medium text-primary"
+              href="https://www.linkedin.com/in/bogdan-cosmin-maftei-412018215/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
+          </p>
+        </div>
+        <div ref={note} className="mt-12 border-t border-line pt-10">
+          <p className="text-lg">Or send it from here.</p>
+          <ContactForm />
+        </div>
       </div>
     </div>
   )
