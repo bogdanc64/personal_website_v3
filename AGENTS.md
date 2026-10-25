@@ -110,6 +110,14 @@ The directory rows made the email and the profiles look like a table, and the fo
 - The form is the other way to write, under a hairline: “Or send it from here.”
 - Do not put the email back into a labeled row, and do not put the form above the address.
 
+### 13. Back to the rows, button on the right
+
+The large address was set aside. The hairline rows read more clearly: email, then GitHub and LinkedIn, then the form.
+
+- “Send the message” sits on the right edge of the column.
+- The sent note and the failure note stay on the left, under the button.
+- Do not put the address back into display type above the form.
+
 ### 6. Color headshot
 
 The home portrait is `assets/images/portrait.jpg`, the square color photo against the brick wall. The older grayscale outdoor portrait is retired. Keep the circular crop centered. Do not switch back to `portrait-min2.jpg`.

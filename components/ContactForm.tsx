@@ -36,7 +36,7 @@ function ContactForm() {
   }
 
   return (
-    <form className="mt-8" onSubmit={handleSubmit}>
+    <form className="mt-10" onSubmit={handleSubmit}>
       <div className="grid gap-6 sm:grid-cols-2">
         <label className="block">
           <span className="font-medium">Name</span>
@@ -83,13 +83,15 @@ function ContactForm() {
           required
         />
       </label>
-      <button
-        type="submit"
-        disabled={status === 'sending'}
-        className="mt-8 cursor-pointer border border-line bg-primary px-4 py-2 font-medium text-primary shadow transition-colors duration-200 hover:border-accent disabled:cursor-default disabled:opacity-50"
-      >
-        {status === 'sending' ? 'Sending…' : 'Send the message'}
-      </button>
+      <div className="mt-8 flex justify-end">
+        <button
+          type="submit"
+          disabled={status === 'sending'}
+          className="cursor-pointer border border-line bg-primary px-4 py-2 font-medium text-primary shadow transition-colors duration-200 hover:border-accent disabled:cursor-default disabled:opacity-50"
+        >
+          {status === 'sending' ? 'Sending…' : 'Send the message'}
+        </button>
+      </div>
       <p role="status" aria-live="polite" className="mt-6 min-h-[1.6em] text-lg">
         {status === 'sent' && 'Message sent.'}
         {status === 'error' && (
