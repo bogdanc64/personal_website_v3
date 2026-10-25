@@ -1,94 +1,109 @@
-import { useState } from 'react'
-import LoadingSpinner from './LoadingSpinner'
+import { FormEvent, useState } from 'react'
+
+const fieldClass =
+  'mt-2 w-full rounded-md border border-line bg-primary px-3 py-2 text-base text-primary shadow transition-colors duration-200 focus:border-accent'
 
 function ContactForm() {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [subject, setSubject] = useState('')
+  const [message, setMessage] = useState('')
+  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
 
-    const [name, setName] = useState('')
-    const [email, setEmail] = useState('')
-    const [subject, setSubject] = useState('')
-    const [message, setMessage] = useState('')
-    const [submitted, setSubmitted] = useState<boolean>(false)
-    const [response, setResponse] = useState<string | null>(null)
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    if (status === 'sending') return
+    setStatus('sending')
 
-    const inputs = document.querySelectorAll("input");
-    const textarea = document.querySelector("textarea");
-
-    const handleSubmit = (e:any) => { 
-      e.preventDefault()
-      
-      setSubmitted(true)
-      
-      const data = {
-        name,
-        email,
-        subject,
-        message
-      }
-      fetch('/api/contact', {
-            method: 'POST',
-            headers: {
-              'Accept': 'application/json, text/plain, */*',
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-          }).then((res) => {
-            setResponse(res.status === 200 ? "Success" : "Error");
-            resetForm();
-          })
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json, text/plain, */*',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, email, subject, message }),
+      })
+      if (!res.ok) throw new Error('send failed')
+      setName('')
+      setEmail('')
+      setSubject('')
+      setMessage('')
+      setStatus('sent')
+    } catch {
+      setStatus('error')
     }
+  }
 
-    const resetForm = () => {
-      setName('');
-      setEmail('');
-      setSubject('');
-      setMessage('');
-
-      inputs.forEach((input) => (input.value = ""));
-
-      if (textarea) {
-        textarea.value  = "";
-      }
-    }
-
-    return (
-        <form id="contactForm" className='flex flex-col text-center items-center justify-center' onSubmit={(e)=>{handleSubmit(e)}}>
-            <input
-            type="text" 
-            onChange={(e)=>{setName(e.target.value)}} 
-            className="form-control shadow w-2/5 px-3 py-1.5 text-base font-normal text-primary bg-primary border border-solid border-line rounded transition ease-in-out my-3 focus:border-accent"
-            placeholder="Name"
+  return (
+    <form className="mt-10" onSubmit={handleSubmit}>
+      <div className="grid gap-6 sm:grid-cols-2">
+        <label className="block">
+          <span className="font-medium">Name</span>
+          <input
+            className={fieldClass}
+            name="name"
+            autoComplete="name"
+            value={name}
+            onChange={(event) => setName(event.target.value)}
             required
-            />
-            <input
+          />
+        </label>
+        <label className="block">
+          <span className="font-medium">Email</span>
+          <input
+            className={fieldClass}
             type="email"
-            onChange={(e)=>{setEmail(e.target.value)}} 
-            className="form-control shadow w-2/5 px-3 py-1.5 text-base font-normal text-primary bg-primary border border-solid border-line rounded transition ease-in-out my-3 focus:border-accent"
-            placeholder="Email"
+            name="email"
+            autoComplete="email"
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
             required
-            />
-            <input
-            type="text"
-            onChange={(e)=>{setSubject(e.target.value)}} 
-            className="form-control shadow w-2/5 px-3 py-1.5 text-base font-normal text-primary bg-primary border border-solid border-line rounded transition ease-in-out my-3 focus:border-accent"
-            placeholder="Subject"
-            required
-            />
-            <textarea
-            rows={6}
-            onChange={(e)=>{setMessage(e.target.value)}} 
-            className="form-control shadow w-2/5 px-3 py-1.5 text-base font-normal text-primary bg-primary border border-solid border-line rounded transition ease-in-out my-3 focus:border-accent"
-            placeholder="Your message"
-            required
-            />
-            <input type="submit" value="Send" className="bg-primary text-primary font-medium py-2 px-4 border border-line hover:border-accent transition-colors duration-200 rounded cursor-pointer shadow my-3" />
-            {
-              submitted !== true ? null : (response === null)
-                                 ? <LoadingSpinner /> : (response === "Success")
-                                 ? <p className="my-6">Message has been sent sucessfully!</p> : <p className="my-6 text-danger">An error has been occured!</p>
-            }
-          
-        </form>
-        )
+          />
+        </label>
+      </div>
+      <label className="mt-6 block">
+        <span className="font-medium">Subject</span>
+        <input
+          className={fieldClass}
+          name="subject"
+          value={subject}
+          onChange={(event) => setSubject(event.target.value)}
+          required
+        />
+      </label>
+      <label className="mt-6 block">
+        <span className="font-medium">Message</span>
+        <textarea
+          className={fieldClass}
+          name="message"
+          rows={6}
+          value={message}
+          onChange={(event) => setMessage(event.target.value)}
+          required
+        />
+      </label>
+      <button
+        type="submit"
+        disabled={status === 'sending'}
+        className="mt-8 cursor-pointer border border-line bg-primary px-4 py-2 font-medium text-primary shadow transition-colors duration-200 hover:border-accent disabled:cursor-default disabled:opacity-50"
+      >
+        {status === 'sending' ? 'Sending…' : 'Send the message'}
+      </button>
+      <p role="status" aria-live="polite" className="mt-6 min-h-[1.6em] text-lg">
+        {status === 'sent' && 'Message sent.'}
+        {status === 'error' && (
+          <span className="text-danger">
+            That did not send. Email{' '}
+            <a className="hero-link font-medium" href="mailto:maftei.bogdan@outlook.com">
+              maftei.bogdan@outlook.com
+            </a>
+            {' '}instead.
+          </span>
+        )}
+      </p>
+    </form>
+  )
 }
 
 export default ContactForm
