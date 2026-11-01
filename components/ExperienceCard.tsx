@@ -38,7 +38,7 @@ function ExperienceCard(props: Props) {
         : 'h-8 w-auto'
 
     return (
-        <article className="py-8">
+        <article data-reveal className="py-8">
             <div className="flex flex-col-reverse gap-4 sm:flex-row sm:items-start sm:justify-between">
                 <div className="min-w-0">
                     <h3 className="text-2xl">{props.position}</h3>
