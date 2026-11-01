@@ -1,78 +1,82 @@
-import Image, { StaticImageData } from "next/image";
-import Button from "./Button";
+import Image, { StaticImageData } from 'next/image'
 import SkillIcon from './SkillIcon'
 
 interface Props {
-    index: number,
-    title: string,
-    description: string,
-    technologies?: string[],
-    linkCode: string,
-    privateRepository: boolean,
-    image: string | StaticImageData,
+  title: string
+  description: string
+  technologies?: string[]
+  linkCode: string
+  privateRepository: boolean
+  image: string | StaticImageData
+  imageAlt: string
+}
+
+const skillNames: Record<string, string> = {
+  vue: 'Vue',
+  nestjs: 'NestJS',
+  'socket.io': 'Socket.IO',
+  react: 'React',
+  tailwind: 'Tailwind',
+  nextjs: 'Next.js',
 }
 
 function Project(props: Props) {
+  const plate = (
+    <Image
+      src={props.image}
+      alt={props.privateRepository ? props.imageAlt : ''}
+      layout="responsive"
+      sizes="(min-width: 1280px) 64rem, 100vw"
+      quality={80}
+    />
+  )
 
-    const isOdd = (props.index % 2 === 0) ? false : true;
-
-    if (isOdd) {
-        return (
-            <div className="grid gap-x-20 xl:gap-x-28 lg:grid-cols-2">
-                <div className="flex justify-center items-center">
-                    <Image className="z-[-10]" objectFit="cover" src={props.image} quality={75} width={1280} height={720}></Image>
-                </div>
-                <div className="flex flex-col justify-center">
-                    <h2 className="pt-10 lg:pt-0">{props.title}</h2>
-                    <p className="my-5 text-justify">{props.description}</p>
-                    <div className="flex flex-row">
-                        {
-                            props.technologies?.map((element, index) => (
-                                <div key={index} className="mr-5">
-                                    <SkillIcon title={false} type={element} size={25} />
-                                </div>
-                            ))
-                        }
-                    </div>
-                    <div className="flex flex-row pt-5">
-                        <a target='_blank' rel="noreferrer" href={props.linkCode}>
-                            <Button disabled={props.privateRepository} name={props.privateRepository ? 'Private repository' : 'View Code'} />
-                        </a>
-                    </div>
-                </div>
+  return (
+    <article>
+      <figure data-reveal="media">
+        {props.privateRepository ? (
+          <div className="overflow-hidden rounded-md border border-line bg-secondary">
+            {plate}
+          </div>
+        ) : (
+          <a
+            href={props.linkCode}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`View the code for ${props.title}`}
+            className="block rounded-md border border-line bg-secondary transition-colors duration-200 hover:border-accent"
+          >
+            <div className="overflow-hidden rounded-md">
+              {plate}
             </div>
-        )
-    }
-    else {
-        return (
-            <div className="grid gap-x-20 xl:gap-x-28 lg:grid-cols-2">
-                <div className="flex flex-col justify-center order-last lg:order-[0]">
-                    <h2 className="pt-10 lg:pt-0">{props.title}</h2>
-                    <p className="my-5 text-justify">{props.description}</p>
-                    <div className="flex flex-row">
-                        {
-                            props.technologies?.map((element, index) => (
-                                <div key={index} className="mr-5">
-                                    <SkillIcon title={false} type={element} size={25} />
-                                </div>
-                            ))
-                        }
-                    </div>
-                    <div className="flex flex-row pt-5">
-                        {props.privateRepository && <Button disabled={true} name={'Private repository'} />}
-                        {!props.privateRepository &&
-                            <a target='_blank' rel="noreferrer" href={props.linkCode}>
-                                <Button name={'View Code'} />
-                            </a>
-                        }
-                    </div>
-                </div>
-                <div className="flex justify-center items-center">
-                    <Image className="z-[-10]" objectFit="cover" src={props.image} quality={75} width={640} height={360}></Image>
-                </div>
-            </div>
-        )
-    }
+          </a>
+        )}
+      </figure>
+      <div data-reveal className="mt-6 max-w-[40rem]">
+        <h2 className="text-2xl">{props.title}</h2>
+        <p className="mt-3 text-lg leading-relaxed text-secondary">{props.description}</p>
+        {(props.technologies ?? []).length > 0 && (
+          <ul className="mt-6 flex flex-wrap gap-x-5 gap-y-3">
+            {(props.technologies ?? []).map((skill) => (
+              <li className="flex cursor-default items-center gap-2 text-secondary" key={skill}>
+                <SkillIcon type={skill} size={16} title={false} />
+                <span>{skillNames[skill] ?? skill}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+        <p className="mt-6">
+          {props.privateRepository ? (
+            <span className="text-secondary">Private repository</span>
+          ) : (
+            <a className="hero-link font-medium text-primary" href={props.linkCode} target="_blank" rel="noreferrer">
+              View the code
+            </a>
+          )}
+        </p>
+      </div>
+    </article>
+  )
 }
 
 export default Project
