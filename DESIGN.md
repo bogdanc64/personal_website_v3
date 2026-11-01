@@ -145,6 +145,10 @@ The first view is a hiring pitch in two columns, still on the same hairlines and
 
 About is an account of the work, not a skill grid. A short opening, then three hairline rows: the first conversation, a build from nothing, and a system already in use. A closing paragraph links to experience, and a résumé link sits under that. The column is about 40rem, left aligned, under the existing centered title. Do not bring back “Proficient at”, “Other skills”, or a logo wall on this page.
 
+### Contact
+
+The page title is “Contact me”. Contact is the same 40rem column as about. An opening line, then two hairline rows: the email address, and GitHub and LinkedIn as text links. The form sits under that, left aligned, with a visible label on every field. Name and email share a row from the `sm` breakpoint. The button reads “Send the message” and sits on the right. A sent note or a danger-colored failure note sits under the button, on the left. Do not bring back a centered stack of placeholder-only fields at 40% width, the word “Send” alone, a spinner under the button, or the address set as a large display link above the form.
+
 ### Experience
 
 Each role is a block in the same 40rem column. A hairline sits between roles, not under the page title. The open role ends its date with “Present” in full ink. The company logo sits at the right of the heading, at its own color: Softwire’s teal wordmark, and the SBP mark knocked out of its black plate so it reads ink on paper and white on night. The work is one point per line, with a small ink dot and room between the lines. Each tool is its own icon and name, in a quiet row. No calendar glyph, no orange dash, no separate “Current” label.
