@@ -129,6 +129,15 @@ The large address was set aside. The hairline rows read more clearly: email, the
 - Do not put the address back into display type above the form.
 - The page title is “Contact me”. The nav label stays “Contact”.
 
+### 14. Projects as plates
+
+The projects page was still the old zig-zag: a screenshot, a justified paragraph, icon-only tools, and a disabled “Private repository” button, with a page fade and a second scroll animation.
+
+- Each screenshot is a plate at up to 64rem, in a hairline frame. The writing under it stays in the 40rem measure.
+- The facts stay the two existing projects. The sentences are tightened, not extended with a new claim.
+- Tools match experience: icon, then the name, not clickable. “View the code” is a text link. A private repository is text, not a button.
+- The entrance is the shared line settle. The plate uses `data-reveal="media"`. Do not put the scroll-triggered fade back.
+
 ### 6. Color headshot
 
 The home portrait is `assets/images/portrait.jpg`, the square color photo against the brick wall. The older grayscale outdoor portrait is retired. Keep the circular crop centered. Do not switch back to `portrait-min2.jpg`.

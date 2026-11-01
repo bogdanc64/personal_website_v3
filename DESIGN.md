@@ -149,13 +149,17 @@ About is an account of the work, not a skill grid. A short opening, then three h
 
 The page title is “Contact me”. Contact is the same 40rem column as about. An opening line, then two hairline rows: the email address, and GitHub and LinkedIn as text links. The form sits under that, left aligned, with a visible label on every field. Name and email share a row from the `sm` breakpoint. The button reads “Send the message” and sits on the right. A sent note or a danger-colored failure note sits under the button, on the left. Do not bring back a centered stack of placeholder-only fields at 40% width, the word “Send” alone, a spinner under the button, or the address set as a large display link above the form.
 
+### Projects
+
+Projects is the one page where the work is larger than the column. The title stays the centered hairline title. One opening line sits under it, left aligned, in a 40rem measure. Each project is then a plate: the screenshot at the full width of a 64rem column, inside a 1px hairline and a 6px radius, on raised paper. The name, a short account, the tools, and the code link sit under the plate, back in the 40rem measure. Tools are an icon and a name, the same row as experience, and they are not clickable. A public repository is “View the code”, a text link, and the plate is the same link. A private repository is the words “Private repository”, not a disabled button. Do not bring back the alternating two-column grid, justified paragraphs, icon-only tools, or a second scroll animation.
+
 ### Experience
 
 Each role is a block in the same 40rem column. A hairline sits between roles, not under the page title. The open role ends its date with “Present” in full ink. The company logo sits at the right of the heading, at its own color: Softwire’s teal wordmark, and the SBP mark knocked out of its black plate so it reads ink on paper and white on night. The work is one point per line, with a small ink dot and room between the lines. Each tool is its own icon and name, in a quiet row. No calendar glyph, no orange dash, no separate “Current” label.
 
 ## Motion
 
-Home, about, and experience share one entrance. Each marked line rises 16px and fades in, staggered by about 70ms, with an exponential ease-out (`power3.out`). On about, that is the introduction, each way of working, the close, and the résumé. On experience, it is the title and then each role as a whole block. The portrait uses that same rise and eases from a scale of 0.97. The navbar and the footer stay still. Nothing loops. Skip the entrance when the visitor prefers reduced motion. Do not fade the whole frame, and do not add a second animation on top of this one.
+Home, about, experience, and projects share one entrance. Each marked line rises 16px and fades in, staggered by about 70ms, with an exponential ease-out (`power3.out`). On about, that is the introduction, each way of working, the close, and the résumé. On experience, it is the title and then each role as a whole block. On projects, it is the opening line, then each plate, then the writing under it. The portrait uses that same rise and eases from a scale of 0.97. The navbar and the footer stay still. Nothing loops. Skip the entrance when the visitor prefers reduced motion. Do not fade the whole frame, and do not add a second animation on top of this one.
 
 ## Elevation & Depth
 
