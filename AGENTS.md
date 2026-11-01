@@ -93,6 +93,16 @@ The experience page was a two-column résumé card: a logo, an orange dash, a ca
 - The open role is the date that ends in “Present”. Do not add a separate “Current” label beside the title.
 - Each point is its own line, with an ink dot and clear space between lines. Each tool has its skill icon before the name.
 
+### 10. Lines settle in
+
+Studied the entrances catalogued on [Details](https://details.so/): a page arrives as a short sequence of lines, while the frame stays put.
+
+- Home, about, and experience share `useReveal`. Mark a line with `data-reveal`. The portrait is `data-reveal="media"` and eases from a scale of 0.97 in that same tween.
+- The navbar no longer fades with the page. Do not put the fade back on the layout shell.
+- About reveals the introduction, each way of working, the close, and the résumé on their own.
+- Experience reveals the page title, then each role as one block, so the points do not leave a gap under the heading.
+- One entrance per page. Skip it when the visitor prefers reduced motion. Do not add a loop, a spring, or a second fade on the same lines.
+
 ### 6. Color headshot
 
 The home portrait is `assets/images/portrait.jpg`, the square color photo against the brick wall. The older grayscale outdoor portrait is retired. Keep the circular crop centered. Do not switch back to `portrait-min2.jpg`.

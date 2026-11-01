@@ -1,7 +1,6 @@
 import Navbar from './Navbar'
 import Footer from './Footer'
 import { useEffect, useState } from 'react';
-import { motion } from "framer-motion"
 
 type Props = {
     children?: React.ReactNode;
@@ -19,17 +18,12 @@ export default function Layout({children}:Props) {
     if(!mounted) return null;
   
     return (
-    <motion.div
-        className="flex min-h-[100dvh] flex-col"
-        initial={{ opacity: 0, scale: 1 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.4 }}
-    >  
+    <div className="flex min-h-[100dvh] flex-col">
       <Navbar />
          <main className="flex flex-1 flex-col pt-20 md:pt-24">
              {children}
          </main>
       <Footer />
-    </motion.div>
+    </div>
   )
 }
